@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>測量與誤差 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="measurement-error">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>量測資料分布</h2>
+            <p>改變儀器刻度和量測次數，觀察多次測量結果如何分散，以及平均值落在哪裡。</p>
+          </div>
+          <div class="scene-shell measurement-scene">
+            <div class="measurement-scale">
+              <div class="measurement-ruler"></div>
+              <div id="measurementMeanLine" class="measurement-mean-line"></div>
+              <div id="measurementPoints" class="measurement-points"></div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>刻度越細，通常越能讀得更精確；量測次數更多，也比較能看出平均趨勢。</p>
+          </div>
+          <label class="control-group">
+            <span>量測次數：<strong id="measurementCountValue">8</strong> 次</span>
+            <input id="measurementCountRange" type="range" min="4" max="16" value="8" />
+          </label>
+          <label class="control-group">
+            <span>儀器刻度：<strong id="measurementResolutionValue">0.5</strong> cm</span>
+            <input id="measurementResolutionRange" type="range" min="1" max="6" value="3" />
+          </label>
+          <div class="button-row">
+            <button id="measurementReroll" class="primary-button" type="button">重新量測</button>
+            <button id="measurementReset" class="ghost-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>平均值</span>
+              <strong id="measurementMeanText">12.5 cm</strong>
+            </div>
+            <div class="stat-item">
+              <span>最大差距</span>
+              <strong id="measurementSpreadText">0.8 cm</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="measurementTip">多量幾次，比較容易看出資料的中心。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>這頁在學什麼？</h2>
+          <ul>
+            <li>一次量測不一定剛好是真值，所以常需要多次測量。</li>
+            <li>平均值能代表資料的中心位置，但也要看資料分散程度。</li>
+            <li>儀器刻度會影響你能讀到多細的數值。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>高中延伸</h2>
+          <p>在高中物理裡，測量不只是在讀數，還會開始思考不確定度、系統誤差和隨機誤差的差別。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/measurement-error.js"></script>
+  </body>
+</html>

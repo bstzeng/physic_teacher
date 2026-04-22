@@ -14,22 +14,22 @@
           <p class="eyebrow">互動式物理教育網站</p>
           <h1>物理小老師</h1>
           <p class="hero-text">
-            把抽象的物理概念變成可以操作的互動頁面。從國小到國中，你可以一邊拉滑桿、一邊按按鈕、一邊直接看到畫面上的結果變化。
+            把物理概念變成可以操作的互動頁面。現在已經從國小一路擴充到高中，能直接用滑桿、按鈕和選項觀察物理量怎麼改變。
           </p>
           <div class="hero-actions">
             <a class="primary-button" href="#concept-sections">開始探索主題</a>
-            <span class="hero-note">目前共有 42 個可直接操作的主題頁</span>
+            <span class="hero-note">目前共有 47 個可直接操作的主題頁</span>
           </div>
         </div>
         <div class="hero-panel">
           <div class="hero-orbit orbit-a"></div>
           <div class="hero-orbit orbit-b"></div>
           <div class="hero-card">
-            <h2>這個網站可以做什麼？</h2>
+            <h2>網站特色</h2>
             <ul>
-              <li>用滑桿、按鈕和選項直接操作實驗。</li>
-              <li>看見力、光、聲、熱與電磁的即時變化。</li>
-              <li>搭配小測驗與前後主題導覽，循序學習不漏掉。</li>
+              <li>每個主題都有互動控制，結果會即時反映在畫面上。</li>
+              <li>每頁都有白話說明、小測驗，以及上一個與下一個主題導覽。</li>
+              <li>現在已涵蓋國小、國中與高中三個學習階段。</li>
             </ul>
           </div>
         </div>
@@ -38,20 +38,20 @@
       <main id="concept-sections">
         <section class="section-heading">
           <p class="eyebrow">主題總覽</p>
-          <h2>42 個示範主題已可直接操作</h2>
-          <p>所有主題都使用繁體中文，並以國小到國中的程度來安排，方便一步一步探索。</p>
+          <h2>47 個示範主題已可直接操作</h2>
+          <p>所有頁面都使用繁體中文，並依學習程度分成國小、國中與高中三個區塊。</p>
         </section>
 
         <section class="filter-panel">
           <div class="filter-copy">
             <p class="eyebrow">快速搜尋</p>
-            <h2>用關鍵字、年級和分類找到你想玩的主題</h2>
-            <p>可以直接搜尋像是「光」、「電路」、「浮力」，也可以切換國小、國中和不同主題分類。</p>
+            <h2>用關鍵字、年級和分類找到你想學的主題</h2>
+            <p>可以搜尋像是「光」、「電場」、「向量」、「潮汐」，也可以先切換國小、國中或高中。</p>
           </div>
           <div class="filter-controls">
             <label class="filter-search">
               <span>搜尋主題</span>
-              <input id="concept-search" type="search" placeholder="例如：光、磁鐵、槓桿、潮汐" />
+              <input id="concept-search" type="search" placeholder="例如：電場、向量、槓桿、折射" />
             </label>
             <div class="filter-row">
               <div class="filter-group">
@@ -60,6 +60,7 @@
                   <button class="filter-chip active" data-level="全部" type="button">全部</button>
                   <button class="filter-chip" data-level="國小" type="button">國小</button>
                   <button class="filter-chip" data-level="國中" type="button">國中</button>
+                  <button class="filter-chip" data-level="高中" type="button">高中</button>
                 </div>
               </div>
               <label class="filter-select">
@@ -70,7 +71,7 @@
               </label>
             </div>
             <div class="results-row">
-              <strong id="results-summary">目前顯示 42 / 42 個主題</strong>
+              <strong id="results-summary">目前顯示 47 / 47 個主題</strong>
               <button id="clear-filters" class="ghost-button" type="button">清除篩選</button>
             </div>
           </div>
@@ -92,9 +93,17 @@
           <div id="junior-ready" class="card-grid"></div>
         </section>
 
+        <section class="concept-section" data-group="senior">
+          <div class="section-heading compact">
+            <p class="eyebrow">高中主題</p>
+            <h2>把模型、圖像與公式一起連起來</h2>
+          </div>
+          <div id="senior-ready" class="card-grid"></div>
+        </section>
+
         <div id="filter-empty-state" class="filter-empty-state" hidden>
           <h3>找不到符合條件的主題</h3>
-          <p>可以試著換一個關鍵字，或把年級與分類條件放寬一點。</p>
+          <p>可以換個關鍵字，或把年級與分類條件放寬一點再找找看。</p>
         </div>
 
         <section class="concept-section planned-section">
@@ -112,16 +121,16 @@
           </div>
           <div class="board-steps">
             <article>
-              <h3>1. 先看畫面</h3>
-              <p>先不要急著改很多設定，先觀察預設情況下會發生什麼事。</p>
+              <h3>1. 先看預設結果</h3>
+              <p>先觀察初始畫面，再開始調整控制器，會更容易看出差異。</p>
             </article>
             <article>
-              <h3>2. 一次改一個變數</h3>
-              <p>只改速度、只改角度、只改材質，比較容易看出真正影響結果的是哪一個因素。</p>
+              <h3>2. 一次只改一個變數</h3>
+              <p>只改速度、只改角度、只改材質，最容易知道到底是哪個因素造成變化。</p>
             </article>
             <article>
               <h3>3. 用前後主題接著玩</h3>
-              <p>每一頁底下都有上一個和下一個主題，可以一路玩下去，不容易漏掉。</p>
+              <p>每頁底下都有上一個與下一個主題，不容易漏掉連貫的概念。</p>
             </article>
           </div>
         </section>

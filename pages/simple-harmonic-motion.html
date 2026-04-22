@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>簡諧運動 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="simple-harmonic-motion">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>彈簧振子</h2>
+            <p>改變振幅和彈性常數，觀察振子來回運動時的位置、速度與加速度。</p>
+          </div>
+          <div class="scene-shell shm-scene">
+            <div class="shm-wall"></div>
+            <div id="shmSpring" class="shm-spring"></div>
+            <div id="shmMass" class="shm-mass">m</div>
+            <div class="shm-center-line"></div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>振幅會影響位移大小，彈性常數則會影響振動快慢。</p>
+          </div>
+          <label class="control-group">
+            <span>振幅：<strong id="shmAmplitudeValue">6</strong> 格</span>
+            <input id="shmAmplitudeRange" type="range" min="2" max="9" value="6" />
+          </label>
+          <label class="control-group">
+            <span>彈性常數：<strong id="shmKValue">5</strong></span>
+            <input id="shmKRange" type="range" min="2" max="9" value="5" />
+          </label>
+          <div class="button-row">
+            <button id="shmPlay" class="primary-button" type="button">播放</button>
+            <button id="shmPause" class="secondary-button" type="button">暫停</button>
+            <button id="shmReset" class="ghost-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>位移</span>
+              <strong id="shmDisplacementText">0.0</strong>
+            </div>
+            <div class="stat-item">
+              <span>速度趨勢</span>
+              <strong id="shmVelocityText">平衡位置附近最大</strong>
+            </div>
+            <div class="stat-item">
+              <span>週期感受</span>
+              <strong id="shmPeriodText">中等</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>圖像觀念</h2>
+          <ul>
+            <li>最兩端位移最大，但速度最小。</li>
+            <li>經過平衡位置時速度最大，但位移是零。</li>
+            <li>恢復力永遠朝向平衡位置，所以運動會來回重複。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>高中延伸</h2>
+          <p>高中會把這種週期性運動連到正弦、餘弦圖像，以及角頻率和週期的關係。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/simple-harmonic-motion.js"></script>
+  </body>
+</html>

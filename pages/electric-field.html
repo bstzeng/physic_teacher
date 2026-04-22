@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>電場與電位 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="electric-field">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>單一電荷的電場</h2>
+            <p>改變電荷量與測試點距離，看看電場方向、場強和電位怎麼變。</p>
+          </div>
+          <div class="scene-shell electric-scene">
+            <div id="electricCharge" class="electric-charge">+</div>
+            <div class="electric-ring ring-a"></div>
+            <div class="electric-ring ring-b"></div>
+            <div class="electric-ring ring-c"></div>
+            <div id="electricProbe" class="electric-probe">q</div>
+            <div id="electricArrow" class="electric-arrow">電場</div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>正電荷的電場向外，負電荷的電場向內；距離越遠，場強通常越小。</p>
+          </div>
+          <label class="control-group">
+            <span>源電荷量：<strong id="electricChargeValue">+4</strong> μC</span>
+            <input id="electricChargeRange" type="range" min="-8" max="8" value="4" />
+          </label>
+          <label class="control-group">
+            <span>測試點距離：<strong id="electricDistanceValue">90</strong> px</span>
+            <input id="electricDistanceRange" type="range" min="60" max="150" value="90" />
+          </label>
+          <div class="control-group">
+            <span>測試點方向</span>
+            <div class="button-row">
+              <button class="mode-button active" data-probe-angle="0" type="button">右側</button>
+              <button class="mode-button" data-probe-angle="90" type="button">上方</button>
+              <button class="mode-button" data-probe-angle="180" type="button">左側</button>
+              <button class="mode-button" data-probe-angle="270" type="button">下方</button>
+            </div>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>電場方向</span>
+              <strong id="electricDirectionText">向外</strong>
+            </div>
+            <div class="stat-item">
+              <span>場強大小</span>
+              <strong id="electricFieldText">0.49</strong>
+            </div>
+            <div class="stat-item">
+              <span>電位高低</span>
+              <strong id="electricPotentialText">偏高</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>先抓住這三件事</h2>
+          <ul>
+            <li>電場方向是正測試電荷受力的方向。</li>
+            <li>距離拉遠時，電場通常會快速減弱。</li>
+            <li>電位和場強不是同一件事，但都和電荷量與距離有關。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>高中延伸</h2>
+          <p>這個頁面是從單一點電荷開始，之後還可以再擴充到兩個電荷、等位線和電位能圖像。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/electric-field.js"></script>
+  </body>
+</html>

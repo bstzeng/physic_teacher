@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>圓周運動與向心力 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="circular-motion">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>旋轉中的小球</h2>
+            <p>改變半徑、質量和速度，看看需要的向心力怎麼改變。</p>
+          </div>
+          <div class="scene-shell circular-scene">
+            <div id="circularOrbit" class="circular-orbit"></div>
+            <div class="circular-center"></div>
+            <div id="circularForceArrow" class="circular-force-arrow">向心力</div>
+            <div id="circularBall" class="circular-ball">m</div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>在同樣半徑下，速度越快，向心力通常會增加得很明顯。</p>
+          </div>
+          <label class="control-group">
+            <span>半徑：<strong id="circularRadiusValue">1.6</strong> m</span>
+            <input id="circularRadiusRange" type="range" min="10" max="25" value="16" />
+          </label>
+          <label class="control-group">
+            <span>速度：<strong id="circularSpeedValue">4.0</strong> m/s</span>
+            <input id="circularSpeedRange" type="range" min="20" max="70" value="40" />
+          </label>
+          <label class="control-group">
+            <span>質量：<strong id="circularMassValue">2.0</strong> kg</span>
+            <input id="circularMassRange" type="range" min="10" max="50" value="20" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>向心力</span>
+              <strong id="circularForceText">20.0 N</strong>
+            </div>
+            <div class="stat-item">
+              <span>角速度感受</span>
+              <strong id="circularAngularText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="circularTip">把速度提高時，向心力會比你想像中增加得更快。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>這裡的力在做什麼？</h2>
+          <ul>
+            <li>向心力不一定是新的力，它可能來自拉力、摩擦力或重力的某個方向分量。</li>
+            <li>只要物體一直改變速度方向，就需要一個朝向圓心的合力。</li>
+            <li>速度越快、半徑越小，需要的向心力通常越大。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>生活中的例子</h2>
+          <p>轉彎的汽車、旋轉中的遊樂設施、甩繩子的球，都能看到圓周運動的概念。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/circular-motion.js"></script>
+  </body>
+</html>

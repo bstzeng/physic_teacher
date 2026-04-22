@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>向量合成與分解 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="vector-components">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>向量圖像</h2>
+            <p>調整大小和角度，觀察主向量、水平分量和垂直分量的關係。</p>
+          </div>
+          <div class="scene-shell vector-scene">
+            <svg id="vectorSvg" viewBox="0 0 420 320" aria-label="向量圖像">
+              <defs>
+                <marker id="arrow-main" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 Z" fill="#d62839"></path>
+                </marker>
+                <marker id="arrow-x" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 Z" fill="#0077b6"></path>
+                </marker>
+                <marker id="arrow-y" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 Z" fill="#2a9d8f"></path>
+                </marker>
+              </defs>
+              <line x1="60" y1="260" x2="360" y2="260" class="vector-axis"></line>
+              <line x1="60" y1="260" x2="60" y2="40" class="vector-axis"></line>
+              <line id="vectorMain" x1="60" y1="260" x2="250" y2="120" class="vector-main"></line>
+              <line id="vectorX" x1="60" y1="260" x2="250" y2="260" class="vector-x"></line>
+              <line id="vectorY" x1="250" y1="260" x2="250" y2="120" class="vector-y"></line>
+            </svg>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>角度越大，垂直分量通常越明顯；角度越小，水平分量通常越大。</p>
+          </div>
+          <label class="control-group">
+            <span>向量大小：<strong id="vectorMagnitudeValue">20</strong></span>
+            <input id="vectorMagnitudeRange" type="range" min="5" max="30" value="20" />
+          </label>
+          <label class="control-group">
+            <span>角度：<strong id="vectorAngleValue">36</strong> 度</span>
+            <input id="vectorAngleRange" type="range" min="5" max="85" value="36" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>水平分量</span>
+              <strong id="vectorXText">16.2</strong>
+            </div>
+            <div class="stat-item">
+              <span>垂直分量</span>
+              <strong id="vectorYText">11.8</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="vectorTip">把角度拉到 45 度附近看看，兩個分量會更接近。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>為什麼要分解？</h2>
+          <ul>
+            <li>很多物理問題都會把力、速度或位移拆成 x 與 y 兩個方向來看。</li>
+            <li>這樣可以分別分析不同方向上的變化，再組合回完整結果。</li>
+            <li>斜拋、斜面、斜向施力都很常用到向量分解。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>圖像重點</h2>
+          <p>主向量是斜邊，水平與垂直分量則像是形成直角三角形的兩條直角邊。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/vector-components.js"></script>
+  </body>
+</html>

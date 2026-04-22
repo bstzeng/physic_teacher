@@ -252,6 +252,36 @@
       answer: 0,
       explanation: "月球重力對海水凸起的影響非常明顯。",
     },
+    "measurement-error": {
+      question: "如果同一個量測做很多次，最常先拿來代表結果的是什麼？",
+      choices: ["平均值", "最大值", "最小值"],
+      answer: 0,
+      explanation: "多次量測時，常會先用平均值來代表比較穩定的結果。",
+    },
+    "vector-components": {
+      question: "一個斜向上的力，可以拆成哪兩個最常見的分量？",
+      choices: ["水平分量和垂直分量", "長度和質量", "速度和時間"],
+      answer: 0,
+      explanation: "向量常會沿著水平與垂直方向分解，方便分析。",
+    },
+    "circular-motion": {
+      question: "物體做等速度圓周運動時，向心力方向會指向哪裡？",
+      choices: ["圓心", "切線方向", "遠離圓心"],
+      answer: 0,
+      explanation: "向心力會一直把物體拉向圓心，才能維持圓周路徑。",
+    },
+    "simple-harmonic-motion": {
+      question: "簡諧運動裡，恢復力最常把物體往哪裡拉？",
+      choices: ["平衡位置", "最遠端", "任意方向"],
+      answer: 0,
+      explanation: "恢復力會把物體拉回平衡位置，所以振動才能來回進行。",
+    },
+    "electric-field": {
+      question: "正的測試電荷放進電場後，受力方向通常和什麼一致？",
+      choices: ["電場方向", "重力方向", "速度方向"],
+      answer: 0,
+      explanation: "電場方向就是正電荷受力的方向。",
+    },
   };
 
   function renderQuiz(conceptId) {

@@ -1,5 +1,6 @@
 const readyElementary = document.querySelector("#elementary-ready");
 const readyJunior = document.querySelector("#junior-ready");
+const readySenior = document.querySelector("#senior-ready");
 const plannedContainer = document.querySelector("#planned-concepts");
 const searchInput = document.querySelector("#concept-search");
 const levelFilters = document.querySelector("#level-filters");
@@ -52,6 +53,13 @@ if (readyElementary) {
 if (readyJunior) {
   readyJunior.innerHTML = readyConcepts
     .filter((concept) => concept.level === "國中")
+    .map(createReadyCard)
+    .join("");
+}
+
+if (readySenior) {
+  readySenior.innerHTML = readyConcepts
+    .filter((concept) => concept.level === "高中")
     .map(createReadyCard)
     .join("");
 }
