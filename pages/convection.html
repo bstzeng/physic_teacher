@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>冷熱對流 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="convection">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>對流實驗</h2>
+            <p>熱的流體往上、冷的流體往下，會形成循環。</p>
+          </div>
+          <div class="scene-shell convection-scene">
+            <div class="convection-cup"></div>
+            <div id="convectionHotFlow" class="convection-flow hot-flow"></div>
+            <div id="convectionColdFlow" class="convection-flow cold-flow"></div>
+            <div class="convection-flame"></div>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>改變加熱強度，看看對流循環是不是更明顯。</p>
+          </div>
+          <label class="control-group">
+            <span>加熱強度：<strong id="convectionHeatValue">5</strong></span>
+            <input id="convectionHeatRange" type="range" min="1" max="10" value="5" />
+          </label>
+          <label class="control-group">
+            <span>容器大小：<strong id="convectionSizeValue">6</strong></span>
+            <input id="convectionSizeRange" type="range" min="3" max="10" value="6" />
+          </label>
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>對流速度</span>
+              <strong id="convectionSpeedText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>熱上升效果</span>
+              <strong id="convectionRiseText">明顯</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="convectionTip">把火力調大，看看紅色熱流會不會更快往上。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>受熱後，較熱的流體常會往上升。</li>
+            <li>較冷的流體會往下沉，形成循環。</li>
+            <li>加熱越強，對流常會更明顯。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>先用小火，再用大火，比較熱流上升的速度差多少。</p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/convection.js"></script>
+  </body>
+</html>

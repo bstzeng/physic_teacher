@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>帕斯卡原理 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="pascal-principle">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>液壓活塞模型</h2>
+            <p>往左邊的小活塞施力，看看右邊的大活塞能被抬多高。</p>
+          </div>
+          <div class="scene-shell pascal-scene">
+            <div class="pascal-tube left">
+              <div id="pascalLeftLiquid" class="pascal-liquid"></div>
+              <div id="pascalLeftPiston" class="pascal-piston small"></div>
+            </div>
+            <div class="pascal-bridge"></div>
+            <div class="pascal-tube right">
+              <div id="pascalRightLiquid" class="pascal-liquid"></div>
+              <div id="pascalRightPiston" class="pascal-piston large"></div>
+            </div>
+            <div id="pascalLoad" class="pascal-load">重物</div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>小面積施力，能透過液體把壓力傳到大面積活塞上。</p>
+          </div>
+          <label class="control-group">
+            <span>左側施力：<strong id="pascalForceValue">30</strong> 牛頓</span>
+            <input id="pascalForceRange" type="range" min="10" max="80" value="30" />
+          </label>
+          <label class="control-group">
+            <span>右側面積：<strong id="pascalAreaValue">4</strong> 倍</span>
+            <input id="pascalAreaRange" type="range" min="2" max="6" value="4" />
+          </label>
+          <button id="pascalReset" class="ghost-button" type="button">重設</button>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>系統壓力</span>
+              <strong id="pascalPressureText">30 Pa</strong>
+            </div>
+            <div class="stat-item">
+              <span>右側推力</span>
+              <strong id="pascalOutputText">120 N</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="pascalTip">放大效果會跟面積比有關。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>重點概念</h2>
+          <ul>
+            <li>密閉液體中的壓力可以往各方向傳遞。</li>
+            <li>如果另一邊活塞面積比較大，就能把力放大。</li>
+            <li>汽車煞車和千斤頂都會用到類似的原理。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>思考一下</h2>
+          <p>如果右邊活塞更大，雖然能舉更重，但它上升的高度會不會和左邊一樣多呢？</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/pascal-principle.js"></script>
+  </body>
+</html>

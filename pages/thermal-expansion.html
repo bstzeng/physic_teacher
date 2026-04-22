@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>熱脹冷縮 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="thermal-expansion">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>長度變化實驗</h2>
+            <p>加熱時常會變長，降溫時常會縮回來。</p>
+          </div>
+          <div class="scene-shell expansion-scene">
+            <div class="expansion-thermometer">
+              <div id="expansionThermoFill" class="expansion-thermo-fill"></div>
+            </div>
+            <div class="expansion-base"></div>
+            <div id="expansionBar" class="expansion-bar"></div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>不同材料的伸長程度不一樣。</p>
+          </div>
+          <div class="segmented-row">
+            <button class="expansion-button active" data-material="steel" type="button">鋼</button>
+            <button class="expansion-button" data-material="aluminum" type="button">鋁</button>
+            <button class="expansion-button" data-material="copper" type="button">銅</button>
+          </div>
+          <label class="control-group">
+            <span>溫度：<strong id="expansionTempValue">20</strong> °C</span>
+            <input id="expansionTempRange" type="range" min="-20" max="120" value="20" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>材料</span>
+              <strong id="expansionMaterialText">鋼</strong>
+            </div>
+            <div class="stat-item">
+              <span>長度變化</span>
+              <strong id="expansionLengthText">原本長度</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="expansionTip">升溫後看看長條是不是慢慢變長。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>溫度升高時，物體常會膨脹。</li>
+            <li>溫度降低時，物體常會收縮。</li>
+            <li>不同材料的變化量不一定一樣。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把溫度調到最高，切換鋼和鋁，比較誰伸長得比較明顯。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/thermal-expansion.js"></script>
+  </body>
+</html>

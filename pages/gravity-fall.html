@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>重力與自由落體 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="gravity-fall">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>掉落實驗</h2>
+            <p>物體放手後會往下掉，觀察高度和時間的關係。</p>
+          </div>
+          <div class="scene-shell gravity-scene">
+            <div class="gravity-ruler"></div>
+            <div class="gravity-ground"></div>
+            <div id="gravityBall" class="gravity-ball"></div>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>從不同高度放手，看看落地時間怎麼變。</p>
+          </div>
+          <label class="control-group">
+            <span>起始高度：<strong id="gravityHeightValue">6</strong></span>
+            <input id="gravityHeightRange" type="range" min="2" max="10" value="6" />
+          </label>
+          <div class="button-row">
+            <button id="gravityDropButton" class="primary-button" type="button">放手</button>
+            <button id="gravityResetButton" class="ghost-button" type="button">回到上方</button>
+          </div>
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>已掉落時間</span>
+              <strong id="gravityTimeText">0.0 秒</strong>
+            </div>
+            <div class="stat-item">
+              <span>目前速度</span>
+              <strong id="gravitySpeedText">0.0</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="gravityTip">先用低高度掉一次，再改高一點比較。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>放手後，物體會往下掉。</li>
+            <li>高度越高，通常落地時間會更長。</li>
+            <li>掉落過程中，速度常會越來越快。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>先從高度 3 掉一次，再從高度 9 掉一次，比較哪一次花比較久。</p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/gravity-fall.js"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>凸透鏡成像 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="lens-imaging">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>成像實驗</h2>
+            <p>移動物體和焦距，看看像會在哪裡、變大還是變小。</p>
+          </div>
+          <div class="scene-shell svg-stage">
+            <svg viewBox="0 0 700 340" aria-label="凸透鏡成像互動圖">
+              <rect width="700" height="340" fill="#f8fcff"></rect>
+              <line x1="40" y1="170" x2="660" y2="170" stroke="#7b8ea3" stroke-width="4"></line>
+              <line x1="350" y1="45" x2="350" y2="295" stroke="#4ea8de" stroke-width="12" stroke-linecap="round"></line>
+              <line id="focalLeft" x1="0" y1="145" x2="0" y2="195" stroke="#f4a261" stroke-width="4"></line>
+              <line id="focalRight" x1="0" y1="145" x2="0" y2="195" stroke="#f4a261" stroke-width="4"></line>
+              <line id="objectArrow" x1="210" y1="170" x2="210" y2="100" stroke="#d62839" stroke-width="8" stroke-linecap="round"></line>
+              <polygon id="objectArrowHead" points="198,106 222,106 210,86" fill="#d62839"></polygon>
+              <line id="imageArrow" x1="490" y1="170" x2="490" y2="250" stroke="#006d77" stroke-width="8" stroke-linecap="round"></line>
+              <polygon id="imageArrowHead" points="478,244 502,244 490,264" fill="#006d77"></polygon>
+            </svg>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>物體靠近焦點時，像的位置和大小會明顯改變。</p>
+          </div>
+          <label class="control-group">
+            <span>物體距離：<strong id="lensObjectValue">14</strong></span>
+            <input id="lensObjectRange" type="range" min="6" max="20" value="14" />
+          </label>
+          <label class="control-group">
+            <span>焦距：<strong id="lensFocalValue">6</strong></span>
+            <input id="lensFocalRange" type="range" min="4" max="10" value="6" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>像的位置</span>
+              <strong id="lensImageDistance">7.5</strong>
+            </div>
+            <div class="stat-item">
+              <span>像的樣子</span>
+              <strong id="lensImageType">倒立實像</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="lensTip">把物體慢慢移近焦點，注意像會跑去哪裡。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>物體在焦點外時，常會形成倒立的實像。</li>
+            <li>物體靠近焦點時，像會跑得更遠，也可能變很大。</li>
+            <li>物體進到焦點內時，會出現正立的虛像。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>先固定焦距，再慢慢把物體移近透鏡，看看像會從右邊跑到左邊嗎？</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/lens-imaging.js"></script>
+  </body>
+</html>

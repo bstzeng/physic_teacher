@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>熱輻射 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="heat-radiation">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>表面吸熱比較</h2>
+            <p>調整日照強度與表面顏色，看看哪一塊板子升溫比較快。</p>
+          </div>
+          <div class="scene-shell radiation-scene">
+            <div id="radiationSun" class="radiation-sun"></div>
+            <div id="radiationPlate" class="radiation-plate">測試板</div>
+            <div class="radiation-meter">
+              <div id="radiationFill" class="radiation-meter-fill"></div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>深色常比較容易吸熱，亮色或銀色則比較容易反射一部分熱。</p>
+          </div>
+          <label class="control-group">
+            <span>日照強度：<strong id="radiationSunValue">70</strong>%</span>
+            <input id="radiationSunRange" type="range" min="20" max="100" value="70" />
+          </label>
+          <div class="control-group">
+            <span>表面顏色</span>
+            <div class="button-row">
+              <button class="material-button active" type="button" data-surface="dark">深色</button>
+              <button class="material-button" type="button" data-surface="light">淺色</button>
+              <button class="material-button" type="button" data-surface="silver">銀色</button>
+            </div>
+          </div>
+          <button id="radiationReset" class="ghost-button" type="button">重設</button>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>表面溫度</span>
+              <strong id="radiationTempText">38°C</strong>
+            </div>
+            <div class="stat-item">
+              <span>吸熱程度</span>
+              <strong id="radiationAbsorbText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="radiationTip">試著比較深色和銀色表面。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>學到什麼？</h2>
+          <ul>
+            <li>熱可以不用碰到物體，也能靠輻射傳過來。</li>
+            <li>表面顏色和材質會影響吸熱與散熱效果。</li>
+            <li>這和穿衣服、保溫杯、太陽能板設計都有關係。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>生活連結</h2>
+          <p>夏天穿深色衣服容易更熱，就是因為表面吸收太陽熱輻射的效果常比較明顯。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/heat-radiation.js"></script>
+  </body>
+</html>

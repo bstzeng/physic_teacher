@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>牛頓第三定律 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="newton-third-law">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>作用力實驗</h2>
+            <p>你推我，我也會同時推你，大小一樣、方向相反。</p>
+          </div>
+          <div class="scene-shell thirdlaw-scene">
+            <div class="thirdlaw-ground"></div>
+            <div id="thirdLeftCart" class="thirdlaw-cart left-cart">甲</div>
+            <div id="thirdRightCart" class="thirdlaw-cart right-cart">乙</div>
+            <div id="thirdArrowLeft" class="thirdlaw-arrow arrow-left">反作用力</div>
+            <div id="thirdArrowRight" class="thirdlaw-arrow arrow-right">作用力</div>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>改變推力與車子質量，比較兩邊後退情形。</p>
+          </div>
+          <label class="control-group">
+            <span>推力大小：<strong id="thirdForceValue">6</strong></span>
+            <input id="thirdForceRange" type="range" min="1" max="10" value="6" />
+          </label>
+          <label class="control-group">
+            <span>甲車質量：<strong id="thirdLeftMassValue">4</strong></span>
+            <input id="thirdLeftMassRange" type="range" min="1" max="8" value="4" />
+          </label>
+          <label class="control-group">
+            <span>乙車質量：<strong id="thirdRightMassValue">4</strong></span>
+            <input id="thirdRightMassRange" type="range" min="1" max="8" value="4" />
+          </label>
+          <button id="thirdPushButton" class="primary-button" type="button">互推一次</button>
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>作用力大小</span>
+              <strong id="thirdActionText">6</strong>
+            </div>
+            <div class="stat-item">
+              <span>反作用力大小</span>
+              <strong id="thirdReactionText">6</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="thirdTip">注意兩個力大小一樣，但方向相反。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>作用力和反作用力會同時出現。</li>
+            <li>兩個力大小相等、方向相反。</li>
+            <li>質量較小的一方，通常退得比較快。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把甲車變輕、乙車變重，再互推一次，看看哪一台退得比較多。</p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/newton-third-law.js"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>液體壓力與連通 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="hydraulic">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>液體實驗</h2>
+            <p>水越深，下面的壓力通常越大；連通的容器水面也會互相影響。</p>
+          </div>
+          <div class="scene-shell hydraulic-scene">
+            <div id="hydraulicLeft" class="hydraulic-tube left-tube">
+              <div id="hydraulicLeftWater" class="hydraulic-water"></div>
+            </div>
+            <div id="hydraulicRight" class="hydraulic-tube right-tube">
+              <div id="hydraulicRightWater" class="hydraulic-water"></div>
+            </div>
+            <div class="hydraulic-bridge"></div>
+            <div class="hydraulic-gauge">
+              <div id="hydraulicGaugeFill" class="hydraulic-gauge-fill"></div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>改變水深和容器形狀，看看壓力和水位怎麼變。</p>
+          </div>
+          <label class="control-group">
+            <span>注水高度：<strong id="hydraulicDepthValue">6</strong></span>
+            <input id="hydraulicDepthRange" type="range" min="1" max="10" value="6" />
+          </label>
+          <label class="control-group">
+            <span>容器形狀</span>
+            <select id="hydraulicShapeSelect">
+              <option value="same">兩邊一樣寬</option>
+              <option value="left-wide">左寬右窄</option>
+              <option value="right-wide">左窄右寬</option>
+            </select>
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>底部壓力</span>
+              <strong id="hydraulicPressureText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>連通觀察</span>
+              <strong id="hydraulicLevelText">兩邊水面接近</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="hydraulicTip">把水加深，看看壓力條是不是升高。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>水越深，底部壓力通常越大。</li>
+            <li>連通的容器中，水面會趨向相近高度。</li>
+            <li>容器寬窄不同，不代表底部壓力一定不同，水深更重要。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>切換不同容器形狀，再把水深調高，比較底部壓力條與水面位置的變化。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/hydraulic.js"></script>
+  </body>
+</html>

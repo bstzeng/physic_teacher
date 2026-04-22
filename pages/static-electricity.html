@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>靜電與吸附 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="static-electricity">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>靜電吸附實驗</h2>
+            <p>幫氣球摩擦充電，看看小紙片會不會被吸過去。</p>
+          </div>
+          <div class="scene-shell static-scene">
+            <div id="staticBalloon" class="static-balloon">氣球</div>
+            <div class="static-sweater">毛衣</div>
+            <div class="paper-cloud">
+              <span class="paper-bit" id="paperBit1"></span>
+              <span class="paper-bit" id="paperBit2"></span>
+              <span class="paper-bit" id="paperBit3"></span>
+              <span class="paper-bit" id="paperBit4"></span>
+              <span class="paper-bit" id="paperBit5"></span>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>摩擦越多次，通常靜電越明顯；空氣潮濕時效果會弱一些。</p>
+          </div>
+          <label class="control-group">
+            <span>摩擦次數：<strong id="staticRubValue">6</strong></span>
+            <input id="staticRubRange" type="range" min="0" max="10" value="6" />
+          </label>
+          <div class="control-group">
+            <span>空氣狀態</span>
+            <div class="button-row">
+              <button class="mode-button active" type="button" data-humidity="dry">乾燥</button>
+              <button class="mode-button" type="button" data-humidity="normal">普通</button>
+              <button class="mode-button" type="button" data-humidity="humid">潮濕</button>
+            </div>
+          </div>
+          <button id="staticReset" class="ghost-button" type="button">重設</button>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>帶電程度</span>
+              <strong id="staticChargeText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>吸附效果</span>
+              <strong id="staticPullText">紙片開始靠近</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="staticTip">試試看切換乾燥和潮濕空氣。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會看到什麼？</h2>
+          <ul>
+            <li>摩擦越多次，氣球吸紙片的效果通常越明顯。</li>
+            <li>潮濕空氣會讓靜電比較不容易累積。</li>
+            <li>被吸住的常常是很輕、很小的物體。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>生活中的例子</h2>
+          <p>冬天脫毛衣時有時會啪一聲，或是梳過頭髮的梳子能吸起小紙片，這些都和靜電有關。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/static-electricity.js"></script>
+  </body>
+</html>

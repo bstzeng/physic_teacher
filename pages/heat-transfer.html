@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>熱傳導與保溫 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="heat-transfer">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>熱傳實驗</h2>
+            <p>不同材料把熱傳出去的速度不一樣。</p>
+          </div>
+          <div class="scene-shell heat-scene">
+            <div class="heat-source">熱源</div>
+            <div id="heatBar" class="heat-bar">
+              <div id="heatProgress" class="heat-progress"></div>
+            </div>
+            <div id="heatTarget" class="heat-target">冰塊</div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>金屬通常傳熱快，木頭和塑膠比較慢。</p>
+          </div>
+          <div class="segmented-row">
+            <button class="heat-material-button active" data-material="metal" type="button">金屬</button>
+            <button class="heat-material-button" data-material="wood" type="button">木頭</button>
+            <button class="heat-material-button" data-material="plastic" type="button">塑膠</button>
+          </div>
+          <label class="control-group">
+            <span>加熱時間：<strong id="heatTimeValue">5</strong></span>
+            <input id="heatTimeRange" type="range" min="1" max="10" value="5" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>材料</span>
+              <strong id="heatMaterialText">金屬</strong>
+            </div>
+            <div class="stat-item">
+              <span>熱傳程度</span>
+              <strong id="heatLevelText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="heatTip">換成木頭後，比較冰塊融化得快不快。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>不同材料的傳熱速度不同。</li>
+            <li>傳熱快的材料，比較容易把熱送到另一端。</li>
+            <li>保溫材料通常會讓熱比較不容易跑掉。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把加熱時間固定住，先用金屬，再換成塑膠，看看哪一個讓冰塊融化得更多。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/heat-transfer.js"></script>
+  </body>
+</html>

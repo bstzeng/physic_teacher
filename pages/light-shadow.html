@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>光與影子 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="light-shadow">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>影子實驗</h2>
+            <p>移動光源的位置與高度，觀察影子長短。</p>
+          </div>
+          <div class="scene-shell svg-stage">
+            <svg id="shadowSvg" viewBox="0 0 900 320" aria-label="光與影子的互動圖">
+              <defs>
+                <linearGradient id="skyGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+                  <stop offset="0%" stop-color="#eef7ff"></stop>
+                  <stop offset="100%" stop-color="#fff3dc"></stop>
+                </linearGradient>
+              </defs>
+              <rect width="900" height="320" fill="url(#skyGradient)"></rect>
+              <rect y="270" width="900" height="50" fill="#d4bb80"></rect>
+              <polygon id="shadowShape" fill="rgba(45, 62, 94, 0.28)"></polygon>
+              <rect id="objectRect" x="420" y="155" width="60" height="115" rx="10" fill="#2e4057"></rect>
+              <circle id="lightPoint" cx="220" cy="80" r="18" fill="#ffd34d"></circle>
+              <line id="lightRay" x1="220" y1="80" x2="480" y2="155" stroke="#ffb300" stroke-width="5" stroke-linecap="round"></line>
+            </svg>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>試試看把光源移高，影子會變長還是變短？</p>
+          </div>
+          <label class="control-group">
+            <span>光源左右位置：<strong id="lightXValue">220</strong></span>
+            <input id="lightXRange" type="range" min="90" max="810" value="220" />
+          </label>
+          <label class="control-group">
+            <span>光源高度：<strong id="lightYValue">80</strong></span>
+            <input id="lightYRange" type="range" min="40" max="145" value="80" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>影子方向</span>
+              <strong id="shadowDirection">往右邊</strong>
+            </div>
+            <div class="stat-item">
+              <span>影子長度</span>
+              <strong id="shadowLength">0 公分</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="shadowTip">光源位置改變，影子也會跟著改變。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>光源在左邊時，影子會跑到右邊。</li>
+            <li>光源越低，影子通常越長。</li>
+            <li>影子會告訴我們光從哪裡照過來。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把光源移到最右邊，再把高度調低，看看影子是不是會往左邊拉長。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/light-shadow.js"></script>
+  </body>
+</html>

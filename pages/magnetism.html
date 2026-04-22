@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>磁鐵與磁力 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="magnetism">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>磁力實驗</h2>
+            <p>看看相同磁極會不會推開，不同磁極會不會吸近。</p>
+          </div>
+          <div class="scene-shell magnet-scene">
+            <div class="magnet-track"></div>
+            <div class="magnet-field"></div>
+            <div id="leftMagnet" class="magnet-block magnet-left">
+              <span id="leftPoleLabel">N</span>
+            </div>
+            <div id="rightMagnet" class="magnet-block magnet-right">
+              <span id="rightPoleLabel">S</span>
+            </div>
+            <div id="magnetArrow" class="magnet-arrow">吸引</div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>改變磁極和距離，觀察磁力方向與大小。</p>
+          </div>
+          <label class="control-group">
+            <span>左邊磁極</span>
+            <select id="leftPoleSelect">
+              <option value="N">N 極</option>
+              <option value="S">S 極</option>
+            </select>
+          </label>
+          <label class="control-group">
+            <span>右邊磁極</span>
+            <select id="rightPoleSelect">
+              <option value="S">S 極</option>
+              <option value="N">N 極</option>
+            </select>
+          </label>
+          <label class="control-group">
+            <span>磁鐵距離：<strong id="magnetDistanceValue">5</strong></span>
+            <input id="magnetDistanceRange" type="range" min="1" max="10" value="5" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>作用結果</span>
+              <strong id="magnetResult">互相吸引</strong>
+            </div>
+            <div class="stat-item">
+              <span>磁力強度</span>
+              <strong id="magnetStrength">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="magnetTip">異極相吸，同極相斥。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>N 極和 S 極靠近時，會互相吸引。</li>
+            <li>N 極和 N 極，或 S 極和 S 極，會互相推開。</li>
+            <li>距離越近，磁力通常越明顯。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把兩邊都調成 N 極，再把距離拉到最短，看看磁鐵會不會更想分開。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/magnetism.js"></script>
+  </body>
+</html>

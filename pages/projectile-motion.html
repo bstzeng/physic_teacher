@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>拋體運動入門 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="projectile-motion">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>拋物線路徑</h2>
+            <p>先調整角度和速度，再發射小球，看看它的最高點和落點在哪裡。</p>
+          </div>
+          <div class="scene-shell projectile-scene">
+            <svg id="projectileSvg" viewBox="0 0 640 320" aria-label="拋體運動畫面">
+              <line x1="0" y1="280" x2="640" y2="280" class="projectile-ground-line"></line>
+              <polyline id="projectilePath" class="projectile-path" points=""></polyline>
+              <circle id="projectileBall" class="projectile-ball-dot" cx="80" cy="280" r="10"></circle>
+            </svg>
+            <div class="projectile-launcher"></div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>角度和初速度都會影響球飛多遠、飛多高。</p>
+          </div>
+          <label class="control-group">
+            <span>發射角度：<strong id="projectileAngleValue">45</strong> 度</span>
+            <input id="projectileAngleRange" type="range" min="15" max="75" value="45" />
+          </label>
+          <label class="control-group">
+            <span>初速度：<strong id="projectileSpeedValue">20</strong> m/s</span>
+            <input id="projectileSpeedRange" type="range" min="10" max="30" value="20" />
+          </label>
+          <div class="button-row">
+            <button id="projectileLaunch" class="primary-button" type="button">發射</button>
+            <button id="projectileReset" class="ghost-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>最遠距離</span>
+              <strong id="projectileRangeText">0 m</strong>
+            </div>
+            <div class="stat-item">
+              <span>最高點</span>
+              <strong id="projectileHeightText">0 m</strong>
+            </div>
+            <div class="stat-item">
+              <span>飛行時間</span>
+              <strong id="projectileTimeText">0 s</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>可以怎麼觀察？</h2>
+          <ul>
+            <li>把速度固定，只改角度，看哪個角度飛得更遠。</li>
+            <li>把角度固定，只改速度，看路徑怎麼整體放大。</li>
+            <li>最高點和落點不一定會同時變化一樣多。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小提醒</h2>
+          <p>這個頁面用的是簡化模型，先幫你看出角度、速度和路徑之間的關係。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/projectile-motion.js"></script>
+  </body>
+</html>

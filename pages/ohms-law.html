@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>電阻與歐姆定律 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="ohms-law">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>電流實驗</h2>
+            <p>電壓越大，電流通常越大；電阻越大，電流通常越小。</p>
+          </div>
+          <div class="scene-shell ohm-scene">
+            <div class="ohm-battery">電池</div>
+            <div id="ohmResistor" class="ohm-resistor"></div>
+            <div class="ohm-wire"></div>
+            <div class="ohm-meter">
+              <div id="ohmNeedle" class="ohm-needle"></div>
+            </div>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>改變電壓和電阻，看看電流數值怎麼變。</p>
+          </div>
+          <label class="control-group">
+            <span>電壓：<strong id="ohmVoltageValue">6</strong></span>
+            <input id="ohmVoltageRange" type="range" min="1" max="12" value="6" />
+          </label>
+          <label class="control-group">
+            <span>電阻：<strong id="ohmResistanceValue">4</strong></span>
+            <input id="ohmResistanceRange" type="range" min="1" max="10" value="4" />
+          </label>
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>電流 I</span>
+              <strong id="ohmCurrentText">1.50</strong>
+            </div>
+            <div class="stat-item">
+              <span>公式提示</span>
+              <strong id="ohmFormulaText">I = V / R</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="ohmTip">先固定電阻，再把電壓慢慢調高看看。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>電壓升高時，電流通常會增加。</li>
+            <li>電阻變大時，電流通常會減少。</li>
+            <li>電流可以用 I = V / R 來估算。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把電壓固定在 8，再把電阻從 2 調到 8，比較電流表指針怎麼變。</p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/ohms-law.js"></script>
+  </body>
+</html>

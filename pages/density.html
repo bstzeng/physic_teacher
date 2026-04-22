@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>密度 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="density">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>密度觀察</h2>
+            <p>同樣大小不一定一樣重，這就是密度在作怪。</p>
+          </div>
+          <div class="scene-shell density-scene">
+            <div class="density-reference">水的密度 = 1.0</div>
+            <div id="densityBlock" class="density-block">物體</div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>密度 = 質量 ÷ 體積，數值越大通常代表越重。</p>
+          </div>
+          <label class="control-group">
+            <span>質量：<strong id="densityMassValue">6</strong></span>
+            <input id="densityMassRange" type="range" min="1" max="12" value="6" />
+          </label>
+          <label class="control-group">
+            <span>體積：<strong id="densityVolumeValue">6</strong></span>
+            <input id="densityVolumeRange" type="range" min="1" max="12" value="6" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>密度值</span>
+              <strong id="densityValueText">1.00</strong>
+            </div>
+            <div class="stat-item">
+              <span>和水相比</span>
+              <strong id="densityCompareText">差不多</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="densityTip">試著只改質量或只改體積，比較密度怎麼變。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>體積一樣時，質量越大，密度越高。</li>
+            <li>質量一樣時，體積越大，密度越低。</li>
+            <li>密度可以幫助我們判斷物體會不會容易浮起來。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把質量調到 10、體積調到 4，再把體積改成 10，比較密度下降多少。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/density.js"></script>
+  </body>
+</html>

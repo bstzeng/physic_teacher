@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>物理小老師 | 互動式物理學習網站</title>
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">互動式物理教育網站</p>
+          <h1>物理小老師</h1>
+          <p class="hero-text">
+            把抽象的物理概念變成可以操作的互動頁面。從國小到國中，你可以一邊拉滑桿、一邊按按鈕、一邊直接看到畫面上的結果變化。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#concept-sections">開始探索主題</a>
+            <span class="hero-note">目前共有 42 個可直接操作的主題頁</span>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-orbit orbit-a"></div>
+          <div class="hero-orbit orbit-b"></div>
+          <div class="hero-card">
+            <h2>這個網站可以做什麼？</h2>
+            <ul>
+              <li>用滑桿、按鈕和選項直接操作實驗。</li>
+              <li>看見力、光、聲、熱與電磁的即時變化。</li>
+              <li>搭配小測驗與前後主題導覽，循序學習不漏掉。</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main id="concept-sections">
+        <section class="section-heading">
+          <p class="eyebrow">主題總覽</p>
+          <h2>42 個示範主題已可直接操作</h2>
+          <p>所有主題都使用繁體中文，並以國小到國中的程度來安排，方便一步一步探索。</p>
+        </section>
+
+        <section class="filter-panel">
+          <div class="filter-copy">
+            <p class="eyebrow">快速搜尋</p>
+            <h2>用關鍵字、年級和分類找到你想玩的主題</h2>
+            <p>可以直接搜尋像是「光」、「電路」、「浮力」，也可以切換國小、國中和不同主題分類。</p>
+          </div>
+          <div class="filter-controls">
+            <label class="filter-search">
+              <span>搜尋主題</span>
+              <input id="concept-search" type="search" placeholder="例如：光、磁鐵、槓桿、潮汐" />
+            </label>
+            <div class="filter-row">
+              <div class="filter-group">
+                <span>年級</span>
+                <div id="level-filters" class="chip-row">
+                  <button class="filter-chip active" data-level="全部" type="button">全部</button>
+                  <button class="filter-chip" data-level="國小" type="button">國小</button>
+                  <button class="filter-chip" data-level="國中" type="button">國中</button>
+                </div>
+              </div>
+              <label class="filter-select">
+                <span>主題分類</span>
+                <select id="category-filter">
+                  <option value="全部">全部分類</option>
+                </select>
+              </label>
+            </div>
+            <div class="results-row">
+              <strong id="results-summary">目前顯示 42 / 42 個主題</strong>
+              <button id="clear-filters" class="ghost-button" type="button">清除篩選</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="concept-section" data-group="elementary">
+          <div class="section-heading compact">
+            <p class="eyebrow">國小主題</p>
+            <h2>從生活經驗出發，先建立直覺</h2>
+          </div>
+          <div id="elementary-ready" class="card-grid"></div>
+        </section>
+
+        <section class="concept-section" data-group="junior">
+          <div class="section-heading compact">
+            <p class="eyebrow">國中主題</p>
+            <h2>把直覺變成更完整的物理概念</h2>
+          </div>
+          <div id="junior-ready" class="card-grid"></div>
+        </section>
+
+        <div id="filter-empty-state" class="filter-empty-state" hidden>
+          <h3>找不到符合條件的主題</h3>
+          <p>可以試著換一個關鍵字，或把年級與分類條件放寬一點。</p>
+        </div>
+
+        <section class="concept-section planned-section">
+          <div class="section-heading compact">
+            <p class="eyebrow">擴充進度</p>
+            <h2>目前規劃的主題都已完成</h2>
+          </div>
+          <div id="planned-concepts" class="planned-grid"></div>
+        </section>
+
+        <section class="intro-board">
+          <div>
+            <p class="eyebrow">學習建議</p>
+            <h2>怎麼玩，最容易看懂變化？</h2>
+          </div>
+          <div class="board-steps">
+            <article>
+              <h3>1. 先看畫面</h3>
+              <p>先不要急著改很多設定，先觀察預設情況下會發生什麼事。</p>
+            </article>
+            <article>
+              <h3>2. 一次改一個變數</h3>
+              <p>只改速度、只改角度、只改材質，比較容易看出真正影響結果的是哪一個因素。</p>
+            </article>
+            <article>
+              <h3>3. 用前後主題接著玩</h3>
+              <p>每一頁底下都有上一個和下一個主題，可以一路玩下去，不容易漏掉。</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./assets/js/data/concepts.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

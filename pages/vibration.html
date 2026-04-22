@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>振動與發聲 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="vibration">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>振動實驗</h2>
+            <p>改變長度和拉力，觀察振動快慢和波形密度。</p>
+          </div>
+          <div class="scene-shell svg-stage">
+            <svg viewBox="0 0 700 340" aria-label="振動與發聲互動圖">
+              <rect width="700" height="340" fill="#f8fcff"></rect>
+              <line x1="90" y1="170" x2="610" y2="170" stroke="#a0aec0" stroke-width="4"></line>
+              <circle cx="90" cy="170" r="10" fill="#6c757d"></circle>
+              <circle cx="610" cy="170" r="10" fill="#6c757d"></circle>
+              <path id="vibrationPath" d="" fill="none" stroke="#6d28d9" stroke-width="6" stroke-linecap="round"></path>
+            </svg>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>弦比較短或拉得比較緊時，通常會振得更快。</p>
+          </div>
+          <label class="control-group">
+            <span>弦的長度：<strong id="vibrationLengthValue">6</strong></span>
+            <input id="vibrationLengthRange" type="range" min="2" max="10" value="6" />
+          </label>
+          <label class="control-group">
+            <span>拉力大小：<strong id="vibrationTensionValue">5</strong></span>
+            <input id="vibrationTensionRange" type="range" min="1" max="10" value="5" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>振動快慢</span>
+              <strong id="vibrationSpeedText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>聲音高低</span>
+              <strong id="vibrationPitchText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="vibrationTip">先縮短長度，再看看波峰會不會更密。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>弦越短，通常振動越快。</li>
+            <li>拉力越大，通常也會振得更快。</li>
+            <li>振動快慢會影響聲音高低。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把拉力固定住，先讓弦很長，再把弦縮短，看看聲音高低會怎麼變。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/vibration.js"></script>
+  </body>
+</html>

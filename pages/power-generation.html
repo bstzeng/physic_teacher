@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>發電與能源來源 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="power-generation">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>能源轉成電力</h2>
+            <p>換不同能源來源，看看發電機和輸出燈泡的亮度怎麼變。</p>
+          </div>
+          <div id="powerScene" class="scene-shell power-generation-scene solar">
+            <div id="powerSource" class="power-source">太陽</div>
+            <div class="power-generator">
+              <div id="powerRotor" class="power-rotor"></div>
+            </div>
+            <div class="power-wire"></div>
+            <div id="powerBulb" class="power-bulb"></div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>不同發電方式，都是把別種能量轉成電能。</p>
+          </div>
+          <div class="control-group">
+            <span>能源來源</span>
+            <div class="button-row">
+              <button class="mode-button active" type="button" data-source="solar">太陽能</button>
+              <button class="mode-button" type="button" data-source="wind">風力</button>
+              <button class="mode-button" type="button" data-source="water">水力</button>
+              <button class="mode-button" type="button" data-source="thermal">火力</button>
+            </div>
+          </div>
+          <label class="control-group">
+            <span>能源強度：<strong id="powerIntensityValue">70</strong>%</span>
+            <input id="powerIntensityRange" type="range" min="20" max="100" value="70" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>輸入能量</span>
+              <strong id="powerInputText">70 單位</strong>
+            </div>
+            <div class="stat-item">
+              <span>輸出電力</span>
+              <strong id="powerOutputText">49 單位</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="powerTip">試著切換能源，看哪種最穩定。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>共同點在哪裡？</h2>
+          <ul>
+            <li>發電都是把其他形式的能量轉成電能。</li>
+            <li>能源來源不同，穩定性和環境影響也可能不同。</li>
+            <li>風、水和蒸汽常會先帶動機器轉動，再發電。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>延伸思考</h2>
+          <p>如果今天沒有太陽、也沒有風，那哪些發電方式還比較能持續運作呢？</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/power-generation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>光的反射 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="reflection">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>反射實驗</h2>
+            <p>光照到平滑鏡面時，入射角和反射角會一樣大。</p>
+          </div>
+          <div class="scene-shell svg-stage">
+            <svg viewBox="0 0 600 320" aria-label="反射互動圖">
+              <rect width="600" height="320" fill="#f8fcff"></rect>
+              <line x1="300" y1="30" x2="300" y2="290" stroke="#8d99ae" stroke-width="4" stroke-dasharray="8 8"></line>
+              <rect x="120" y="154" width="360" height="12" rx="6" fill="#6c91bf"></rect>
+              <line id="incidentReflectionRay" x1="220" y1="40" x2="300" y2="160" stroke="#f77f00" stroke-width="6" stroke-linecap="round"></line>
+              <line id="reflectedRay" x1="300" y1="160" x2="380" y2="40" stroke="#0077b6" stroke-width="6" stroke-linecap="round"></line>
+              <circle cx="300" cy="160" r="8" fill="#30475e"></circle>
+            </svg>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>調整入射角度，看看反射角是不是跟著一樣改變。</p>
+          </div>
+          <label class="control-group">
+            <span>入射角度：<strong id="reflectionIncidentValue">30</strong> 度</span>
+            <input id="reflectionIncidentRange" type="range" min="10" max="75" value="30" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>入射角</span>
+              <strong id="incidentAngleText">30 度</strong>
+            </div>
+            <div class="stat-item">
+              <span>反射角</span>
+              <strong id="reflectionAngleText">30 度</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="reflectionTip">注意兩側和中線的夾角是不是相同。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>入射角變大時，反射角也會跟著變大。</li>
+            <li>反射角會和入射角保持一樣大。</li>
+            <li>中線是用來量角度的重要參考線。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把入射角調成 60 度，看看反射角是不是也正好是 60 度。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/reflection.js"></script>
+  </body>
+</html>

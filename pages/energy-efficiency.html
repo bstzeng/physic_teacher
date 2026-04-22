@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>能源利用與效率 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="energy-efficiency">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>效率比較</h2>
+            <p>同樣的輸入能量，不同裝置轉成有用能量的比例不一樣。</p>
+          </div>
+          <div class="scene-shell efficiency-scene">
+            <div id="efficiencyDevice" class="efficiency-device">LED</div>
+            <div class="efficiency-bars">
+              <div class="energy-bar">
+                <span>輸入能量</span>
+                <div class="bar-track"><div id="inputEnergyBar" class="bar-fill input-fill"></div></div>
+              </div>
+              <div class="energy-bar">
+                <span>有用能量</span>
+                <div class="bar-track"><div id="usefulEnergyBar" class="bar-fill useful-fill"></div></div>
+              </div>
+              <div class="energy-bar">
+                <span>浪費能量</span>
+                <div class="bar-track"><div id="wasteEnergyBar" class="bar-fill waste-fill"></div></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>切換不同裝置，比較效率和浪費掉的能量。</p>
+          </div>
+          <div class="segmented-row">
+            <button class="efficiency-button active" data-device="led" type="button">LED燈</button>
+            <button class="efficiency-button" data-device="bulb" type="button">白熾燈</button>
+            <button class="efficiency-button" data-device="motor" type="button">馬達</button>
+          </div>
+          <label class="control-group">
+            <span>輸入能量：<strong id="efficiencyInputValue">8</strong></span>
+            <input id="efficiencyInputRange" type="range" min="1" max="10" value="8" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>效率</span>
+              <strong id="efficiencyPercentText">80%</strong>
+            </div>
+            <div class="stat-item">
+              <span>浪費情況</span>
+              <strong id="efficiencyWasteText">較少</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="efficiencyTip">先比較 LED 燈和白熾燈，看看哪個比較省能。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>效率高的裝置，能把更多輸入能量轉成有用能量。</li>
+            <li>效率低時，浪費掉的能量會比較多。</li>
+            <li>選擇效率高的設備，通常更省能源。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把輸入能量固定，再切換不同裝置，比較哪一種浪費的能量最多。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/energy-efficiency.js"></script>
+  </body>
+</html>

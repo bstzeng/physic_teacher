@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>平均速度與瞬時速度 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="average-instant-speed">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>速度觀察路線</h2>
+            <p>拖曳時間點，看看跑者此刻在哪裡，以及他現在和整段平均各有多快。</p>
+          </div>
+          <div class="scene-shell speed-compare-scene">
+            <div class="speed-route"></div>
+            <div id="speedTrail" class="speed-trail"></div>
+            <div id="speedRunner" class="speed-runner-dot">跑</div>
+            <div class="speed-finish">終點</div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>平均速度看整段旅程，瞬時速度則是看某一個當下。</p>
+          </div>
+          <label class="control-group">
+            <span>時間點：<strong id="speedMomentValue">10.0 秒</strong></span>
+            <input id="speedMomentRange" type="range" min="0" max="20" step="0.1" value="10" />
+          </label>
+          <div class="button-row">
+            <button id="speedPlay" class="primary-button" type="button">播放旅程</button>
+            <button id="speedPause" class="secondary-button" type="button">暫停</button>
+            <button id="speedReset" class="ghost-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>目前位置</span>
+              <strong id="speedDistanceText">0 公尺</strong>
+            </div>
+            <div class="stat-item">
+              <span>平均速度</span>
+              <strong id="averageSpeedText">0 m/s</strong>
+            </div>
+            <div class="stat-item">
+              <span>瞬時速度</span>
+              <strong id="instantSpeedText">0 m/s</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>兩種速度哪裡不同？</h2>
+          <ul>
+            <li>平均速度是在看從開始到現在，平均每秒前進多少距離。</li>
+            <li>瞬時速度是在看現在這一刻，跑者到底有多快。</li>
+            <li>如果路上有忽快忽慢，這兩個數字就可能差很多。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>學習提示</h2>
+          <p>把時間點停在一開始、中間和快到終點時比較看看，會很容易看出瞬時速度的變化。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/average-instant-speed.js"></script>
+  </body>
+</html>

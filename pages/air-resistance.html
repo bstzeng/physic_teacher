@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>空氣阻力 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="air-resistance">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>下落實驗</h2>
+            <p>面積越大，空氣阻力通常越明顯，下降就會比較慢。</p>
+          </div>
+          <div class="scene-shell air-scene">
+            <div class="air-cloud cloud-a"></div>
+            <div class="air-cloud cloud-b"></div>
+            <div class="air-ground"></div>
+            <div id="airObject" class="air-object">
+              <div id="airParachute" class="air-parachute"></div>
+              <div class="air-box">人</div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>比較打開和收起降落傘時，下落速度差多少。</p>
+          </div>
+          <label class="control-group">
+            <span>展開面積：<strong id="airAreaValue">6</strong></span>
+            <input id="airAreaRange" type="range" min="1" max="10" value="6" />
+          </label>
+          <label class="control-group">
+            <span>物體重量：<strong id="airMassValue">4</strong></span>
+            <input id="airMassRange" type="range" min="1" max="8" value="4" />
+          </label>
+          <label class="control-group">
+            <span>降落傘狀態</span>
+            <select id="parachuteSelect">
+              <option value="open">打開</option>
+              <option value="closed">收起</option>
+            </select>
+          </label>
+          <div class="button-row">
+            <button id="airDropButton" class="primary-button" type="button">開始下落</button>
+            <button id="airResetButton" class="ghost-button" type="button">回到上方</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>下落速度</span>
+              <strong id="airSpeedText">0.0</strong>
+            </div>
+            <div class="stat-item">
+              <span>阻力效果</span>
+              <strong id="airDragText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="airTip">先打開降落傘，再試一次收起降落傘。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>面積越大，空氣阻力通常越大。</li>
+            <li>重量越大，物體可能下降得更快。</li>
+            <li>打開降落傘後，下降常會明顯變慢。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把重量固定，先把面積調大再調小，比較哪一種比較慢落地。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/air-resistance.js"></script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>摩擦力 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="friction">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>滑行實驗</h2>
+            <p>切換不同地面，看看小車會滑多遠。</p>
+          </div>
+          <div id="frictionStage" class="scene-shell friction-stage ice">
+            <div class="ground-label" id="surfaceName">冰面</div>
+            <div class="track-stage">
+              <div class="track-markers"></div>
+              <div id="frictionCart" class="cart">小車</div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>地面越粗糙，摩擦力越大。</p>
+          </div>
+          <div class="segmented-row">
+            <button class="surface-button active" data-surface="ice" type="button">冰面</button>
+            <button class="surface-button" data-surface="wood" type="button">木板</button>
+            <button class="surface-button" data-surface="carpet" type="button">地毯</button>
+          </div>
+          <label class="control-group">
+            <span>推出力量：<strong id="launchValue">6</strong></span>
+            <input id="launchRange" type="range" min="2" max="10" value="6" />
+          </label>
+          <div class="button-row">
+            <button id="launchButton" class="primary-button" type="button">讓小車滑出去</button>
+            <button id="resetFriction" class="ghost-button" type="button">回起點</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>目前速度</span>
+              <strong id="frictionSpeedText">0.0</strong>
+            </div>
+            <div class="stat-item">
+              <span>滑行距離</span>
+              <strong id="distanceText">0 公分</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="frictionTip">先選地面，再讓小車前進。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>冰面比較滑，小車會走得更遠。</li>
+            <li>地毯比較粗，小車很快就停下來。</li>
+            <li>同樣的推出力量，在不同地面上結果不一樣。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>用同樣的推出力量，分別在冰面和地毯試一次，比較滑行距離差多少。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/friction.js"></script>
+  </body>
+</html>

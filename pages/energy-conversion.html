@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>能量轉換 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="energy-conversion">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>能量實驗</h2>
+            <p>小球往下滑時，位能會慢慢轉成動能，也可能存成彈性能。</p>
+          </div>
+          <div class="scene-shell energy-scene">
+            <div class="energy-hill"></div>
+            <div class="energy-spring"></div>
+            <div id="energyBall" class="energy-ball"></div>
+            <div class="energy-bars">
+              <div class="energy-bar">
+                <span>位能</span>
+                <div class="bar-track"><div id="potentialBar" class="bar-fill potential-fill"></div></div>
+              </div>
+              <div class="energy-bar">
+                <span>動能</span>
+                <div class="bar-track"><div id="kineticBar" class="bar-fill kinetic-fill"></div></div>
+              </div>
+              <div class="energy-bar">
+                <span>彈性能</span>
+                <div class="bar-track"><div id="elasticBar" class="bar-fill elastic-fill"></div></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>改變高度、彈簧軟硬和小球所在位置。</p>
+          </div>
+          <label class="control-group">
+            <span>起始高度：<strong id="energyHeightValue">7</strong></span>
+            <input id="energyHeightRange" type="range" min="2" max="10" value="7" />
+          </label>
+          <label class="control-group">
+            <span>彈簧彈性：<strong id="energySpringValue">5</strong></span>
+            <input id="energySpringRange" type="range" min="1" max="10" value="5" />
+          </label>
+          <label class="control-group">
+            <span>小球位置：<strong id="energyPositionValue">0</strong>%</span>
+            <input id="energyPositionRange" type="range" min="0" max="100" value="0" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>主要能量</span>
+              <strong id="energyMainText">位能</strong>
+            </div>
+            <div class="stat-item">
+              <span>目前狀態</span>
+              <strong id="energyStateText">在高處準備出發</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="energyTip">把小球往右移，看看動能會不會先增加。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>在高處時，位能比較多。</li>
+            <li>往下滑時，位能會轉成動能。</li>
+            <li>壓到彈簧時，部分能量會變成彈性能。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>先讓小球在最左邊，再慢慢移到最右邊，觀察三種能量哪一個先增、哪一個後增。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/energy-conversion.js"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>碰撞與回彈 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="collision-bounce">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>掉落與回彈</h2>
+            <p>換一種球的材質，再決定落下速度，看看會彈幾次。</p>
+          </div>
+          <div class="scene-shell bounce-scene">
+            <div class="bounce-ruler"></div>
+            <div id="bounceBall" class="bounce-ball">球</div>
+            <div class="bounce-ground"></div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>有彈性的材質會保留比較多碰撞後的能量。</p>
+          </div>
+          <label class="control-group">
+            <span>落下速度：<strong id="bounceSpeedValue">7</strong></span>
+            <input id="bounceSpeedRange" type="range" min="3" max="10" value="7" />
+          </label>
+          <div class="control-group">
+            <span>球的材質</span>
+            <div class="button-row">
+              <button class="material-button active" type="button" data-material="rubber">橡膠球</button>
+              <button class="material-button" type="button" data-material="steel">金屬球</button>
+              <button class="material-button" type="button" data-material="clay">黏土球</button>
+            </div>
+          </div>
+          <div class="button-row">
+            <button id="bounceStart" class="primary-button" type="button">開始掉落</button>
+            <button id="bounceReset" class="ghost-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>最高回彈</span>
+              <strong id="bounceHeightText">0 公分</strong>
+            </div>
+            <div class="stat-item">
+              <span>碰地次數</span>
+              <strong id="bounceCountText">0 次</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="bounceTip">先試橡膠球，再換成黏土球比比看。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>橡膠球比較容易彈起來，黏土球通常比較不會反彈。</li>
+            <li>落下越快，第一次撞地時通常越有力。</li>
+            <li>每碰一次地面，球通常都會損失一部分能量。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>想一想</h2>
+          <p>如果地面換成軟墊，球還會彈得一樣高嗎？你可以把這個想法延伸成下一個實驗。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/collision-bounce.js"></script>
+  </body>
+</html>

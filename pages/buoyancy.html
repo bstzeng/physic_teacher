@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>浮力與沉浮 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="buoyancy">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>沉浮實驗</h2>
+            <p>改變材質和重量，看看物體在水中會停在哪裡。</p>
+          </div>
+          <div class="scene-shell buoyancy-scene">
+            <div class="water-surface"></div>
+            <div id="floatingObject" class="floating-object">木塊</div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>材質密度不同，浮起來的高度也會不同。</p>
+          </div>
+          <div class="segmented-row">
+            <button class="material-button active" data-material="wood" type="button">木頭</button>
+            <button class="material-button" data-material="plastic" type="button">塑膠</button>
+            <button class="material-button" data-material="iron" type="button">鐵塊</button>
+          </div>
+          <label class="control-group">
+            <span>物體大小：<strong id="sizeValue">3</strong></span>
+            <input id="sizeRange" type="range" min="1" max="5" value="3" />
+          </label>
+          <label class="control-group">
+            <span>額外加重：<strong id="weightValue">1</strong></span>
+            <input id="weightRange" type="range" min="0" max="4" value="1" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>材質</span>
+              <strong id="materialText">木頭</strong>
+            </div>
+            <div class="stat-item">
+              <span>結果</span>
+              <strong id="buoyancyResult">會浮起來</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="buoyancyTip">先試試看把材質換成鐵塊。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>有些材質比較容易浮起來，有些比較容易下沉。</li>
+            <li>物體加重後，會沉得更深。</li>
+            <li>浮力會把物體往上撐，但不一定能完全撐住。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把木頭加到最重，看看它還能不能浮在水面上。再把材質改成塑膠，比較兩者差別。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/buoyancy.js"></script>
+  </body>
+</html>

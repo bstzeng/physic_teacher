@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>簡單電路 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="circuit">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>電路觀察</h2>
+            <p>把路線接通，燈泡才會亮起來。</p>
+          </div>
+          <div class="scene-shell svg-stage">
+            <svg viewBox="0 0 600 320" aria-label="簡單電路互動圖">
+              <rect width="600" height="320" rx="24" fill="#f6fbff"></rect>
+              <line id="wireTop" x1="170" y1="80" x2="430" y2="80" stroke="#8aa4bf" stroke-width="12" stroke-linecap="round"></line>
+              <line id="wireRight" x1="500" y1="110" x2="500" y2="235" stroke="#8aa4bf" stroke-width="12" stroke-linecap="round"></line>
+              <line id="wireBottom" x1="170" y1="235" x2="430" y2="235" stroke="#8aa4bf" stroke-width="12" stroke-linecap="round"></line>
+              <line id="wireLeft" x1="100" y1="110" x2="100" y2="235" stroke="#ff884d" stroke-width="12" stroke-linecap="round"></line>
+              <rect x="80" y="120" width="18" height="85" rx="6" fill="#355070"></rect>
+              <rect x="105" y="110" width="18" height="105" rx="6" fill="#6d597a"></rect>
+              <circle id="bulbGlow" cx="500" cy="95" r="34" fill="#ffe17a" opacity="0.18"></circle>
+              <circle id="bulbShell" cx="500" cy="95" r="24" fill="#f8f3d8" stroke="#5d4a1f" stroke-width="5"></circle>
+              <path d="M490 118 L510 118 L506 146 L494 146 Z" fill="#697a8c"></path>
+              <line id="switchA" x1="430" y1="80" x2="455" y2="80" stroke="#8aa4bf" stroke-width="12" stroke-linecap="round"></line>
+              <line id="switchB" x1="468" y1="80" x2="500" y2="80" stroke="#8aa4bf" stroke-width="12" stroke-linecap="round"></line>
+              <line id="switchBridge" x1="455" y1="80" x2="468" y2="80" stroke="#8aa4bf" stroke-width="8" stroke-linecap="round"></line>
+            </svg>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>三個部分都接好，電流才有完整的路。</p>
+          </div>
+          <div class="segmented-column">
+            <button id="toggleTopWire" class="toggle-button on" type="button">上方導線：已接上</button>
+            <button id="toggleRightWire" class="toggle-button on" type="button">右側導線：已接上</button>
+            <button id="toggleSwitch" class="toggle-button off" type="button">開關：目前打開</button>
+          </div>
+          <label class="control-group">
+            <span>電池數量：<strong id="batteryValue">1</strong></span>
+            <input id="batteryRange" type="range" min="1" max="3" value="1" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>燈泡狀態</span>
+              <strong id="circuitStatus">還沒有亮</strong>
+            </div>
+            <div class="stat-item">
+              <span>亮度</span>
+              <strong id="brightnessText">0%</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="circuitTip">把開關關上試試看。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>只要有一段沒接好，燈泡就不會亮。</li>
+            <li>形成完整回路，電流才能流動。</li>
+            <li>電池變多時，燈泡可以更亮。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>試著讓燈泡最亮，再故意把其中一段導線移開，看看畫面有什麼變化。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/circuit.js"></script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>斜面與省力 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="inclined-plane">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>斜面實驗</h2>
+            <p>斜坡越平緩，通常越省力，但路會比較長。</p>
+          </div>
+          <div class="scene-shell incline-scene">
+            <div id="inclineRamp" class="incline-ramp"></div>
+            <div id="inclineBox" class="incline-box">箱子</div>
+            <div id="inclineArrow" class="force-arrow">推力</div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>調整角度和重量，看看推上去需要多少力。</p>
+          </div>
+          <label class="control-group">
+            <span>斜面角度：<strong id="inclineAngleValue">25</strong> 度</span>
+            <input id="inclineAngleRange" type="range" min="10" max="45" value="25" />
+          </label>
+          <label class="control-group">
+            <span>箱子重量：<strong id="inclineMassValue">6</strong></span>
+            <input id="inclineMassRange" type="range" min="2" max="12" value="6" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>推力大小</span>
+              <strong id="inclineForceText">2.5</strong>
+            </div>
+            <div class="stat-item">
+              <span>斜面長度</span>
+              <strong id="inclineLengthText">較長</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="inclineTip">把角度調低，看看推力是不是會變小。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>斜坡越陡，推上去通常越費力。</li>
+            <li>斜坡越平，推力常會比較小。</li>
+            <li>斜面把原本直接向上的工作，換成比較長的路徑來完成。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把重量固定，先用 15 度斜面，再用 40 度斜面，比較推力差多少。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/inclined-plane.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>串聯與並聯電路 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="series-parallel">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>接線比較</h2>
+            <p>同樣兩顆燈泡，換不同接法看看亮度。</p>
+          </div>
+          <div class="scene-shell svg-stage">
+            <svg viewBox="0 0 600 320" aria-label="串聯與並聯電路互動圖">
+              <rect width="600" height="320" fill="#f8fcff"></rect>
+              <rect x="65" y="116" width="18" height="88" rx="5" fill="#355070"></rect>
+              <rect x="90" y="106" width="18" height="108" rx="5" fill="#6d597a"></rect>
+              <line id="seriesWireTop" x1="108" y1="110" x2="470" y2="110" stroke="#8aa4bf" stroke-width="10" stroke-linecap="round"></line>
+              <line id="seriesWireRight" x1="470" y1="110" x2="470" y2="230" stroke="#8aa4bf" stroke-width="10" stroke-linecap="round"></line>
+              <line id="seriesWireBottom" x1="470" y1="230" x2="108" y2="230" stroke="#8aa4bf" stroke-width="10" stroke-linecap="round"></line>
+              <circle id="bulbAGlow" cx="270" cy="110" r="24" fill="#ffe17a" opacity="0.08"></circle>
+              <circle id="bulbAGlass" cx="270" cy="110" r="18" fill="#f8f3d8" stroke="#5d4a1f" stroke-width="4"></circle>
+              <circle id="bulbBGlow" cx="390" cy="110" r="24" fill="#ffe17a" opacity="0.08"></circle>
+              <circle id="bulbBGlass" cx="390" cy="110" r="18" fill="#f8f3d8" stroke="#5d4a1f" stroke-width="4"></circle>
+              <line id="parallelBranchLeft" x1="220" y1="110" x2="220" y2="230" stroke="#8aa4bf" stroke-width="10" stroke-linecap="round" opacity="0"></line>
+              <line id="parallelBranchRight" x1="440" y1="110" x2="440" y2="230" stroke="#8aa4bf" stroke-width="10" stroke-linecap="round" opacity="0"></line>
+              <line id="parallelTopA" x1="220" y1="140" x2="270" y2="140" stroke="#8aa4bf" stroke-width="10" stroke-linecap="round" opacity="0"></line>
+              <line id="parallelTopB" x1="390" y1="140" x2="440" y2="140" stroke="#8aa4bf" stroke-width="10" stroke-linecap="round" opacity="0"></line>
+            </svg>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>切換接法後，比較兩顆燈泡亮度。</p>
+          </div>
+          <div class="segmented-row">
+            <button id="seriesMode" class="mode-button active" data-mode="series" type="button">串聯</button>
+            <button id="parallelMode" class="mode-button" data-mode="parallel" type="button">並聯</button>
+          </div>
+          <label class="control-group">
+            <span>電池數量：<strong id="seriesBatteryValue">2</strong></span>
+            <input id="seriesBatteryRange" type="range" min="1" max="3" value="2" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>燈泡 A 亮度</span>
+              <strong id="bulbAText">40%</strong>
+            </div>
+            <div class="stat-item">
+              <span>燈泡 B 亮度</span>
+              <strong id="bulbBText">40%</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="seriesTip">先切到並聯，比較亮度變化。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>串聯時，燈泡常常會比較暗一些。</li>
+            <li>並聯時，每顆燈泡比較像各自接到電池。</li>
+            <li>同樣的電池數量，不同接法會有不同結果。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把電池調到 3 顆，先看串聯亮度，再切到並聯，觀察兩顆燈泡是不是一起變亮。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/series-parallel.js"></script>
+  </body>
+</html>

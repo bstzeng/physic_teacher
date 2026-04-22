@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>快慢與距離 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="speed">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>跑步實驗</h2>
+            <p>同樣的時間裡，速度越快會跑得越遠。</p>
+          </div>
+          <div class="scene-shell">
+            <div class="track-stage speed-stage">
+              <div class="track-markers"></div>
+              <div class="finish-flag">終點線</div>
+              <div id="runner" class="runner">跑</div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>調整速度，再開始跑步。</p>
+          </div>
+          <label class="control-group">
+            <span>速度：<strong id="speedRangeValue">5</strong></span>
+            <input id="speedRange" type="range" min="1" max="10" value="5" />
+          </label>
+          <label class="control-group">
+            <span>觀察時間：<strong id="timeRangeValue">5</strong> 秒</span>
+            <input id="timeRange" type="range" min="2" max="10" value="5" />
+          </label>
+          <div class="button-row">
+            <button id="runButton" class="primary-button" type="button">開始跑</button>
+            <button id="resetSpeed" class="ghost-button" type="button">回起點</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>已過時間</span>
+              <strong id="elapsedText">0.0 秒</strong>
+            </div>
+            <div class="stat-item">
+              <span>移動距離</span>
+              <strong id="travelText">0 公尺</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="speedTip">先調整速度，再開始觀察。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>同樣時間裡，速度越快就會走得越遠。</li>
+            <li>如果速度不變，距離會穩定增加。</li>
+            <li>時間變長時，總距離也會變多。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把觀察時間固定在 5 秒，先用速度 3 跑一次，再用速度 8 跑一次，比較距離差多少。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/speed.js"></script>
+  </body>
+</html>

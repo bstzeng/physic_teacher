@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>聲音大小與高低 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="sound">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>聲波觀察</h2>
+            <p>頻率和振幅改變時，波形也會跟著改變。</p>
+          </div>
+          <div class="scene-shell svg-stage">
+            <svg id="soundSvg" viewBox="0 0 600 320" aria-label="聲波互動圖">
+              <rect width="600" height="320" rx="26" fill="#f8fcff"></rect>
+              <g id="speakerGroup">
+                <rect x="48" y="105" width="90" height="110" rx="18" fill="#30475e"></rect>
+                <circle cx="92" cy="160" r="30" fill="#5c677d"></circle>
+                <circle cx="92" cy="160" r="14" fill="#d9d9d9"></circle>
+              </g>
+              <path id="wavePath" d="" fill="none" stroke="#0077b6" stroke-width="6" stroke-linecap="round"></path>
+            </svg>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>試試看調高音調，波峰會變密還是變疏？</p>
+          </div>
+          <label class="control-group">
+            <span>音調高低：<strong id="frequencyValue">5</strong></span>
+            <input id="frequencyRange" type="range" min="1" max="10" value="5" />
+          </label>
+          <label class="control-group">
+            <span>聲音大小：<strong id="amplitudeValue">5</strong></span>
+            <input id="amplitudeRange" type="range" min="1" max="10" value="5" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>波峰密度</span>
+              <strong id="densityText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>波高</span>
+              <strong id="waveHeightText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="soundTip">先調整音調，看看波形變得多密。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>音調越高，波形通常看起來越密。</li>
+            <li>聲音越大，波形上下起伏越明顯。</li>
+            <li>音調和音量是兩件不一樣的事。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把聲音大小固定住，只改變音調，觀察波形密度變化。再把音調固定，只改變聲音大小。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/sound.js"></script>
+  </body>
+</html>

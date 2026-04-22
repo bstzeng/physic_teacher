@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>滑輪省力 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="pulley">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>滑輪實驗</h2>
+            <p>滑輪越多，通常越省力，但拉的距離也會變長。</p>
+          </div>
+          <div class="scene-shell pulley-scene">
+            <div class="pulley-beam"></div>
+            <div id="pulleyGroup" class="pulley-group"></div>
+            <div id="pulleyRope" class="pulley-rope"></div>
+            <div id="pulleyWeight" class="pulley-weight">重物</div>
+            <div id="pulleyHandle" class="pulley-handle">拉</div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>切換滑輪數量和重量，比較需要的力量。</p>
+          </div>
+          <label class="control-group">
+            <span>滑輪數量：<strong id="pulleyCountValue">2</strong></span>
+            <input id="pulleyCountRange" type="range" min="1" max="4" value="2" />
+          </label>
+          <label class="control-group">
+            <span>重物重量：<strong id="pulleyMassValue">8</strong></span>
+            <input id="pulleyMassRange" type="range" min="2" max="12" value="8" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>所需拉力</span>
+              <strong id="pulleyForceText">4.0</strong>
+            </div>
+            <div class="stat-item">
+              <span>拉繩距離</span>
+              <strong id="pulleyDistanceText">2 倍</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="pulleyTip">增加滑輪後，再看所需拉力會不會變小。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>滑輪數量增加時，拉力通常會減少。</li>
+            <li>雖然比較省力，但要拉的繩子會更長。</li>
+            <li>滑輪能幫助我們用較小的力搬動重物。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把重量調高，先用 1 個滑輪，再用 4 個滑輪，比較需要的拉力差多少。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/pulley.js"></script>
+  </body>
+</html>

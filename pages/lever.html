@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>槓桿平衡 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="lever">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>平衡實驗</h2>
+            <p>改變重量與距離，看看哪一邊會下降。</p>
+          </div>
+          <div class="scene-shell lever-scene">
+            <div class="beam-support"></div>
+            <div id="leverBeam" class="lever-beam">
+              <div id="leftWeight" class="weight-block left-weight">左</div>
+              <div id="rightWeight" class="weight-block right-weight">右</div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>槓桿不只看重量，也要看離支點多遠。</p>
+          </div>
+          <label class="control-group">
+            <span>左邊重量：<strong id="leftMassValue">3</strong></span>
+            <input id="leftMassRange" type="range" min="1" max="5" value="3" />
+          </label>
+          <label class="control-group">
+            <span>左邊距離：<strong id="leftDistanceValue">2</strong></span>
+            <input id="leftDistanceRange" type="range" min="1" max="5" value="2" />
+          </label>
+          <label class="control-group">
+            <span>右邊重量：<strong id="rightMassValue">3</strong></span>
+            <input id="rightMassRange" type="range" min="1" max="5" value="3" />
+          </label>
+          <label class="control-group">
+            <span>右邊距離：<strong id="rightDistanceValue">2</strong></span>
+            <input id="rightDistanceRange" type="range" min="1" max="5" value="2" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>左邊力矩</span>
+              <strong id="leftTorqueText">6</strong>
+            </div>
+            <div class="stat-item">
+              <span>右邊力矩</span>
+              <strong id="rightTorqueText">6</strong>
+            </div>
+            <div class="stat-item">
+              <span>結果</span>
+              <strong id="leverResult">目前平衡</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>比較重的一邊不一定會贏，還要看距離支點多遠。</li>
+            <li>重量和距離一起決定槓桿效果。</li>
+            <li>左右兩邊力矩相同時，就會平衡。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>試著讓左邊比較輕，但拉得更遠，看看能不能和右邊平衡。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/lever.js"></script>
+  </body>
+</html>

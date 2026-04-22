@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>功與功率 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="work-power">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>搬運實驗</h2>
+            <p>搬同樣重物、同樣高度，時間越短，功率通常越大。</p>
+          </div>
+          <div class="scene-shell work-scene">
+            <div class="work-platform"></div>
+            <div id="workLiftBox" class="work-box">箱子</div>
+            <div class="work-meter">
+              <div id="powerMeterFill" class="work-meter-fill"></div>
+            </div>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>改變重量、高度和搬運時間，比較功和功率。</p>
+          </div>
+          <label class="control-group">
+            <span>重量：<strong id="workMassValue">6</strong></span>
+            <input id="workMassRange" type="range" min="1" max="10" value="6" />
+          </label>
+          <label class="control-group">
+            <span>抬高距離：<strong id="workHeightValue">5</strong></span>
+            <input id="workHeightRange" type="range" min="1" max="10" value="5" />
+          </label>
+          <label class="control-group">
+            <span>花費時間：<strong id="workTimeValue">5</strong></span>
+            <input id="workTimeRange" type="range" min="1" max="10" value="5" />
+          </label>
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>做功大小</span>
+              <strong id="workText">30</strong>
+            </div>
+            <div class="stat-item">
+              <span>功率大小</span>
+              <strong id="powerText">6.0</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="workTip">固定功，再把時間縮短，看看功率會不會上升。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>重量和高度越大，做的功通常越大。</li>
+            <li>同樣的功，如果時間更短，功率會更大。</li>
+            <li>功率是在看做功快不快。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>讓做功保持差不多，再把時間改短，看看功率條會不會升高。</p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/work-power.js"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>波的振幅、頻率與波速 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="wave-properties">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>波形實驗</h2>
+            <p>調整振幅、頻率和波速，看看波形怎麼改變。</p>
+          </div>
+          <div class="scene-shell svg-stage">
+            <svg viewBox="0 0 700 340" aria-label="波形互動圖">
+              <rect width="700" height="340" fill="#f8fcff"></rect>
+              <line x1="50" y1="170" x2="650" y2="170" stroke="#94a3b8" stroke-width="3"></line>
+              <path id="wavePropertiesPath" d="" fill="none" stroke="#1d4ed8" stroke-width="6" stroke-linecap="round"></path>
+            </svg>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>振幅看高低，頻率看疏密，波速看移動快慢。</p>
+          </div>
+          <label class="control-group">
+            <span>振幅：<strong id="waveAmplitudeValue">5</strong></span>
+            <input id="waveAmplitudeRange" type="range" min="1" max="10" value="5" />
+          </label>
+          <label class="control-group">
+            <span>頻率：<strong id="waveFrequencyValue">4</strong></span>
+            <input id="waveFrequencyRange" type="range" min="1" max="10" value="4" />
+          </label>
+          <label class="control-group">
+            <span>波速：<strong id="waveSpeedValue">5</strong></span>
+            <input id="waveSpeedRange" type="range" min="1" max="10" value="5" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>波峰高低</span>
+              <strong id="waveHeightLabel">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>波峰密度</span>
+              <strong id="waveDensityLabel">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="waveTip">先只改振幅，看看是不是只改變高低。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>振幅越大，波看起來越高。</li>
+            <li>頻率越高，波峰通常越密。</li>
+            <li>波速越大，波形往前移動得越快。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把振幅固定住，只改頻率和波速，看看哪一個是改變波的疏密，哪一個是改變移動快慢。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/wave-properties.js"></script>
+  </body>
+</html>

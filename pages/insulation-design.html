@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>隔熱設計挑戰 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="insulation-design">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>保溫杯挑戰</h2>
+            <p>幫熱飲挑一層外套，看看過了一段時間後還能保留多少熱。</p>
+          </div>
+          <div class="scene-shell insulation-scene">
+            <div id="insulationCupWrap" class="insulation-cup-wrap"></div>
+            <div class="insulation-cup"></div>
+            <div class="insulation-lid"></div>
+            <div class="insulation-thermometer">
+              <div id="insulationThermoFill" class="insulation-thermo-fill"></div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>不同材料和厚度，會讓熱量流失的速度不一樣。</p>
+          </div>
+          <div class="control-group">
+            <span>包覆材料</span>
+            <div class="button-row">
+              <button class="heat-material-button active" type="button" data-wrap="foam">泡棉</button>
+              <button class="heat-material-button" type="button" data-wrap="fabric">布料</button>
+              <button class="heat-material-button" type="button" data-wrap="foil">鋁箔</button>
+            </div>
+          </div>
+          <label class="control-group">
+            <span>包覆厚度：<strong id="insulationThicknessValue">3</strong> 層</span>
+            <input id="insulationThicknessRange" type="range" min="1" max="5" value="3" />
+          </label>
+          <label class="control-group">
+            <span>放置時間：<strong id="insulationTimeValue">20</strong> 分鐘</span>
+            <input id="insulationTimeRange" type="range" min="5" max="40" step="5" value="20" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>剩餘溫度</span>
+              <strong id="insulationTempText">68°C</strong>
+            </div>
+            <div class="stat-item">
+              <span>保溫表現</span>
+              <strong id="insulationResultText">表現不錯</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="insulationTip">厚一點通常比較能留住熱。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>怎麼挑保溫材料？</h2>
+          <ul>
+            <li>不容易傳熱的材料，通常比較適合當保溫層。</li>
+            <li>厚度增加時，熱量要跑出去的路也會變長。</li>
+            <li>保溫不只和材料有關，也和時間有關。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>挑戰自己</h2>
+          <p>試著找出哪一種材料和厚度組合，能讓 20 分鐘後的溫度最高。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/insulation-design.js"></script>
+  </body>
+</html>

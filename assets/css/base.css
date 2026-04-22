@@ -1,0 +1,182 @@
+:root {
+  --bg: #f8f4e8;
+  --bg-soft: #fffaf1;
+  --card: rgba(255, 255, 255, 0.88);
+  --line: rgba(52, 73, 94, 0.12);
+  --ink: #223045;
+  --muted: #57667a;
+  --accent: #007f7b;
+  --accent-strong: #005f73;
+  --warm: #f18f01;
+  --warm-soft: #ffd7a0;
+  --sky: #dff2ff;
+  --shadow: 0 18px 45px rgba(34, 48, 69, 0.12);
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --page-width: 1180px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", "Microsoft JhengHei", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(255, 210, 160, 0.6), transparent 28%),
+    radial-gradient(circle at top right, rgba(175, 225, 255, 0.55), transparent 24%),
+    linear-gradient(180deg, #fff7ea 0%, #f7f4ee 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.page-shell,
+.concept-page {
+  width: min(calc(100% - 32px), var(--page-width));
+  margin: 0 auto;
+  padding: 24px 0 56px;
+}
+
+.eyebrow,
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--accent-strong);
+  background: rgba(0, 127, 123, 0.1);
+}
+
+.primary-button,
+.secondary-button,
+.ghost-button,
+.toggle-button,
+.surface-button,
+.material-button,
+.medium-button,
+.mode-button,
+.filter-chip,
+.quiz-choice {
+  min-height: 48px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease;
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.ghost-button:hover,
+.toggle-button:hover,
+.surface-button:hover,
+.material-button:hover,
+.medium-button:hover,
+.mode-button:hover,
+.filter-chip:hover,
+.quiz-choice:hover {
+  transform: translateY(-1px);
+}
+
+.primary-button {
+  color: #fff;
+  background: linear-gradient(135deg, var(--warm), #ff7b00);
+  box-shadow: 0 14px 25px rgba(241, 143, 1, 0.24);
+}
+
+.secondary-button {
+  color: #fff;
+  background: linear-gradient(135deg, #00a6a6, var(--accent-strong));
+  box-shadow: 0 14px 25px rgba(0, 127, 123, 0.2);
+}
+
+.ghost-button {
+  color: var(--accent-strong);
+  background: rgba(0, 127, 123, 0.08);
+}
+
+.section-heading {
+  margin-bottom: 22px;
+}
+
+.section-heading.compact {
+  margin-bottom: 16px;
+}
+
+.section-heading h2,
+.card-head h2,
+.lesson-card h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.5rem, 2vw, 2.1rem);
+}
+
+.section-heading p,
+.card-head p,
+.lesson-card p,
+.lead,
+.stat-item span {
+  color: var(--muted);
+}
+
+.scene-shell,
+.stage-card,
+.control-card,
+.lesson-card,
+.hero-card,
+.intro-board,
+.concept-card,
+.planned-card {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+@media (max-width: 760px) {
+  .page-shell,
+  .concept-page {
+    width: min(calc(100% - 20px), var(--page-width));
+    padding-top: 16px;
+    padding-bottom: 36px;
+  }
+}

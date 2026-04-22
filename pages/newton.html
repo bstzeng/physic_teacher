@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>牛頓運動 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="newton">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>加速實驗</h2>
+            <p>改變力量和質量，看看小車怎麼越跑越快。</p>
+          </div>
+          <div class="scene-shell">
+            <div class="track-stage newton-stage">
+              <div class="track-markers"></div>
+              <div id="newtonArrow" class="force-arrow">力</div>
+              <div id="newtonCart" class="newton-cart">小車</div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>力量越大，或小車越輕，加速度通常越大。</p>
+          </div>
+          <label class="control-group">
+            <span>施力大小：<strong id="newtonForceValue">6</strong></span>
+            <input id="newtonForceRange" type="range" min="1" max="10" value="6" />
+          </label>
+          <label class="control-group">
+            <span>小車質量：<strong id="newtonMassValue">3</strong></span>
+            <input id="newtonMassRange" type="range" min="1" max="6" value="3" />
+          </label>
+          <div class="button-row">
+            <button id="newtonStart" class="primary-button" type="button">開始推進</button>
+            <button id="newtonReset" class="ghost-button" type="button">回起點</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>加速度</span>
+              <strong id="accelerationText">2.0</strong>
+            </div>
+            <div class="stat-item">
+              <span>目前速度</span>
+              <strong id="newtonSpeedText">0.0</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="newtonTip">先固定質量，再調整施力比較看看。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>同一台小車被更大的力推時，速度增加得更快。</li>
+            <li>質量越大，同樣的力帶來的加速度越小。</li>
+            <li>力、質量和加速度之間有固定關係。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把施力固定在 6，先讓質量是 2，再改成 5，看看加速度差多少。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/newton.js"></script>
+  </body>
+</html>

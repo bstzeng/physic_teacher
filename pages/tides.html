@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>月球與潮汐 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="tides">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>地球、月球與海面</h2>
+            <p>調整月球位置和距離，看看海面凸起的方向怎麼跟著轉。</p>
+          </div>
+          <div class="scene-shell tides-scene">
+            <div id="tideBulge" class="tide-bulge"></div>
+            <div class="tide-earth">地球</div>
+            <div id="tideMoon" class="tide-moon">月球</div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>月球位置改變時，高低潮的方向也會跟著改變。</p>
+          </div>
+          <label class="control-group">
+            <span>月球角度：<strong id="tideAngleValue">0</strong> 度</span>
+            <input id="tideAngleRange" type="range" min="0" max="360" value="0" />
+          </label>
+          <label class="control-group">
+            <span>月球距離：<strong id="tideDistanceValue">180</strong></span>
+            <input id="tideDistanceRange" type="range" min="140" max="240" value="180" />
+          </label>
+          <div class="button-row">
+            <button id="tidePlay" class="primary-button" type="button">轉動月球</button>
+            <button id="tideReset" class="ghost-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>潮汐方向</span>
+              <strong id="tideDirectionText">左右兩側</strong>
+            </div>
+            <div class="stat-item">
+              <span>潮汐強度</span>
+              <strong id="tideStrengthText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="tideTip">月球越近，潮汐影響通常越明顯。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會看到什麼？</h2>
+          <ul>
+            <li>海水凸起的方向，會大致對著月球和背對月球兩側。</li>
+            <li>月球位置改變時，高潮區也會跟著轉動。</li>
+            <li>月球更近時，潮汐影響通常更強一些。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>延伸觀察</h2>
+          <p>地球自轉也會讓不同地方輪流經過高潮區和低潮區，所以潮汐看起來會隨時間變化。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/tides.js"></script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>電與磁／電磁鐵 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="electromagnet">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>電磁鐵實驗</h2>
+            <p>電流越大、線圈越多，電磁鐵通常越強。</p>
+          </div>
+          <div class="scene-shell electromagnet-scene">
+            <div id="electroCore" class="electro-core"></div>
+            <div id="electroCoil" class="electro-coil"></div>
+            <div class="electro-battery">電池</div>
+            <div class="clip-column">
+              <div class="paper-clip" id="clip1"></div>
+              <div class="paper-clip" id="clip2"></div>
+              <div class="paper-clip" id="clip3"></div>
+              <div class="paper-clip" id="clip4"></div>
+              <div class="paper-clip" id="clip5"></div>
+              <div class="paper-clip" id="clip6"></div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>試著比較有沒有鐵芯時，磁力差了多少。</p>
+          </div>
+          <label class="control-group">
+            <span>電流大小：<strong id="currentValue">4</strong></span>
+            <input id="currentRange" type="range" min="1" max="8" value="4" />
+          </label>
+          <label class="control-group">
+            <span>線圈圈數：<strong id="turnsValue">5</strong></span>
+            <input id="turnsRange" type="range" min="1" max="8" value="5" />
+          </label>
+          <label class="control-group">
+            <span>鐵芯狀態</span>
+            <select id="coreSelect">
+              <option value="on">有鐵芯</option>
+              <option value="off">沒有鐵芯</option>
+            </select>
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>磁力強度</span>
+              <strong id="electroStrengthText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>吸住迴紋針</span>
+              <strong id="clipCountText">3 個</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="electroTip">線圈變多時，看看會不會吸起更多迴紋針。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>電流變大時，磁力通常會更強。</li>
+            <li>線圈圈數增加時，磁力通常也會增加。</li>
+            <li>加入鐵芯後，電磁鐵常常能吸住更多東西。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>先把鐵芯關掉，再把電流和圈數調高，最後打開鐵芯，比較吸住的迴紋針數量。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/electromagnet.js"></script>
+  </body>
+</html>

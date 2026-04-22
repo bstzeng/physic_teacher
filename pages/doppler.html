@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>都卜勒效應入門 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="doppler">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>移動中的警報聲</h2>
+            <p>讓救護車靠近或遠離，觀察波紋間距和你聽到的音調變化。</p>
+          </div>
+          <div class="scene-shell doppler-scene">
+            <div class="doppler-road"></div>
+            <div id="dopplerCar" class="doppler-car">救護車</div>
+            <span class="doppler-wave" id="dopplerWave1"></span>
+            <span class="doppler-wave" id="dopplerWave2"></span>
+            <span class="doppler-wave" id="dopplerWave3"></span>
+            <span class="doppler-wave" id="dopplerWave4"></span>
+            <span class="doppler-wave" id="dopplerWave5"></span>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>聲源靠近時波峰變密，遠離時波峰會變鬆。</p>
+          </div>
+          <label class="control-group">
+            <span>車速：<strong id="dopplerSpeedValue">40</strong> km/h</span>
+            <input id="dopplerSpeedRange" type="range" min="10" max="80" value="40" />
+          </label>
+          <div class="control-group">
+            <span>移動方向</span>
+            <div class="button-row">
+              <button class="mode-button active" type="button" data-direction="approach">朝你靠近</button>
+              <button class="mode-button" type="button" data-direction="away">離你遠去</button>
+            </div>
+          </div>
+          <div class="button-row">
+            <button id="dopplerPlay" class="primary-button" type="button">播放</button>
+            <button id="dopplerReset" class="ghost-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>原本音調</span>
+              <strong id="dopplerBaseText">700 Hz</strong>
+            </div>
+            <div class="stat-item">
+              <span>你聽到的音調</span>
+              <strong id="dopplerHeardText">760 Hz</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="dopplerTip">靠近時會比較尖，遠離時會比較低。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>為什麼會這樣？</h2>
+          <ul>
+            <li>聲源朝你靠近時，前方的波峰會擠得更密。</li>
+            <li>聲源遠離你時，波峰會被拉得更開。</li>
+            <li>這就是為什麼車子經過時，聲音高低會改變。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>生活中的例子</h2>
+          <p>救護車、警車和火車經過時，最容易聽出都卜勒效應帶來的聲音變化。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/doppler.js"></script>
+  </body>
+</html>

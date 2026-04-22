@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>推力與拉力 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="force">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>操作畫面</h2>
+            <p>按下推或拉，看看箱子會怎麼動。</p>
+          </div>
+          <div class="scene-shell">
+            <div class="track-stage">
+              <div class="track-markers"></div>
+              <div id="forceArrow" class="force-arrow">推</div>
+              <div id="forceBox" class="moving-box">箱子</div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>改變用力大小和箱子重量。</p>
+          </div>
+          <label class="control-group">
+            <span>用力大小：<strong id="forceValue">6</strong></span>
+            <input id="forceRange" type="range" min="1" max="10" value="6" />
+          </label>
+          <label class="control-group">
+            <span>箱子重量：<strong id="massValue">3</strong></span>
+            <input id="massRange" type="range" min="1" max="5" value="3" />
+          </label>
+          <div class="button-row">
+            <button id="pushButton" class="primary-button" type="button">往右推</button>
+            <button id="pullButton" class="secondary-button" type="button">往左拉</button>
+          </div>
+          <button id="resetForce" class="ghost-button" type="button">重設位置</button>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>目前速度</span>
+              <strong id="speedText">0.0</strong>
+            </div>
+            <div class="stat-item">
+              <span>移動方向</span>
+              <strong id="directionText">暫停中</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="forceTip">箱子還沒開始動。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>用力越大，箱子通常移動得越快。</li>
+            <li>箱子越重，同樣的力帶來的效果會比較小。</li>
+            <li>推和拉都屬於力，只是方向不同。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把重量調到最重，再試著用最小的力推一次。箱子還會不會明顯前進呢？</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/force.js"></script>
+  </body>
+</html>

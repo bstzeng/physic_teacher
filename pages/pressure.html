@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>壓力 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="pressure">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>壓力實驗</h2>
+            <p>同樣的力，面積越小，壓力就會越大。</p>
+          </div>
+          <div class="scene-shell pressure-scene">
+            <div class="pressure-surface"></div>
+            <div id="pressureFootprint" class="pressure-footprint"></div>
+            <div id="pressureBlock" class="pressure-block">壓</div>
+            <div class="pressure-scale">
+              <div id="pressureFill" class="pressure-fill"></div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制面板</h2>
+            <p>調整施力大小和接觸面積，比較壓力變化。</p>
+          </div>
+          <label class="control-group">
+            <span>施力大小：<strong id="pressureForceValue">6</strong></span>
+            <input id="pressureForceRange" type="range" min="1" max="12" value="6" />
+          </label>
+          <label class="control-group">
+            <span>接觸面積：<strong id="pressureAreaValue">6</strong></span>
+            <input id="pressureAreaRange" type="range" min="1" max="12" value="6" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>壓力值</span>
+              <strong id="pressureValueText">1.0</strong>
+            </div>
+            <div class="stat-item">
+              <span>壓力程度</span>
+              <strong id="pressureLevelText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="pressureTip">試著把面積縮小，看看壓力會不會增加。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>你會發現什麼？</h2>
+          <ul>
+            <li>力量越大，壓力通常越大。</li>
+            <li>面積越小，壓力通常越大。</li>
+            <li>尖尖的地方常常比平平的地方更容易產生大壓力。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把力固定住，先用大面積，再用小面積，比較壓力條的高低差。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/pressure.js"></script>
+  </body>
+</html>
