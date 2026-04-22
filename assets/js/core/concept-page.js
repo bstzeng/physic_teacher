@@ -282,6 +282,36 @@
       answer: 0,
       explanation: "電場方向就是正電荷受力的方向。",
     },
+    "momentum-conservation": {
+      question: "如果系統不受外力影響，碰撞前後哪一個量最應該保持一致？",
+      choices: ["總動量", "總速度", "總位移"],
+      answer: 0,
+      explanation: "動量守恆是在看整個系統的總動量是否維持不變。",
+    },
+    pendulum: {
+      question: "在小角度近似下，單擺的週期最明顯和哪一個量有關？",
+      choices: ["擺長", "擺球顏色", "擺球材質名稱"],
+      answer: 0,
+      explanation: "在簡化模型裡，擺長越長，週期通常越長。",
+    },
+    "wave-interference": {
+      question: "兩個波峰剛好同時到達同一點時，最常看到什麼結果？",
+      choices: ["振幅變大", "完全抵消", "波速變零"],
+      answer: 0,
+      explanation: "這是建設性干涉，兩個波會疊加得更明顯。",
+    },
+    "electromagnetic-induction": {
+      question: "磁鐵穿過線圈時，什麼情況常讓感應效果更明顯？",
+      choices: ["移動得更快", "完全不動", "磁鐵拿得更遠"],
+      answer: 0,
+      explanation: "磁通量改變得越快，感應電流通常越明顯。",
+    },
+    "photoelectric-effect": {
+      question: "光電效應中，想要先讓電子被打出來，最關鍵的是什麼？",
+      choices: ["光的頻率夠高", "光更亮", "金屬更大塊"],
+      answer: 0,
+      explanation: "只要頻率沒達到門檻，再強的光也不一定能打出電子。",
+    },
   };
 
   function renderQuiz(conceptId) {

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>單擺與週期 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="pendulum">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>單擺模型</h2>
+            <p>調整擺長和起始角度，觀察來回擺動的速度與週期。</p>
+          </div>
+          <div class="scene-shell pendulum-scene">
+            <div class="pendulum-support"></div>
+            <div id="pendulumRod" class="pendulum-rod"></div>
+            <div id="pendulumBob" class="pendulum-bob"></div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>在小角度近似下，擺長越長，單擺週期通常越長。</p>
+          </div>
+          <label class="control-group">
+            <span>擺長：<strong id="pendulumLengthValue">1.2</strong> m</span>
+            <input id="pendulumLengthRange" type="range" min="6" max="18" value="12" />
+          </label>
+          <label class="control-group">
+            <span>起始角度：<strong id="pendulumAngleValue">14</strong> 度</span>
+            <input id="pendulumAngleRange" type="range" min="5" max="25" value="14" />
+          </label>
+          <div class="button-row">
+            <button id="pendulumPlay" class="primary-button" type="button">播放</button>
+            <button id="pendulumPause" class="secondary-button" type="button">暫停</button>
+            <button id="pendulumReset" class="ghost-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>週期</span>
+              <strong id="pendulumPeriodText">2.20 s</strong>
+            </div>
+            <div class="stat-item">
+              <span>頻率</span>
+              <strong id="pendulumFrequencyText">0.45 Hz</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="pendulumTip">試著固定角度，只改擺長來比較週期。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>看哪裡最有感？</h2>
+          <ul>
+            <li>經過最低點時，擺球速度通常最大。</li>
+            <li>在最兩側時，速度最小但位移最大。</li>
+            <li>小角度下，改變擺長比改變角度更容易看出週期差異。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>高中延伸</h2>
+          <p>單擺常用來連到週期公式、重力加速度估算，以及近似模型的適用條件。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/pendulum.js"></script>
+  </body>
+</html>

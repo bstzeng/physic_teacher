@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>動量守恆與碰撞 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="momentum-conservation">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>碰撞軌道</h2>
+            <p>先設定兩台小車的質量和速度，再觀察碰撞前後總動量和速度怎麼變。</p>
+          </div>
+          <div class="scene-shell momentum-scene">
+            <div class="momentum-track"></div>
+            <div id="momentumCartA" class="momentum-cart cart-a">A</div>
+            <div id="momentumCartB" class="momentum-cart cart-b">B</div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>彈性碰撞和完全非彈性碰撞，碰後速度分配會不同，但總動量仍可比較。</p>
+          </div>
+          <label class="control-group">
+            <span>A 質量：<strong id="momentumMassAValue">2.0</strong> kg</span>
+            <input id="momentumMassARange" type="range" min="10" max="50" value="20" />
+          </label>
+          <label class="control-group">
+            <span>B 質量：<strong id="momentumMassBValue">3.0</strong> kg</span>
+            <input id="momentumMassBRange" type="range" min="10" max="50" value="30" />
+          </label>
+          <label class="control-group">
+            <span>A 速度：<strong id="momentumSpeedAValue">4.0</strong> m/s</span>
+            <input id="momentumSpeedARange" type="range" min="0" max="80" value="40" />
+          </label>
+          <label class="control-group">
+            <span>B 速度：<strong id="momentumSpeedBValue">-1.0</strong> m/s</span>
+            <input id="momentumSpeedBRange" type="range" min="-40" max="40" value="-10" />
+          </label>
+          <div class="control-group">
+            <span>碰撞型態</span>
+            <div class="button-row">
+              <button class="mode-button active" type="button" data-collision="elastic">彈性碰撞</button>
+              <button class="mode-button" type="button" data-collision="inelastic">完全非彈性</button>
+            </div>
+          </div>
+          <div class="button-row">
+            <button id="momentumStart" class="primary-button" type="button">開始碰撞</button>
+            <button id="momentumReset" class="ghost-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>碰前總動量</span>
+              <strong id="momentumBeforeText">5.0</strong>
+            </div>
+            <div class="stat-item">
+              <span>碰後總動量</span>
+              <strong id="momentumAfterText">5.0</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="momentumTip">先只改一台小車的質量，再看結果差異。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>這頁要抓的重點</h2>
+          <ul>
+            <li>系統外力可忽略時，總動量是最重要的比較量之一。</li>
+            <li>彈性碰撞和完全非彈性碰撞，碰後速度分配不同。</li>
+            <li>總動量守恆，不代表每一台車的速度都保持不變。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>延伸想法</h2>
+          <p>之後還可以把這個頁面再往上擴充成動能比較版，讓守恆量和損失量一起看。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/momentum-conservation.js"></script>
+  </body>
+</html>

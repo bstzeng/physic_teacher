@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>波的干涉 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="wave-interference">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>雙波源干涉</h2>
+            <p>選定觀察點後，比較兩個波源到達此點的相位差，看看波峰會加強還是抵消。</p>
+          </div>
+          <div class="scene-shell interference-scene">
+            <div class="interference-source source-a">S1</div>
+            <div class="interference-source source-b">S2</div>
+            <div id="interferenceWaveA" class="interference-wave wave-a"></div>
+            <div id="interferenceWaveB" class="interference-wave wave-b"></div>
+            <div id="interferencePoint" class="interference-point">P</div>
+            <div id="interferenceGlow" class="interference-glow"></div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>路徑差和相位差會一起決定觀察點是亮點、暗點，還是介於中間。</p>
+          </div>
+          <label class="control-group">
+            <span>觀察點高度：<strong id="interferenceYValue">50</strong>%</span>
+            <input id="interferenceYRange" type="range" min="20" max="80" value="50" />
+          </label>
+          <label class="control-group">
+            <span>觀察點左右位置：<strong id="interferenceXValue">78</strong>%</span>
+            <input id="interferenceXRange" type="range" min="55" max="90" value="78" />
+          </label>
+          <label class="control-group">
+            <span>相位差：<strong id="interferencePhaseValue">0</strong>°</span>
+            <input id="interferencePhaseRange" type="range" min="0" max="360" value="0" />
+          </label>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>路徑差</span>
+              <strong id="interferencePathText">0.00 λ</strong>
+            </div>
+            <div class="stat-item">
+              <span>結果型態</span>
+              <strong id="interferenceTypeText">建設性干涉</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="interferenceTip">把相位差拉到 180°，再比較看看。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>先懂這三件事</h2>
+          <ul>
+            <li>兩個波同時到某一點時，會把位移疊加在一起。</li>
+            <li>波峰碰波峰常會加強，波峰碰波谷常會削弱。</li>
+            <li>路徑差和相位差都會影響最後的疊加結果。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>延伸</h2>
+          <p>之後如果要再往上做，很適合接到雙狹縫、駐波或聲波干涉的更進階版本。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/wave-interference.js"></script>
+  </body>
+</html>

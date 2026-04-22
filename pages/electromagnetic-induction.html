@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>電磁感應 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="electromagnetic-induction">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>磁鐵穿過線圈</h2>
+            <p>讓磁鐵快速或慢速穿過線圈，觀察電流表指針如何偏轉。</p>
+          </div>
+          <div class="scene-shell induction-scene">
+            <div id="inductionMagnet" class="induction-magnet">
+              <span id="inductionMagnetLeft">N</span>
+              <span id="inductionMagnetRight">S</span>
+            </div>
+            <div class="induction-coil"></div>
+            <div class="induction-meter">
+              <div id="inductionNeedle" class="induction-needle"></div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>磁通量改變得越快，感應效果通常越明顯；方向變了，電流方向也會跟著變。</p>
+          </div>
+          <label class="control-group">
+            <span>磁鐵速度：<strong id="inductionSpeedValue">5</strong></span>
+            <input id="inductionSpeedRange" type="range" min="2" max="9" value="5" />
+          </label>
+          <div class="control-group">
+            <span>先進入的磁極</span>
+            <div class="button-row">
+              <button class="mode-button active" type="button" data-pole="N">N 極先進</button>
+              <button class="mode-button" type="button" data-pole="S">S 極先進</button>
+            </div>
+          </div>
+          <div class="button-row">
+            <button id="inductionStart" class="primary-button" type="button">開始移動</button>
+            <button id="inductionReset" class="ghost-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>感應電流方向</span>
+              <strong id="inductionDirectionText">尚未產生</strong>
+            </div>
+            <div class="stat-item">
+              <span>峰值強度</span>
+              <strong id="inductionPeakText">0.00</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="inductionTip">磁鐵穿進和離開線圈時，偏轉方向常會相反。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>這個頁面在看什麼？</h2>
+          <ul>
+            <li>不是磁鐵本身有電流，而是磁通量變化讓線圈產生感應電流。</li>
+            <li>穿進線圈和離開線圈時，感應方向可能不同。</li>
+            <li>移動得更快時，改變通常也更明顯。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>生活應用</h2>
+          <p>發電機、腳踏車發電燈和一些感應裝置，背後都和電磁感應有關。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/electromagnetic-induction.js"></script>
+  </body>
+</html>

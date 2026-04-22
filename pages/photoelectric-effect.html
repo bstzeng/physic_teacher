@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>光電效應入門 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="photoelectric-effect">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>光照金屬板</h2>
+            <p>調整光的頻率與強度，看看金屬表面會不會放出電子，以及電子飛出的快慢。</p>
+          </div>
+          <div class="scene-shell photoelectric-scene">
+            <div id="photoBeam" class="photo-beam"></div>
+            <div class="photo-lamp"></div>
+            <div class="photo-metal"></div>
+            <div id="photoElectrons" class="photo-electrons"></div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>操作控制</h2>
+            <p>頻率主要影響電子能不能被打出來與動能大小；強度則更像在影響電子數量。</p>
+          </div>
+          <label class="control-group">
+            <span>光頻率：<strong id="photoFrequencyValue">6.0</strong></span>
+            <input id="photoFrequencyRange" type="range" min="2" max="10" step="0.1" value="6.0" />
+          </label>
+          <label class="control-group">
+            <span>光強度：<strong id="photoIntensityValue">60</strong>%</span>
+            <input id="photoIntensityRange" type="range" min="10" max="100" value="60" />
+          </label>
+          <div class="control-group">
+            <span>金屬材料</span>
+            <div class="button-row">
+              <button class="material-button active" type="button" data-metal="sodium">鈉</button>
+              <button class="material-button" type="button" data-metal="zinc">鋅</button>
+              <button class="material-button" type="button" data-metal="copper">銅</button>
+            </div>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>是否放出電子</span>
+              <strong id="photoEmitText">會</strong>
+            </div>
+            <div class="stat-item">
+              <span>電子動能感受</span>
+              <strong id="photoEnergyText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="photoTip">先固定強度，只改頻率比較最清楚。</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>最容易搞混的地方</h2>
+          <ul>
+            <li>不是光越亮就一定能打出電子，先要看頻率有沒有達到門檻。</li>
+            <li>頻率高於門檻後，電子動能才會隨頻率增加而變大。</li>
+            <li>強度常比較像在影響被打出的電子數量。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>近代物理意義</h2>
+          <p>光電效應是理解光量子概念的重要起點，也是高中近代物理很關鍵的一頁。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/photoelectric-effect.js"></script>
+  </body>
+</html>
