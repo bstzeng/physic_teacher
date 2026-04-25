@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>洛倫茲力 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="lorentz-force">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2 id="packSceneTitle">互動畫面</h2>
+            <p id="packSceneDesc"></p>
+          </div>
+          <div class="scene-shell generic-pack-scene">
+            <canvas id="packCanvas" class="pack-canvas" width="640" height="340"></canvas>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2 id="packControlTitle">操作控制</h2>
+            <p id="packControlDesc"></p>
+          </div>
+          <div id="packControls" class="pack-controls"></div>
+          <div id="packStats" class="stat-list"></div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul id="packObserve"></ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p id="packChallenge"></p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/core/hundred-pack.js"></script>
+  </body>
+</html>

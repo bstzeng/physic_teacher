@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   const quizBank = {
     "gravity-fall": {
       question: "球放開後最可能怎麼移動？",
@@ -432,7 +432,147 @@
       answer: 0,
       explanation: "兩種核反應都可能把一部分質量差轉成大量能量放出來。",
     },
-  };
+    "lorentz-force": {
+      question: "若帶電粒子速度方向固定，磁場變強時洛倫茲力通常怎麼變？",
+      choices: ["變大", "變小", "完全不變"],
+      answer: 0,
+      explanation: "磁力大小和磁場強度成正比，所以磁場越強，受力通常越大。",
+    },    "magnetic-particle": {
+      question: "在相同磁場下，粒子速度越快，圓形軌道半徑通常會怎樣？",
+      choices: ["變大", "變小", "一定不變"],
+      answer: 0,
+      explanation: "速度越大時，需要更大的轉彎半徑才能維持圓周運動。",
+    },    "crossed-fields": {
+      question: "如果電場力和磁力大小相等、方向相反，粒子最可能怎樣？",
+      choices: ["接近直線前進", "立刻停止", "一定繞圓"],
+      answer: 0,
+      explanation: "兩種力互相抵消時，粒子可以接近不偏轉地前進。",
+    },    "motor-effect": {
+      question: "馬達效應中，導線受力和哪三個量有關？",
+      choices: ["電流、磁場、導線長度", "只有導線顏色", "只有溫度"],
+      answer: 0,
+      explanation: "導線受力和電流、磁場及有效長度都有關。",
+    },    "generator-principle": {
+      question: "線圈轉得更快時，感應電壓通常會怎樣？",
+      choices: ["變大", "變成零", "完全不變"],
+      answer: 0,
+      explanation: "切割磁力線更快時，感應電壓通常會提高。",
+    },    "damping-oscillation": {
+      question: "阻尼越大時，振幅通常會怎樣？",
+      choices: ["衰減得更快", "變得無限大", "完全不變"],
+      answer: 0,
+      explanation: "阻尼會消耗振動能量，所以阻尼越大，振幅通常越快縮小。",
+    },    "resonance": {
+      question: "外力頻率最接近固有頻率時，最容易出現什麼現象？",
+      choices: ["共振", "完全靜止", "重力消失"],
+      answer: 0,
+      explanation: "當外力頻率接近系統固有頻率時，最容易出現共振。",
+    },    "standing-wave-harmonics": {
+      question: "諧波數增加時，節點數通常會怎樣？",
+      choices: ["增加", "減少", "一定歸零"],
+      answer: 0,
+      explanation: "更高的諧波會出現更多節點與腹點。",
+    },    "spring-energy": {
+      question: "彈簧被拉得越開時，彈性位能通常會怎樣？",
+      choices: ["增加", "減少", "完全不變"],
+      answer: 0,
+      explanation: "位移越大，彈簧儲存的彈性位能通常越多。",
+    },    "pendulum-energy": {
+      question: "單擺從更高角度放手時，到底部的速率通常會怎樣？",
+      choices: ["變快", "變慢到零", "完全不變"],
+      answer: 0,
+      explanation: "起始高度越高，轉成動能的位能越多，所以到底部通常更快。",
+    },    "angular-momentum": {
+      question: "角動量和下列哪一項最有關？",
+      choices: ["質量、半徑、速度", "只有顏色", "只有溫度"],
+      answer: 0,
+      explanation: "角動量和質量、半徑、切線速度都有關。",
+    },    "moment-of-inertia": {
+      question: "質量分布越靠外側，轉動慣量通常會怎樣？",
+      choices: ["變大", "變小", "一定不變"],
+      answer: 0,
+      explanation: "質量離轉軸越遠，對轉動慣量的貢獻越大。",
+    },    "torque-rotation": {
+      question: "在其他條件固定下，力臂變長時力矩通常會怎樣？",
+      choices: ["變大", "變小", "完全不變"],
+      answer: 0,
+      explanation: "力矩等於力乘上力臂，所以力臂越長，力矩通常越大。",
+    },    "projectile-range": {
+      question: "同一初速下，哪個角度常接近最遠射程？",
+      choices: ["45 度附近", "0 度", "90 度"],
+      answer: 0,
+      explanation: "在理想情況下，45 度附近常能得到接近最遠的射程。",
+    },    "escape-velocity": {
+      question: "行星質量變大時，逃逸速度通常會怎樣？",
+      choices: ["增加", "減少到零", "完全不變"],
+      answer: 0,
+      explanation: "質量越大，引力越強，因此所需逃逸速度通常越高。",
+    },    "kepler-third-law": {
+      question: "軌道半徑變大時，公轉週期通常會怎樣？",
+      choices: ["變長", "變短到零", "完全不變"],
+      answer: 0,
+      explanation: "軌道越大，繞行一圈通常需要更久時間。",
+    },    "bernoulli-flow": {
+      question: "在其他條件相近時，流速越大，靜壓常會怎樣？",
+      choices: ["降低", "升高很多", "完全不變"],
+      answer: 0,
+      explanation: "白努力原理說明流速大時，靜壓常較低。",
+    },    "venturi-effect": {
+      question: "管子變窄時，流速通常會怎樣？",
+      choices: ["變快", "變慢到零", "完全不變"],
+      answer: 0,
+      explanation: "流量相近時，管徑變窄通常會讓流速變快。",
+    },    "polarization": {
+      question: "分析器轉到 90 度附近時，通過光通常會怎樣？",
+      choices: ["變得很弱", "變得最強", "完全不變"],
+      answer: 0,
+      explanation: "偏振方向互相垂直時，通過的光通常會很少。",
+    },    "diffraction-grating": {
+      question: "波長變長時，光柵亮線通常會怎樣？",
+      choices: ["更容易分開", "全部重疊", "完全不變"],
+      answer: 0,
+      explanation: "波長變長時，亮線常會往外拉開。",
+    },    "semiconductor-diode": {
+      question: "二極體跨過導通門檻後，電流常會怎樣？",
+      choices: ["快速增加", "變成零", "固定不變"],
+      answer: 0,
+      explanation: "當電壓超過門檻後，電流常會明顯上升。",
+    },    "transistor-switch": {
+      question: "基極電流增加時，集極電流通常會怎樣？",
+      choices: ["跟著增加", "一定減少", "完全不變"],
+      answer: 0,
+      explanation: "在放大區內，基極電流增加常會讓集極電流增加。",
+    },    "quantum-tunneling": {
+      question: "障壁越寬時，穿透機率通常會怎樣？",
+      choices: ["降低", "升高到一百", "完全不變"],
+      answer: 0,
+      explanation: "障壁越寬，粒子穿隧出去的機率通常越低。",
+    },    "infinite-potential-well": {
+      question: "量子數變大時，能階通常會怎樣？",
+      choices: ["升高", "下降到零", "完全不變"],
+      answer: 0,
+      explanation: "量子數越高，對應的能量通常越高。",
+    },    "bohr-spectrum-advanced": {
+      question: "電子從高能階跳到低能階時，常會怎樣？",
+      choices: ["放出光子", "失去全部質量", "完全停止存在"],
+      answer: 0,
+      explanation: "能階差會以光子的形式放出。",
+    },    "nuclear-binding-energy": {
+      question: "哪一類大小的原子核通常比較穩定？",
+      choices: ["中等大小附近", "最小的一定最穩", "最大的永遠最穩"],
+      answer: 0,
+      explanation: "每核子束縛能常在中等大小附近接近最大，代表那附近較穩定。",
+    },    "photoelectric-advanced": {
+      question: "哪一個主要決定光電子最大動能？",
+      choices: ["入射光頻率", "光的顏色名稱", "金屬外型"],
+      answer: 0,
+      explanation: "光電子最大動能主要和入射光頻率及逸出功有關。",
+    },    "signal-filter": {
+      question: "輸入頻率高於截止頻率很多時，輸出通常會怎樣？",
+      choices: ["被明顯削弱", "一定變大", "完全不變"],
+      answer: 0,
+      explanation: "低通濾波器會讓高頻成分變弱。",
+    },  };
 
   function renderQuiz(conceptId) {
     const quiz = quizBank[conceptId];
@@ -590,3 +730,4 @@
     return concept;
   };
 })();
+
