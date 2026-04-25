@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>德布羅意波 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="de-broglie-wave">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>物質波觀察區</h2>
+            <p>動量越大，畫面上的波峰會擠得越密，代表波長變短。</p>
+          </div>
+          <div class="scene-shell matter-wave-scene">
+            <div class="particle-dot"></div>
+            <div class="matter-wave-line">
+              <div id="matterWaveBars" class="wave-bars"></div>
+            </div>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制區</h2>
+            <p>質量和速度都會影響動量，所以也會影響德布羅意波長。</p>
+          </div>
+          <label class="control-group">
+            <span>粒子質量：<strong id="matterMassValue">2.0</strong></span>
+            <input id="matterMassRange" type="range" min="10" max="80" value="20" />
+          </label>
+          <label class="control-group">
+            <span>粒子速度：<strong id="matterSpeedValue">3.0</strong></span>
+            <input id="matterSpeedRange" type="range" min="10" max="80" value="30" />
+          </label>
+          <div class="stat-list">
+            <div class="stat-item"><span>相對動量</span><strong id="matterMomentumText">6.0</strong></div>
+            <div class="stat-item"><span>相對波長</span><strong id="matterWaveText">0.167</strong></div>
+            <div class="stat-item"><span>觀察提示</span><strong id="matterTipText">現在波峰間距偏大</strong></div>
+          </div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>波長和動量成反比。</li>
+            <li>大質量或高速粒子的物質波通常比較短。</li>
+            <li>電子等微小粒子較容易觀察到波動效果。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>同時增加質量和速度，看看波峰間距會縮短到多密。</p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/de-broglie-wave.js"></script>
+  </body>
+</html>

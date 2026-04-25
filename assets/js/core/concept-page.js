@@ -372,6 +372,66 @@
       answer: 0,
       explanation: "電子回到較低能階時，會把能量差以光子的形式放出去。",
     },
+    "gravity-potential": {
+      question: "如果和行星中心的距離變成兩倍，引力場強度通常會怎樣？",
+      choices: ["變成四分之一左右", "變成兩倍", "完全不變"],
+      answer: 0,
+      explanation: "萬有引力場強度和距離平方成反比，所以距離變兩倍時通常降成四分之一。",
+    },
+    "electromagnetic-spectrum": {
+      question: "可見光在電磁波頻譜中，大約位在哪兩種波之間？",
+      choices: ["紅外線和紫外線之間", "微波和無線電波之間", "X 光和伽瑪射線之間"],
+      answer: 0,
+      explanation: "可見光位在紅外線和紫外線之間，只是我們肉眼能看到這一小段。",
+    },
+    transformer: {
+      question: "如果次級線圈圈數比初級多很多，輸出電壓通常會怎樣？",
+      choices: ["升高", "降低到零", "完全不變"],
+      answer: 0,
+      explanation: "理想變壓器中，次級圈數越多，輸出電壓通常越高。",
+    },
+    "rc-circuit": {
+      question: "RC 電路中，時間常數變大代表什麼？",
+      choices: ["充放電變慢", "充放電瞬間完成", "電流方向固定不變"],
+      answer: 0,
+      explanation: "時間常數越大，電容電壓變化越慢，需要更久才接近充滿或放空。",
+    },
+    "relativity-intro": {
+      question: "當速度越接近光速時，哪個效果會更明顯？",
+      choices: ["時間延緩和長度收縮", "重力完全消失", "物體質量變成零"],
+      answer: 0,
+      explanation: "速度越接近光速，相對論效應會越明顯，包括時間延緩和長度收縮。",
+    },
+    "blackbody-radiation": {
+      question: "黑體溫度升高時，最強輻射波長通常會怎樣？",
+      choices: ["變短", "變長", "完全不變"],
+      answer: 0,
+      explanation: "根據維恩位移定律，溫度越高，最強輻射波長越短。",
+    },
+    "de-broglie-wave": {
+      question: "如果粒子的動量變大，德布羅意波長通常會怎樣？",
+      choices: ["變短", "變長", "不一定有關"],
+      answer: 0,
+      explanation: "物質波波長和動量成反比，所以動量變大時，波長會變短。",
+    },
+    "uncertainty-principle": {
+      question: "把粒子的位置限制得更小時，動量不確定度通常會怎樣？",
+      choices: ["變大", "變小", "完全不變"],
+      answer: 0,
+      explanation: "位置越精確，動量越不容易同時精確知道，這就是不確定性原理的核心。",
+    },
+    spectroscopy: {
+      question: "為什麼不同氣體會有不同的發射光譜線？",
+      choices: ["因為能階差不同", "因為顏色是隨機的", "因為所有原子都一樣"],
+      answer: 0,
+      explanation: "不同原子的能階結構不同，所以電子躍遷放出的光譜線也不同。",
+    },
+    "nuclear-reactions": {
+      question: "核分裂和核融合共同的特點是什麼？",
+      choices: ["都可能放出大量能量", "都只會吸收能量", "都完全不涉及質量變化"],
+      answer: 0,
+      explanation: "兩種核反應都可能把一部分質量差轉成大量能量放出來。",
+    },
   };
 
   function renderQuiz(conceptId) {

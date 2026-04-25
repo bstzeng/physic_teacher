@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>萬有引力場與位能 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="gravity-potential">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>引力場觀察區</h2>
+            <p>觀察探測器離行星越近時，箭頭和數值如何一起改變。</p>
+          </div>
+          <div class="scene-shell gravity-potential-scene">
+            <div class="gravity-planet"></div>
+            <div id="gravityArrow" class="gravity-arrow"></div>
+            <div id="gravityProbe" class="gravity-probe"></div>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制區</h2>
+            <p>行星質量越大、距離越近，引力場和位能變化都會更明顯。</p>
+          </div>
+          <label class="control-group">
+            <span>行星質量：<strong id="gravityMassValue">8.0</strong></span>
+            <input id="gravityMassRange" type="range" min="20" max="120" value="80" />
+          </label>
+          <label class="control-group">
+            <span>探測距離：<strong id="gravityDistanceValue">7.0</strong> 單位</span>
+            <input id="gravityDistanceRange" type="range" min="3" max="12" value="7" />
+          </label>
+          <label class="control-group">
+            <span>探測器質量：<strong id="gravityProbeMassValue">2.0</strong></span>
+            <input id="gravityProbeMassRange" type="range" min="10" max="60" value="20" />
+          </label>
+          <div class="stat-list">
+            <div class="stat-item"><span>引力場強度</span><strong id="gravityFieldText">0.163</strong></div>
+            <div class="stat-item"><span>引力位能</span><strong id="gravityPotentialText">-2.29</strong></div>
+            <div class="stat-item"><span>觀察提示</span><strong id="gravityTipText">靠近時變化很快</strong></div>
+          </div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>距離加倍時，引力場強度會大幅下降。</li>
+            <li>位能通常是負值，代表需要做功才能遠離引力源。</li>
+            <li>質量越大時，探測器感受到的作用越明顯。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把距離拉遠，再把行星質量調大，看看能不能把引力場拉回原本差不多的大小。</p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/gravity-potential.js"></script>
+  </body>
+</html>

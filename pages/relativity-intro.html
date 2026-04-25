@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>狹義相對論入門 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="relativity-intro">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>相對論觀察區</h2>
+            <p>當太空船速度接近光速時，船上時鐘和船身長度都會出現明顯變化。</p>
+          </div>
+          <div class="scene-shell relativity-scene">
+            <div class="star-strip"></div>
+            <div id="relativityShip" class="relativity-ship"></div>
+            <div class="clock-face">
+              <div id="relativityHand" class="clock-hand"></div>
+            </div>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制區</h2>
+            <p>速度用光速比例表示，越接近 1，效果越明顯。</p>
+          </div>
+          <label class="control-group">
+            <span>速度：<strong id="relativitySpeedValue">0.50</strong> c</span>
+            <input id="relativitySpeedRange" type="range" min="0" max="99" value="50" />
+          </label>
+          <div class="stat-list">
+            <div class="stat-item"><span>時間延緩因子</span><strong id="relativityGammaText">1.15</strong></div>
+            <div class="stat-item"><span>長度比例</span><strong id="relativityLengthText">86.6%</strong></div>
+            <div class="stat-item"><span>時鐘快慢</span><strong id="relativityClockText">稍慢</strong></div>
+          </div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>低速時，相對論效果通常很不明顯。</li>
+            <li>接近光速時，時間延緩會快速變強。</li>
+            <li>長度收縮發生在運動方向上。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把速度拉到 0.9c 以上，看看船長和時鐘和原本相比差多少。</p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/relativity-intro.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>核分裂與核融合 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="nuclear-reactions">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>核反應觀察區</h2>
+            <p>切換模式時，粒子會重新排列，底部能量條也會顯示這次反應的強弱。</p>
+          </div>
+          <div class="scene-shell nuclear-scene">
+            <div id="nuclearCore" class="nucleus-core"></div>
+            <div id="nuclearParticles"></div>
+            <div class="reaction-energy"><span id="nuclearEnergyFill"></span></div>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制區</h2>
+            <p>核分裂是大核分開，核融合是小核合成更大的核。</p>
+          </div>
+          <div class="control-group">
+            <span>反應模式</span>
+            <div class="button-row">
+              <button class="mode-button active" type="button" data-nuclear-mode="fission">核分裂</button>
+              <button class="mode-button" type="button" data-nuclear-mode="fusion">核融合</button>
+            </div>
+          </div>
+          <label class="control-group">
+            <span>反應條件：<strong id="nuclearConditionValue">60</strong></span>
+            <input id="nuclearConditionRange" type="range" min="20" max="100" value="60" />
+          </label>
+          <div class="stat-list">
+            <div class="stat-item"><span>反應結果</span><strong id="nuclearResultText">大核裂成兩塊</strong></div>
+            <div class="stat-item"><span>相對能量</span><strong id="nuclearEnergyText">60</strong></div>
+            <div class="stat-item"><span>觀察提示</span><strong id="nuclearTipText">能量來自質量差</strong></div>
+          </div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>核分裂常從較重的原子核開始。</li>
+            <li>核融合通常需要很高溫，讓小核更容易靠近。</li>
+            <li>兩者都可能放出很大的能量。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>切換兩種模式，比較在同樣條件數值下，哪一邊的能量條更容易變高。</p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/nuclear-reactions.js"></script>
+  </body>
+</html>

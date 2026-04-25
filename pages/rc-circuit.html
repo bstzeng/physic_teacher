@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RC 充放電 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="rc-circuit">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>充放電觀察區</h2>
+            <p>電容器不會一下子滿電，而是會隨時間慢慢接近目標電壓。</p>
+          </div>
+          <div class="scene-shell rc-scene">
+            <div class="rc-wire"></div>
+            <div class="rc-battery"></div>
+            <div class="rc-resistor"></div>
+            <div class="rc-capacitor"></div>
+            <div class="rc-charge-fill"><span id="rcFill"></span></div>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制區</h2>
+            <p>電阻和電容越大，時間常數越大，變化就越慢。</p>
+          </div>
+          <label class="control-group">
+            <span>電阻 R：<strong id="rcResistanceValue">4.0</strong> kΩ</span>
+            <input id="rcResistanceRange" type="range" min="10" max="100" value="40" />
+          </label>
+          <label class="control-group">
+            <span>電容 C：<strong id="rcCapacitanceValue">6.0</strong> μF</span>
+            <input id="rcCapacitanceRange" type="range" min="10" max="100" value="60" />
+          </label>
+          <div class="button-row">
+            <button id="rcCharge" class="primary-button" type="button">開始充電</button>
+            <button id="rcDischarge" class="ghost-button" type="button">開始放電</button>
+          </div>
+          <div class="stat-list">
+            <div class="stat-item"><span>時間常數</span><strong id="rcTauText">24.0</strong></div>
+            <div class="stat-item"><span>目前電壓比例</span><strong id="rcVoltageText">0%</strong></div>
+            <div class="stat-item"><span>狀態</span><strong id="rcModeText">等待操作</strong></div>
+          </div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>RC 電路的電壓變化通常是漸進式的。</li>
+            <li>時間常數越大，曲線越平緩。</li>
+            <li>充電和放電都不是瞬間完成。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把時間常數調大，再比較充電速度和原本有什麼差異。</p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/rc-circuit.js"></script>
+  </body>
+</html>

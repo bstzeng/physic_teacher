@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>不確定性原理入門 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="uncertainty-principle">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>不確定性觀察區</h2>
+            <p>位置窗越窄，底下的動量散布會越寬，表示越難同時精準知道動量。</p>
+          </div>
+          <div class="scene-shell uncertainty-scene">
+            <div id="positionWindow" class="position-window"></div>
+            <div id="momentumSpread" class="momentum-spread"></div>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制區</h2>
+            <p>這裡用簡化方式幫你感受位置與動量精確度之間的拉扯。</p>
+          </div>
+          <label class="control-group">
+            <span>位置寬度：<strong id="uncertaintyWidthValue">50</strong></span>
+            <input id="uncertaintyWidthRange" type="range" min="20" max="120" value="50" />
+          </label>
+          <div class="stat-list">
+            <div class="stat-item"><span>位置不確定度</span><strong id="uncertaintyPosText">50</strong></div>
+            <div class="stat-item"><span>動量不確定度</span><strong id="uncertaintyMomText">2.00</strong></div>
+            <div class="stat-item"><span>觀察提示</span><strong id="uncertaintyTipText">位置越準，動量越不準</strong></div>
+          </div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>這不是儀器太差，而是量子世界本身的特性。</li>
+            <li>位置越被侷限，動量散布通常越大。</li>
+            <li>兩種量不容易同時達到非常精確。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>試著把位置窗拉到最窄，再看看動量散布和原本相比放大了多少。</p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/uncertainty-principle.js"></script>
+  </body>
+</html>

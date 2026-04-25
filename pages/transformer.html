@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>變壓器 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="transformer">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>變壓觀察區</h2>
+            <p>改變圈數比時，輸出端燈泡亮度也會跟著變。</p>
+          </div>
+          <div class="scene-shell transformer-scene">
+            <div class="core-block"></div>
+            <div class="coil coil-primary"></div>
+            <div class="coil coil-secondary"></div>
+            <div id="transformerLamp" class="lamp-output"></div>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制區</h2>
+            <p>次級圈數比初級多時會升壓，較少時會降壓。</p>
+          </div>
+          <label class="control-group">
+            <span>輸入電壓：<strong id="transformerInputValue">12</strong> V</span>
+            <input id="transformerInputRange" type="range" min="4" max="24" value="12" />
+          </label>
+          <label class="control-group">
+            <span>初級圈數：<strong id="transformerPrimaryValue">40</strong></span>
+            <input id="transformerPrimaryRange" type="range" min="20" max="80" value="40" />
+          </label>
+          <label class="control-group">
+            <span>次級圈數：<strong id="transformerSecondaryValue">60</strong></span>
+            <input id="transformerSecondaryRange" type="range" min="20" max="120" value="60" />
+          </label>
+          <div class="stat-list">
+            <div class="stat-item"><span>輸出電壓</span><strong id="transformerOutputText">18.0 V</strong></div>
+            <div class="stat-item"><span>變壓型態</span><strong id="transformerModeText">升壓</strong></div>
+            <div class="stat-item"><span>亮度</span><strong id="transformerBrightText">偏亮</strong></div>
+          </div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>輸出電壓和圈數比有直接關係。</li>
+            <li>理想情況下，次級圈數越多，輸出電壓越高。</li>
+            <li>變壓器通常搭配交流電使用。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把輸出電壓調到接近 6 V，看看你可以用哪些圈數組合做到。</p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/transformer.js"></script>
+  </body>
+</html>

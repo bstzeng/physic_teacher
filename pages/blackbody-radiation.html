@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>黑體輻射 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="blackbody-radiation">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>輻射觀察區</h2>
+            <p>溫度提高時，物體會越來越亮，最強輻射波長也會往短波移動。</p>
+          </div>
+          <div class="scene-shell blackbody-scene">
+            <div id="blackbodyObject" class="blackbody-object"></div>
+            <div class="radiation-bar"><span id="blackbodyFill"></span></div>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制區</h2>
+            <p>溫度越高，通常發光越亮，顏色也會逐步偏向白藍。</p>
+          </div>
+          <label class="control-group">
+            <span>溫度：<strong id="blackbodyTempValue">3000</strong> K</span>
+            <input id="blackbodyTempRange" type="range" min="800" max="9000" value="3000" />
+          </label>
+          <div class="stat-list">
+            <div class="stat-item"><span>峰值波長</span><strong id="blackbodyPeakText">966</strong> nm</div>
+            <div class="stat-item"><span>光色感覺</span><strong id="blackbodyColorText">紅橙色</strong></div>
+            <div class="stat-item"><span>輻射強度</span><strong id="blackbodyPowerText">中等</strong></div>
+          </div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>溫度越高，最強輻射波長越短。</li>
+            <li>低溫時多在紅外線，高溫時更可能落到可見光。</li>
+            <li>整體輻射強度也會隨溫度上升而增加。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>試著把溫度加到讓物體看起來接近白色，再觀察峰值波長落在哪裡。</p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/blackbody-radiation.js"></script>
+  </body>
+</html>

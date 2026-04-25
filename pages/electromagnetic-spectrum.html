@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>電磁波頻譜 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="electromagnetic-spectrum">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>頻譜觀察區</h2>
+            <p>拖動標記，看看自己現在位在整條電磁波頻譜的哪一段。</p>
+          </div>
+          <div class="scene-shell spectrum-scene">
+            <div class="wave-card">
+              <h3 id="spectrumBandTitle">可見光</h3>
+              <p id="spectrumBandDesc">這是人眼可以直接看到的一小段電磁波。</p>
+            </div>
+            <div class="spectrum-band"></div>
+            <div id="spectrumMarker" class="spectrum-marker"></div>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制區</h2>
+            <p>波長越長，頻率越低；波長越短，頻率越高。</p>
+          </div>
+          <label class="control-group">
+            <span>波長位置：<strong id="spectrumPosValue">56</strong>%</span>
+            <input id="spectrumPosRange" type="range" min="0" max="100" value="56" />
+          </label>
+          <div class="stat-list">
+            <div class="stat-item"><span>頻段名稱</span><strong id="spectrumNameText">可見光</strong></div>
+            <div class="stat-item"><span>相對波長</span><strong id="spectrumWaveText">中等</strong></div>
+            <div class="stat-item"><span>相對頻率</span><strong id="spectrumFreqText">中等</strong></div>
+          </div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>無線電波和微波的波長較長。</li>
+            <li>可見光只佔整條頻譜的一小部分。</li>
+            <li>X 光和伽瑪射線的波長很短、頻率很高。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>先找到可見光，再往左右移動，看看它兩側各接哪一種電磁波。</p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/electromagnetic-spectrum.js"></script>
+  </body>
+</html>

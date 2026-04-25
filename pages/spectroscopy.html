@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>光譜分析 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="spectroscopy">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>光譜觀察區</h2>
+            <p>不同氣體被激發後，會在屏幕上留下不同位置的亮線。</p>
+          </div>
+          <div class="scene-shell spectroscopy-scene">
+            <div id="tubeGlow" class="tube-glow"></div>
+            <div id="spectrumScreen" class="spectrum-screen"></div>
+          </div>
+        </article>
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>控制區</h2>
+            <p>每種元素的能階不同，所以對應的發光線位置也不一樣。</p>
+          </div>
+          <label class="control-group">
+            <span>氣體種類</span>
+            <select id="spectroscopySelect">
+              <option value="hydrogen">氫</option>
+              <option value="neon">氖</option>
+              <option value="helium">氦</option>
+            </select>
+          </label>
+          <div class="button-row">
+            <button id="spectroscopyFlash" class="primary-button" type="button">激發光譜</button>
+          </div>
+          <div class="stat-list">
+            <div class="stat-item"><span>氣體名稱</span><strong id="spectroscopyNameText">氫</strong></div>
+            <div class="stat-item"><span>特徵</span><strong id="spectroscopyHintText">線條較少但清楚</strong></div>
+            <div class="stat-item"><span>觀察提示</span><strong id="spectroscopyTipText">每種元素都有自己的光譜指紋</strong></div>
+          </div>
+        </aside>
+      </section>
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>光譜線像元素的身分證。</li>
+            <li>不同元素的亮線位置不會完全一樣。</li>
+            <li>天文學常用光譜來判斷恆星和星雲的成分。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>切換三種氣體，比較哪一種亮線最多、哪一種最容易辨認。</p>
+        </article>
+      </section>
+    </main>
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/spectroscopy.js"></script>
+  </body>
+</html>
