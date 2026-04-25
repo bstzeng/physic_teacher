@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>放射性與半衰期 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="radioactivity-half-life">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>衰變觀察區</h2>
+            <p>每一個小圓點代表一個原子核，時間前進時，部分原子會逐漸變成衰變後的狀態。</p>
+          </div>
+          <div class="scene-shell radioactivity-scene">
+            <div id="nucleusGrid" class="nucleus-grid"></div>
+            <div class="decay-timeline">
+              <div id="decayMarker" class="decay-marker"></div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>衰變控制</h2>
+            <p>半衰期越短，剩下的原子數量下降得越快。</p>
+          </div>
+          <label class="control-group">
+            <span>半衰期：<strong id="halfLifeValue">4</strong> 秒</span>
+            <input id="halfLifeRange" type="range" min="2" max="10" value="4" />
+          </label>
+          <label class="control-group">
+            <span>初始原子數：<strong id="initialAtomsValue">32</strong></span>
+            <input id="initialAtomsRange" type="range" min="16" max="48" value="32" />
+          </label>
+          <div class="button-row">
+            <button id="radioStart" class="primary-button" type="button">開始</button>
+            <button id="radioReset" class="ghost-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>經過時間</span>
+              <strong id="radioTimeText">0.0 s</strong>
+            </div>
+            <div class="stat-item">
+              <span>剩餘原子</span>
+              <strong id="radioRemainText">32</strong>
+            </div>
+            <div class="stat-item">
+              <span>剩餘比例</span>
+              <strong id="radioRatioText">100%</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>半衰期是「剩一半」所需的時間，不是全部消失的時間。</li>
+            <li>原子越多，圖上看起來越平滑，但規律一樣。</li>
+            <li>時間走越久，剩下的原子會越來越少。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把半衰期調短，看看多久會降到原來的大約四分之一。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/radioactivity-half-life.js"></script>
+  </body>
+</html>

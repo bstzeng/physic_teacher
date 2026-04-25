@@ -2643,6 +2643,497 @@
   }
 }
 
+.orbit-scene,
+.capacitor-scene,
+.ac-scene,
+.engine-scene,
+.radioactivity-scene,
+.coulomb-scene,
+.equipotential-scene,
+.double-slit-scene,
+.gas-scene,
+.atomic-scene {
+  min-height: 390px;
+  overflow: hidden;
+}
+
+.orbit-scene {
+  background: radial-gradient(circle at 50% 45%, rgba(14, 46, 86, 0.95), rgba(2, 12, 27, 0.98));
+}
+
+.orbit-planet {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 110px;
+  height: 110px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 35% 35%, #8ecae6, #1d3557);
+  box-shadow: 0 0 34px rgba(142, 202, 230, 0.28);
+}
+
+.orbit-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 250px;
+  height: 250px;
+  border: 2px dashed rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+}
+
+.orbit-satellite {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 35% 35%, #ffd166, #f77f00);
+  box-shadow: 0 0 18px rgba(255, 209, 102, 0.45);
+}
+
+.capacitor-scene {
+  background: linear-gradient(180deg, rgba(238, 247, 255, 0.98), rgba(255, 245, 227, 0.94));
+}
+
+.capacitor-plate {
+  position: absolute;
+  top: 82px;
+  width: 24px;
+  height: 190px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #334155, #64748b);
+}
+
+.capacitor-left {
+  left: 34%;
+}
+
+.capacitor-right {
+  right: 34%;
+}
+
+.capacitor-field {
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  top: 86px;
+  bottom: 118px;
+  border-radius: 18px;
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(59, 130, 246, 0.1) 0 12px,
+    rgba(59, 130, 246, 0.3) 12px 18px
+  );
+}
+
+.charge-dot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.charge-plus {
+  background: #d62839;
+}
+
+.charge-minus {
+  background: #277da1;
+}
+
+.energy-tank {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  width: 72%;
+  height: 28px;
+  overflow: hidden;
+  border-radius: 999px;
+  transform: translateX(-50%);
+  background: rgba(148, 163, 184, 0.28);
+}
+
+.energy-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ffd166, #ef476f);
+  transition: width 160ms ease;
+}
+
+.ac-scene {
+  background: linear-gradient(180deg, rgba(245, 250, 255, 0.98), rgba(255, 244, 226, 0.94));
+}
+
+.ac-canvas {
+  width: 100%;
+  height: 240px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.ac-lamp {
+  position: absolute;
+  right: 52px;
+  bottom: 42px;
+  width: 86px;
+  height: 86px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 35%, #fff4bf, #ffd166);
+  box-shadow: 0 0 24px rgba(255, 209, 102, 0.25);
+  transition: transform 140ms ease, box-shadow 140ms ease, opacity 140ms ease;
+}
+
+.engine-scene {
+  background: linear-gradient(180deg, rgba(251, 245, 239, 0.98), rgba(255, 246, 232, 0.94));
+}
+
+.engine-hot,
+.engine-cold {
+  position: absolute;
+  width: 110px;
+  height: 150px;
+  border-radius: 24px;
+  top: 88px;
+}
+
+.engine-hot {
+  left: 72px;
+  background: linear-gradient(180deg, #ef476f, #d62839);
+}
+
+.engine-cold {
+  right: 72px;
+  background: linear-gradient(180deg, #90e0ef, #0077b6);
+}
+
+.engine-core {
+  position: absolute;
+  left: 50%;
+  top: 108px;
+  width: 160px;
+  height: 110px;
+  display: grid;
+  place-items: center;
+  border-radius: 28px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #334155, #1e293b);
+  color: #fff;
+  font-weight: 800;
+}
+
+.engine-bars {
+  position: absolute;
+  left: 50%;
+  bottom: 34px;
+  width: 76%;
+  transform: translateX(-50%);
+}
+
+.engine-bar {
+  height: 18px;
+  margin-top: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.24);
+}
+
+.engine-bar span {
+  display: block;
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+}
+
+.engine-work span {
+  background: linear-gradient(90deg, #ffd166, #f77f00);
+}
+
+.engine-waste span {
+  background: linear-gradient(90deg, #8ecae6, #219ebc);
+}
+
+.radioactivity-scene {
+  background: linear-gradient(180deg, rgba(245, 250, 255, 0.98), rgba(245, 255, 245, 0.94));
+}
+
+.nucleus-grid {
+  position: absolute;
+  left: 34px;
+  top: 34px;
+  width: 58%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+}
+
+.nucleus-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 35%, #ef476f, #d62839);
+  transition: opacity 160ms ease, transform 160ms ease, filter 160ms ease;
+}
+
+.nucleus-dot.decayed {
+  opacity: 0.25;
+  transform: scale(0.72);
+  filter: grayscale(1);
+}
+
+.decay-timeline {
+  position: absolute;
+  right: 36px;
+  top: 52px;
+  width: 170px;
+  height: 250px;
+  border-left: 4px solid rgba(34, 48, 69, 0.18);
+}
+
+.decay-marker {
+  position: absolute;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #277da1;
+}
+
+.coulomb-scene {
+  background: linear-gradient(180deg, rgba(245, 250, 255, 0.98), rgba(255, 245, 227, 0.94));
+}
+
+.charge-ball {
+  position: absolute;
+  top: 50%;
+  width: 86px;
+  height: 86px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.charge-ball.positive {
+  background: linear-gradient(180deg, #ef476f, #d62839);
+}
+
+.charge-ball.negative {
+  background: linear-gradient(180deg, #118ab2, #073b4c);
+}
+
+.force-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 12px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, #ffd166, #f77f00);
+}
+
+.force-arrow::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: -6px;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid #f77f00;
+}
+
+.equipotential-scene {
+  background: radial-gradient(circle at 50% 50%, rgba(243, 248, 255, 0.98), rgba(231, 240, 255, 0.96));
+}
+
+.equipotential-charge {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 800;
+}
+
+.equipotential-probe {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border: 4px solid #ffb703;
+  border-radius: 999px;
+  box-shadow: 0 0 0 6px rgba(255, 183, 3, 0.2);
+  transform: translate(-50%, -50%);
+}
+
+.field-arrow {
+  position: absolute;
+  width: 80px;
+  height: 6px;
+  border-radius: 999px;
+  transform-origin: left center;
+  background: linear-gradient(90deg, #ef476f, #f77f00);
+}
+
+.field-arrow::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: -5px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 14px solid #f77f00;
+}
+
+.double-slit-scene {
+  background: linear-gradient(180deg, rgba(251, 248, 255, 0.98), rgba(255, 245, 227, 0.94));
+}
+
+.slit-barrier {
+  position: absolute;
+  left: 34%;
+  top: 56px;
+  width: 26px;
+  height: 260px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #334155, #1e293b);
+}
+
+.slit-gap {
+  position: absolute;
+  left: 50%;
+  width: 12px;
+  height: 34px;
+  border-radius: 999px;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.screen-panel {
+  position: absolute;
+  right: 44px;
+  top: 44px;
+  width: 170px;
+  height: 280px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+}
+
+.fringe-pattern {
+  width: 100%;
+  height: 100%;
+}
+
+.gas-scene {
+  background: linear-gradient(180deg, rgba(244, 250, 255, 0.98), rgba(255, 248, 232, 0.94));
+}
+
+.gas-box {
+  position: absolute;
+  left: 36px;
+  top: 38px;
+  width: 60%;
+  height: 280px;
+  border: 10px solid #7b8ea3;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.gas-particle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 35%, #ffb703, #fb8500);
+}
+
+.pressure-gauge {
+  position: absolute;
+  right: 48px;
+  top: 92px;
+  width: 142px;
+  height: 142px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 8px solid #94a3b8;
+}
+
+.pressure-needle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 56px;
+  height: 6px;
+  border-radius: 999px;
+  transform-origin: left center;
+  background: #d62828;
+}
+
+.atomic-scene {
+  background: radial-gradient(circle at 50% 45%, rgba(13, 25, 45, 0.98), rgba(1, 8, 18, 0.99));
+}
+
+.atom-nucleus {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 35% 35%, #ef476f, #d62839);
+  box-shadow: 0 0 28px rgba(239, 71, 111, 0.3);
+}
+
+.atom-orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+}
+
+.atom-electron {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 35% 35%, #90e0ef, #00b4d8);
+  box-shadow: 0 0 16px rgba(144, 224, 239, 0.5);
+}
+
+.photon-flash {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 28px rgba(255, 209, 102, 0.8);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
 select {
   min-height: 46px;
   padding: 10px 12px;

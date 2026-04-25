@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>光的雙狹縫入門 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="double-slit">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>條紋觀察區</h2>
+            <p>雙狹縫會讓兩列波在屏幕上重疊，形成一明一暗的干涉條紋。</p>
+          </div>
+          <div class="scene-shell double-slit-scene">
+            <div class="slit-barrier">
+              <div id="slitGapA" class="slit-gap"></div>
+              <div id="slitGapB" class="slit-gap"></div>
+            </div>
+            <div class="screen-panel">
+              <div id="fringePattern" class="fringe-pattern"></div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>干涉控制</h2>
+            <p>波長、狹縫間距和屏幕距離，都會影響條紋疏密。</p>
+          </div>
+          <label class="control-group">
+            <span>波長：<strong id="slitWaveValue">520</strong> nm</span>
+            <input id="slitWaveRange" type="range" min="400" max="700" value="520" />
+          </label>
+          <label class="control-group">
+            <span>狹縫間距：<strong id="slitGapValue">0.30</strong> mm</span>
+            <input id="slitGapRange" type="range" min="10" max="60" value="30" />
+          </label>
+          <label class="control-group">
+            <span>屏幕距離：<strong id="slitScreenValue">2.0</strong> m</span>
+            <input id="slitScreenRange" type="range" min="10" max="40" value="20" />
+          </label>
+          <div class="button-row">
+            <button id="slitReset" class="primary-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>亮紋間距</span>
+              <strong id="slitSpacingText">3.47</strong>
+            </div>
+            <div class="stat-item">
+              <span>光色</span>
+              <strong id="slitColorText">綠光附近</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="slitTip">波長變長時條紋會拉開</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>波長越長，條紋間距通常越大。</li>
+            <li>狹縫越靠近，條紋也會比較疏。</li>
+            <li>屏幕越遠，亮暗條紋會被拉開。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把波長調到偏紅，再看看條紋和偏藍時相比有什麼差別。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/double-slit.js"></script>
+  </body>
+</html>

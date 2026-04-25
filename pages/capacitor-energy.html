@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>電容與儲能 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="capacitor-energy">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>電容器觀察區</h2>
+            <p>兩極板上的正負電荷越多，代表儲存的電荷越多，能量條也會一起改變。</p>
+          </div>
+          <div class="scene-shell capacitor-scene">
+            <div class="capacitor-plate capacitor-left"></div>
+            <div class="capacitor-plate capacitor-right"></div>
+            <div class="capacitor-field"></div>
+            <div id="capacitorCharges"></div>
+            <div class="energy-tank">
+              <div id="capacitorEnergyFill" class="energy-fill"></div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>電容控制</h2>
+            <p>在相同電壓下，電容越大，能儲存的電荷和能量通常也越多。</p>
+          </div>
+          <label class="control-group">
+            <span>電容值：<strong id="capacitanceValue">4.0</strong> μF</span>
+            <input id="capacitanceRange" type="range" min="10" max="100" value="40" />
+          </label>
+          <label class="control-group">
+            <span>電壓：<strong id="capacitorVoltageValue">9.0</strong> V</span>
+            <input id="capacitorVoltageRange" type="range" min="10" max="180" value="90" />
+          </label>
+          <div class="button-row">
+            <button id="capacitorReset" class="primary-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>儲存電荷</span>
+              <strong id="capacitorChargeText">36.0</strong>
+            </div>
+            <div class="stat-item">
+              <span>儲存能量</span>
+              <strong id="capacitorEnergyText">0.16</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="capacitorTip">目前儲能中等</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>電容值變大時，相同電壓下能存更多電荷。</li>
+            <li>電壓提高時，儲能會增加得更明顯。</li>
+            <li>電容器像是暫時存放電能的小倉庫。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>試著讓能量條幾乎充滿，再看看是調高電容還是調高電壓更有效。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/capacitor-energy.js"></script>
+  </body>
+</html>

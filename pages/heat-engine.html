@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>熱機與效率 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="heat-engine">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>熱機觀察區</h2>
+            <p>熱量從高溫熱源流向低溫冷源時，有一部分能轉成有用的功。</p>
+          </div>
+          <div class="scene-shell engine-scene">
+            <div class="engine-hot"></div>
+            <div class="engine-core">熱機</div>
+            <div class="engine-cold"></div>
+            <div class="engine-bars">
+              <div class="engine-bar engine-work"><span id="engineWorkFill"></span></div>
+              <div class="engine-bar engine-waste"><span id="engineWasteFill"></span></div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>熱機控制</h2>
+            <p>熱源越熱、冷源越冷，通常越有機會得到較高效率。</p>
+          </div>
+          <label class="control-group">
+            <span>熱源溫度：<strong id="engineHotValue">500</strong> K</span>
+            <input id="engineHotRange" type="range" min="350" max="900" value="500" />
+          </label>
+          <label class="control-group">
+            <span>冷源溫度：<strong id="engineColdValue">300</strong> K</span>
+            <input id="engineColdRange" type="range" min="220" max="500" value="300" />
+          </label>
+          <label class="control-group">
+            <span>輸入熱量：<strong id="engineHeatValue">120</strong> J</span>
+            <input id="engineHeatRange" type="range" min="40" max="200" value="120" />
+          </label>
+          <div class="button-row">
+            <button id="engineReset" class="primary-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>理論效率</span>
+              <strong id="engineEfficiencyText">40%</strong>
+            </div>
+            <div class="stat-item">
+              <span>可用功</span>
+              <strong id="engineWorkText">48 J</strong>
+            </div>
+            <div class="stat-item">
+              <span>排出熱量</span>
+              <strong id="engineWasteText">72 J</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>熱機無法把所有熱量都變成有用功。</li>
+            <li>熱源與冷源的溫差越大，效率通常越高。</li>
+            <li>輸入熱量增加時，有用功與廢熱常會一起增加。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>試著把效率調到超過 50%，看看你需要多大的溫差。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/heat-engine.js"></script>
+  </body>
+</html>

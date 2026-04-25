@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>庫侖定律 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="coulomb-law">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>電力觀察區</h2>
+            <p>同號電荷會互相排斥，異號電荷會互相吸引，距離越近力量越明顯。</p>
+          </div>
+          <div class="scene-shell coulomb-scene">
+            <div id="chargeA" class="charge-ball positive">+</div>
+            <div id="chargeB" class="charge-ball negative">-</div>
+            <div id="forceArrow" class="force-arrow"></div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>電荷控制</h2>
+            <p>力的大小和電荷量成正比，和距離平方成反比。</p>
+          </div>
+          <label class="control-group">
+            <span>電荷 A：<strong id="chargeAValue">+4</strong> μC</span>
+            <input id="chargeARange" type="range" min="-8" max="8" value="4" />
+          </label>
+          <label class="control-group">
+            <span>電荷 B：<strong id="chargeBValue">-3</strong> μC</span>
+            <input id="chargeBRange" type="range" min="-8" max="8" value="-3" />
+          </label>
+          <label class="control-group">
+            <span>距離：<strong id="chargeDistanceValue">2.0</strong> m</span>
+            <input id="chargeDistanceRange" type="range" min="10" max="40" value="20" />
+          </label>
+          <div class="button-row">
+            <button id="coulombReset" class="primary-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>作用型態</span>
+              <strong id="coulombTypeText">互相吸引</strong>
+            </div>
+            <div class="stat-item">
+              <span>相對力大小</span>
+              <strong id="coulombForceText">3.00</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="coulombTip">距離縮短時力會增加很快</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>電荷量越大，作用力通常越大。</li>
+            <li>距離變成兩倍時，力會掉到四分之一。</li>
+            <li>同號排斥，異號吸引。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把兩個電荷都改成同號，再比較箭頭方向和力大小怎麼改變。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/coulomb-law.js"></script>
+  </body>
+</html>

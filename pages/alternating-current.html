@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>交流電與波形 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="alternating-current">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>波形觀察區</h2>
+            <p>交流電會週期性改變方向，波形上方和下方代表電壓正負在交替變化。</p>
+          </div>
+          <div class="scene-shell ac-scene">
+            <canvas id="acCanvas" class="ac-canvas" width="640" height="240"></canvas>
+            <div id="acLamp" class="ac-lamp"></div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>波形控制</h2>
+            <p>振幅會影響高低，頻率會影響快慢，相位會讓波形左右移動。</p>
+          </div>
+          <label class="control-group">
+            <span>振幅：<strong id="acAmplitudeValue">120</strong> V</span>
+            <input id="acAmplitudeRange" type="range" min="40" max="200" value="120" />
+          </label>
+          <label class="control-group">
+            <span>頻率：<strong id="acFrequencyValue">50</strong> Hz</span>
+            <input id="acFrequencyRange" type="range" min="10" max="80" value="50" />
+          </label>
+          <label class="control-group">
+            <span>相位：<strong id="acPhaseValue">0</strong>°</span>
+            <input id="acPhaseRange" type="range" min="0" max="180" value="0" />
+          </label>
+          <div class="button-row">
+            <button id="acPause" class="ghost-button" type="button">暫停 / 繼續</button>
+            <button id="acReset" class="primary-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>有效值概念</span>
+              <strong id="acRmsText">84.9</strong>
+            </div>
+            <div class="stat-item">
+              <span>目前電壓</span>
+              <strong id="acInstantText">0.0</strong>
+            </div>
+            <div class="stat-item">
+              <span>燈泡亮度</span>
+              <strong id="acBrightnessText">中等</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>振幅越大，波峰和波谷越高。</li>
+            <li>頻率越高，同一段時間內的起伏次數越多。</li>
+            <li>相位改變時，整條波形會左右平移。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把頻率調高，再觀察燈泡亮暗變化會不會更快。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/alternating-current.js"></script>
+  </body>
+</html>

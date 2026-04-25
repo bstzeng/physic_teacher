@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>萬有引力與軌道 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="gravity-orbit">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>軌道觀察區</h2>
+            <p>試著調整半徑和速度，看看衛星會穩定繞行、向內掉落，還是飛出原本的軌道。</p>
+          </div>
+          <div class="scene-shell orbit-scene">
+            <div class="orbit-planet"></div>
+            <div id="orbitRing" class="orbit-ring"></div>
+            <div id="orbitSatellite" class="orbit-satellite"></div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>軌道控制</h2>
+            <p>圓形軌道有一個剛好的速度。太慢會掉下來，太快就可能往外飛。</p>
+          </div>
+          <label class="control-group">
+            <span>軌道半徑：<strong id="orbitRadiusValue">170</strong></span>
+            <input id="orbitRadiusRange" type="range" min="120" max="230" value="170" />
+          </label>
+          <label class="control-group">
+            <span>衛星速度：<strong id="orbitSpeedValue">8.0</strong></span>
+            <input id="orbitSpeedRange" type="range" min="30" max="150" value="80" />
+          </label>
+          <label class="control-group">
+            <span>行星質量：<strong id="orbitMassValue">6.0</strong></span>
+            <input id="orbitMassRange" type="range" min="30" max="100" value="60" />
+          </label>
+          <div class="button-row">
+            <button id="orbitPause" class="ghost-button" type="button">暫停 / 繼續</button>
+            <button id="orbitReset" class="primary-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>穩定軌道速度</span>
+              <strong id="orbitTargetText">8.0</strong>
+            </div>
+            <div class="stat-item">
+              <span>逃逸速度</span>
+              <strong id="orbitEscapeText">11.3</strong>
+            </div>
+            <div class="stat-item">
+              <span>目前判斷</span>
+              <strong id="orbitStateText">接近圓形軌道</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>速度太小時，衛星會向內掉，軌道半徑逐漸縮小。</li>
+            <li>速度剛好時，衛星可以接近穩定的圓形軌道。</li>
+            <li>速度太大時，軌道會拉長，甚至接近飛離行星。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>把速度調到剛好接近穩定軌道，再試著把速度多加一點，看看軌道會怎麼變。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/gravity-orbit.js"></script>
+  </body>
+</html>

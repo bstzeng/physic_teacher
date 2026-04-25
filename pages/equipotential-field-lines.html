@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>等位線與電力線 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="equipotential-field-lines">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>場域觀察區</h2>
+            <p>移動探測點時，可以同時看見該點的電位高低，還有電力線的大致方向。</p>
+          </div>
+          <div id="equipotentialScene" class="scene-shell equipotential-scene">
+            <div id="fieldChargeA" class="equipotential-charge positive">+</div>
+            <div id="fieldChargeB" class="equipotential-charge negative">-</div>
+            <div id="fieldProbe" class="equipotential-probe"></div>
+            <div id="fieldArrow" class="field-arrow"></div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>探測控制</h2>
+            <p>等位線是電位相同的位置；電力線方向則表示正電荷受力的方向。</p>
+          </div>
+          <div class="control-group">
+            <span>電荷模式</span>
+            <div class="button-row">
+              <button class="mode-button active" type="button" data-field-mode="dipole">正負電荷</button>
+              <button class="mode-button" type="button" data-field-mode="same">同號電荷</button>
+            </div>
+          </div>
+          <label class="control-group">
+            <span>探測點 X：<strong id="probeXValue">70</strong>%</span>
+            <input id="probeXRange" type="range" min="15" max="85" value="70" />
+          </label>
+          <label class="control-group">
+            <span>探測點 Y：<strong id="probeYValue">50</strong>%</span>
+            <input id="probeYRange" type="range" min="18" max="82" value="50" />
+          </label>
+          <div class="button-row">
+            <button id="fieldReset" class="primary-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>該點電位</span>
+              <strong id="fieldPotentialText">0.00</strong>
+            </div>
+            <div class="stat-item">
+              <span>場強大小</span>
+              <strong id="fieldStrengthText">0.00</strong>
+            </div>
+            <div class="stat-item">
+              <span>方向提示</span>
+              <strong id="fieldDirectionText">往右</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>等位線上的各點電位相同。</li>
+            <li>越靠近電荷，通常電位與場強變化越明顯。</li>
+            <li>正電荷受力方向與電力線方向一致。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>試著找一條位置改變但電位接近不變的路徑，感受等位線的概念。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/equipotential-field-lines.js"></script>
+  </body>
+</html>

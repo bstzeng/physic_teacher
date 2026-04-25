@@ -312,6 +312,66 @@
       answer: 0,
       explanation: "只要頻率沒達到門檻，再強的光也不一定能打出電子。",
     },
+    "gravity-orbit": {
+      question: "如果衛星速度比穩定圓形軌道速度小很多，最可能發生什麼事？",
+      choices: ["慢慢掉回行星", "一定飛離行星", "完全不受重力影響"],
+      answer: 0,
+      explanation: "速度太小時，重力會讓衛星往內掉，軌道會縮小甚至落回行星。",
+    },
+    "capacitor-energy": {
+      question: "在電壓固定時，把電容值變大，儲存能量通常會怎樣？",
+      choices: ["增加", "減少", "保持一樣"],
+      answer: 0,
+      explanation: "電容儲能和電容值成正比，所以在相同電壓下，電容越大能量越多。",
+    },
+    "alternating-current": {
+      question: "交流電的頻率變高，代表什麼？",
+      choices: ["每秒振動次數變多", "電壓一定變小", "電流一定停止"],
+      answer: 0,
+      explanation: "頻率表示每秒重複幾次，頻率越高，波形在同一秒內起伏越多次。",
+    },
+    "heat-engine": {
+      question: "想讓熱機效率提高，最有幫助的做法是什麼？",
+      choices: ["提高熱源溫度並降低冷源溫度", "讓熱源和冷源一樣熱", "只把輸入熱量減少到零"],
+      answer: 0,
+      explanation: "熱源和冷源的溫差越大，通常越能轉成有用的功，效率也會提高。",
+    },
+    "radioactivity-half-life": {
+      question: "經過一個半衰期後，原來的放射性原子大約剩多少？",
+      choices: ["一半", "全部", "完全沒有"],
+      answer: 0,
+      explanation: "半衰期的意思就是經過那段時間後，剩下的原子數大約變成原本的一半。",
+    },
+    "coulomb-law": {
+      question: "兩個電荷距離拉成原本的兩倍時，電力大小大約變成多少？",
+      choices: ["四分之一", "兩倍", "不變"],
+      answer: 0,
+      explanation: "庫侖力和距離平方成反比，所以距離變兩倍，力會變成四分之一。",
+    },
+    "equipotential-field-lines": {
+      question: "如果沿著同一條等位線移動，哪一項通常不變？",
+      choices: ["電位", "電場方向", "與電荷的距離"],
+      answer: 0,
+      explanation: "等位線上的每一點電位相同，所以沿線移動時，電位不改變。",
+    },
+    "double-slit": {
+      question: "雙狹縫實驗裡，波長變長時，亮紋間距通常會怎樣？",
+      choices: ["變大", "變小", "一定消失"],
+      answer: 0,
+      explanation: "波長越長，條紋通常會拉得更開，所以亮紋間距會變大。",
+    },
+    "kinetic-gas": {
+      question: "如果容器體積固定，把溫度升高，壓力通常會怎樣？",
+      choices: ["升高", "降低", "保持一樣"],
+      answer: 0,
+      explanation: "溫度升高後，粒子運動更快，撞擊容器更頻繁，壓力通常會上升。",
+    },
+    "atomic-model": {
+      question: "電子從高能階跳回低能階時，常會發生什麼事？",
+      choices: ["放出光子", "失去全部質量", "完全停止運動"],
+      answer: 0,
+      explanation: "電子回到較低能階時，會把能量差以光子的形式放出去。",
+    },
   };
 
   function renderQuiz(conceptId) {

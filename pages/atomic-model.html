@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>原子模型與能階 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="atomic-model">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>能階觀察區</h2>
+            <p>電子在不同能階有不同軌道大小，往下跳時會放出一個光子。</p>
+          </div>
+          <div class="scene-shell atomic-scene">
+            <div class="atom-nucleus"></div>
+            <div class="atom-orbit" style="width: 110px; height: 110px;"></div>
+            <div class="atom-orbit" style="width: 180px; height: 180px;"></div>
+            <div class="atom-orbit" style="width: 250px; height: 250px;"></div>
+            <div id="atomElectron" class="atom-electron"></div>
+            <div id="photonFlash" class="photon-flash"></div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>能階控制</h2>
+            <p>電子升到高能階需要吸收能量；降回低能階時會放出光。</p>
+          </div>
+          <label class="control-group">
+            <span>目前能階：<strong id="atomLevelValue">3</strong></span>
+            <input id="atomLevelRange" type="range" min="1" max="3" value="3" />
+          </label>
+          <div class="button-row">
+            <button id="atomExcite" class="ghost-button" type="button">升到更高能階</button>
+            <button id="atomDrop" class="primary-button" type="button">往下躍遷</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>能階差</span>
+              <strong id="atomEnergyGapText">1.89 eV</strong>
+            </div>
+            <div class="stat-item">
+              <span>光子顏色</span>
+              <strong id="atomPhotonText">紅色附近</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="atomTip">從高能階掉下來才會放光</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>高能階的軌道通常比較大。</li>
+            <li>躍遷時能量差越大，放出的光子能量也越大。</li>
+            <li>不同能階差會對應不同顏色的光。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>先升到最高能階，再往下跳一階和跳兩階，比較光子顏色有什麼不同。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/atomic-model.js"></script>
+  </body>
+</html>

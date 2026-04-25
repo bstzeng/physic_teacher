@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>氣體動力論與壓力 | 物理小老師</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/concept.css" />
+  </head>
+  <body data-concept-id="kinetic-gas">
+    <main class="concept-page">
+      <header class="concept-hero">
+        <a class="home-link" href="../index.html">回首頁</a>
+        <div class="hero-text-block">
+          <p class="badge" data-role="level"></p>
+          <h1 data-role="title"></h1>
+          <p class="lead" data-role="summary"></p>
+        </div>
+      </header>
+
+      <section class="concept-layout">
+        <article class="stage-card">
+          <div class="card-head">
+            <h2>粒子觀察區</h2>
+            <p>粒子不停撞擊容器壁，撞得越快、越頻繁，壓力通常越大。</p>
+          </div>
+          <div class="scene-shell gas-scene">
+            <div id="gasBox" class="gas-box"></div>
+            <div class="pressure-gauge">
+              <div id="pressureNeedle" class="pressure-needle"></div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="control-card">
+          <div class="card-head">
+            <h2>氣體控制</h2>
+            <p>溫度讓粒子跑更快，體積變大則會讓碰撞變稀疏。</p>
+          </div>
+          <label class="control-group">
+            <span>溫度：<strong id="gasTempValue">300</strong> K</span>
+            <input id="gasTempRange" type="range" min="200" max="700" value="300" />
+          </label>
+          <label class="control-group">
+            <span>體積比例：<strong id="gasVolumeValue">1.0</strong></span>
+            <input id="gasVolumeRange" type="range" min="6" max="16" value="10" />
+          </label>
+          <label class="control-group">
+            <span>粒子數：<strong id="gasCountValue">18</strong></span>
+            <input id="gasCountRange" type="range" min="10" max="28" value="18" />
+          </label>
+          <div class="button-row">
+            <button id="gasReset" class="primary-button" type="button">重設</button>
+          </div>
+
+          <div class="stat-list">
+            <div class="stat-item">
+              <span>相對壓力</span>
+              <strong id="gasPressureText">1.00</strong>
+            </div>
+            <div class="stat-item">
+              <span>平均速率感</span>
+              <strong id="gasSpeedText">中等</strong>
+            </div>
+            <div class="stat-item">
+              <span>觀察提示</span>
+              <strong id="gasTip">升溫會讓壓力上升</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="lesson-grid">
+        <article class="lesson-card">
+          <h2>觀察重點</h2>
+          <ul>
+            <li>溫度升高時，粒子平均速度會變快。</li>
+            <li>體積縮小時，撞牆頻率會增加。</li>
+            <li>粒子數越多，壓力通常也會越大。</li>
+          </ul>
+        </article>
+        <article class="lesson-card">
+          <h2>小挑戰</h2>
+          <p>試著把體積放大，再把溫度調高，看看能不能把壓力拉回來。</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../assets/js/data/concepts.js"></script>
+    <script src="../assets/js/core/concept-page.js"></script>
+    <script src="../assets/js/concepts/kinetic-gas.js"></script>
+  </body>
+</html>
