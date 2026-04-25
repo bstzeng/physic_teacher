@@ -574,6 +574,546 @@
       explanation: "低通濾波器會讓高頻成分變弱。",
     },  };
 
+  const formulaBank = {
+    "gravity-fall": {
+      expression: "h = (1/2)gt^2",
+      note: "這個公式表示物體從靜止開始下落時，高度和時間的關係。時間越久，落下距離增加得越快。",
+      symbols: [{ symbol: "h", meaning: "落下高度，單位 m" }, { symbol: "g", meaning: "重力加速度，地球上約 9.8 m/s^2" }, { symbol: "t", meaning: "下落時間，單位 s" }],
+    },
+    "air-resistance": {
+      expression: "F_drag ~ A v^2",
+      note: "這是簡化公式，表示面積越大或速度越快，空氣阻力通常越明顯。",
+      symbols: [{ symbol: "F_drag", meaning: "空氣阻力" }, { symbol: "A", meaning: "迎風面積" }, { symbol: "v", meaning: "物體速度" }],
+    },
+    "static-electricity": {
+      expression: "F = kq1q2 / r^2",
+      note: "靜電力會隨電荷量變大而變強，距離拉遠時會快速變弱。",
+      symbols: [{ symbol: "F", meaning: "靜電力" }, { symbol: "k", meaning: "靜電常數" }, { symbol: "q1、q2", meaning: "兩個電荷量" }, { symbol: "r", meaning: "兩電荷距離" }],
+    },
+    "magnetism": {
+      expression: "F_m ~ 1 / r^2",
+      note: "這是簡化比例式，用來幫孩子理解磁鐵距離越遠，磁力通常會越弱。",
+      symbols: [{ symbol: "F_m", meaning: "磁力大小" }, { symbol: "r", meaning: "磁鐵間距離" }],
+    },
+    "force": {
+      expression: "F = ma",
+      note: "這表示合力會讓物體產生加速度。力越大或質量越小，速度改變通常越明顯。",
+      symbols: [{ symbol: "F", meaning: "合力，單位 N" }, { symbol: "m", meaning: "質量，單位 kg" }, { symbol: "a", meaning: "加速度，單位 m/s^2" }],
+    },
+    "collision-bounce": {
+      expression: "e = v_after / v_before",
+      note: "反彈係數用來描述碰撞後保留了多少彈跳效果。越接近 1，通常越會彈。",
+      symbols: [{ symbol: "e", meaning: "反彈係數" }, { symbol: "v_after", meaning: "反彈後速度" }, { symbol: "v_before", meaning: "碰撞前速度" }],
+    },
+    "pulley": {
+      expression: "F_in = W / n",
+      note: "理想滑輪組中，滑輪數增加時，拉起重物所需的力可以變小。",
+      symbols: [{ symbol: "F_in", meaning: "輸入拉力" }, { symbol: "W", meaning: "重物重量" }, { symbol: "n", meaning: "分擔重量的繩段數" }],
+    },
+    "friction": {
+      expression: "F_f = mu N",
+      note: "摩擦力和材質特性以及正向支持力有關，所以不同地面滑起來感覺不同。",
+      symbols: [{ symbol: "F_f", meaning: "摩擦力" }, { symbol: "mu", meaning: "摩擦係數" }, { symbol: "N", meaning: "正向力" }],
+    },
+    "light-shadow": {
+      expression: "h_shadow / d_shadow = h_object / d_object",
+      note: "這是相似三角形的想法，幫我們理解光源位置改變時影子長短也會改變。",
+      symbols: [{ symbol: "h_shadow", meaning: "影子高度或長度" }, { symbol: "d_shadow", meaning: "影子到光源距離" }, { symbol: "h_object", meaning: "物體高度" }, { symbol: "d_object", meaning: "物體到光源距離" }],
+    },
+    "circuit": {
+      expression: "V = IR",
+      note: "在很多簡單電路裡，電壓、電流和電阻彼此有固定關係。",
+      symbols: [{ symbol: "V", meaning: "電壓，單位 V" }, { symbol: "I", meaning: "電流，單位 A" }, { symbol: "R", meaning: "電阻，單位 Ω" }],
+    },
+    "speed": {
+      expression: "v = d / t",
+      note: "速度就是距離除以時間，代表每一秒平均走了多遠。",
+      symbols: [{ symbol: "v", meaning: "速度" }, { symbol: "d", meaning: "距離" }, { symbol: "t", meaning: "時間" }],
+    },
+    "inclined-plane": {
+      expression: "F = mg sin(theta)",
+      note: "斜面角度越大，沿著斜面把物體拉下去的力通常也越大。",
+      symbols: [{ symbol: "F", meaning: "沿斜面的力" }, { symbol: "m", meaning: "質量" }, { symbol: "g", meaning: "重力加速度" }, { symbol: "theta", meaning: "斜面角度" }],
+    },
+    "convection": {
+      expression: "q = hAΔT",
+      note: "這是簡化的對流傳熱公式，表示溫差越大、接觸面越大，熱交換通常越明顯。",
+      symbols: [{ symbol: "q", meaning: "對流傳熱量" }, { symbol: "h", meaning: "對流係數" }, { symbol: "A", meaning: "面積" }, { symbol: "ΔT", meaning: "溫差" }],
+    },
+    "heat-transfer": {
+      expression: "Q = kAΔTt / L",
+      note: "熱傳導量和材質、面積、時間、溫差有關，和厚度成反比。",
+      symbols: [{ symbol: "Q", meaning: "傳熱量" }, { symbol: "k", meaning: "導熱係數" }, { symbol: "A", meaning: "面積" }, { symbol: "ΔT", meaning: "溫差" }, { symbol: "t", meaning: "時間" }, { symbol: "L", meaning: "厚度" }],
+    },
+    "insulation-design": {
+      expression: "Q = kAΔTt / L",
+      note: "隔熱就是想辦法讓這個 Q 變小，像是用較低導熱係數或較厚的材料。",
+      symbols: [{ symbol: "Q", meaning: "漏掉的熱量" }, { symbol: "k", meaning: "導熱係數" }, { symbol: "A", meaning: "面積" }, { symbol: "ΔT", meaning: "溫差" }, { symbol: "t", meaning: "時間" }, { symbol: "L", meaning: "厚度" }],
+    },
+    "buoyancy": {
+      expression: "F_b = rho g V",
+      note: "浮力來自排開液體的重量，所以排開越多水，浮力通常越大。",
+      symbols: [{ symbol: "F_b", meaning: "浮力" }, { symbol: "rho", meaning: "液體密度" }, { symbol: "g", meaning: "重力加速度" }, { symbol: "V", meaning: "排開液體體積" }],
+    },
+    "sound": {
+      expression: "v = f lambda",
+      note: "聲音的波速、頻率和波長彼此有關，音調高通常代表頻率大。",
+      symbols: [{ symbol: "v", meaning: "波速" }, { symbol: "f", meaning: "頻率" }, { symbol: "lambda", meaning: "波長" }],
+    },
+    "vibration": {
+      expression: "f = 1 / T",
+      note: "頻率代表一秒振動幾次，週期代表一次完整振動要多久。",
+      symbols: [{ symbol: "f", meaning: "頻率" }, { symbol: "T", meaning: "週期" }],
+    },
+    "average-instant-speed": {
+      expression: "v_avg = Δd / Δt",
+      note: "平均速度是在看整段時間總共走多遠，不是看某一瞬間。",
+      symbols: [{ symbol: "v_avg", meaning: "平均速度" }, { symbol: "Δd", meaning: "距離變化" }, { symbol: "Δt", meaning: "時間變化" }],
+    },
+    "projectile-motion": {
+      expression: "R = v0^2 sin(2theta) / g",
+      note: "在理想拋體裡，射程和初速、角度、重力有關。",
+      symbols: [{ symbol: "R", meaning: "水平射程" }, { symbol: "v0", meaning: "初速度" }, { symbol: "theta", meaning: "發射角" }, { symbol: "g", meaning: "重力加速度" }],
+    },
+    "work-power": {
+      expression: "P = W / t",
+      note: "功率是做功的快慢，同樣的功如果用更短時間完成，功率就更大。",
+      symbols: [{ symbol: "P", meaning: "功率" }, { symbol: "W", meaning: "功" }, { symbol: "t", meaning: "時間" }],
+    },
+    "pressure": {
+      expression: "P = F / A",
+      note: "同樣的力作用在更小的面積上，壓力就會更大。",
+      symbols: [{ symbol: "P", meaning: "壓力" }, { symbol: "F", meaning: "力" }, { symbol: "A", meaning: "面積" }],
+    },
+    "newton": {
+      expression: "F = ma",
+      note: "牛頓第二定律說明施力、質量和加速度之間的關係。",
+      symbols: [{ symbol: "F", meaning: "合力" }, { symbol: "m", meaning: "質量" }, { symbol: "a", meaning: "加速度" }],
+    },
+    "newton-third-law": {
+      expression: "F_AB = -F_BA",
+      note: "甲對乙施力時，乙也會同時對甲施一個大小相等、方向相反的力。",
+      symbols: [{ symbol: "F_AB", meaning: "甲對乙的力" }, { symbol: "F_BA", meaning: "乙對甲的力" }],
+    },
+    "lever": {
+      expression: "tau = Fr",
+      note: "槓桿平衡看的是力矩，不只是看力有多大，也要看離支點多遠。",
+      symbols: [{ symbol: "tau", meaning: "力矩" }, { symbol: "F", meaning: "施力大小" }, { symbol: "r", meaning: "力臂距離" }],
+    },
+    "pascal-principle": {
+      expression: "P = F / A",
+      note: "在封閉液體裡，壓力可以傳到各處，所以小力也能放大成大推力。",
+      symbols: [{ symbol: "P", meaning: "壓力" }, { symbol: "F", meaning: "作用力" }, { symbol: "A", meaning: "受力面積" }],
+    },
+    "hydraulic": {
+      expression: "P = rho g h",
+      note: "液體越深，受到的壓力通常越大。",
+      symbols: [{ symbol: "P", meaning: "液體壓力" }, { symbol: "rho", meaning: "液體密度" }, { symbol: "g", meaning: "重力加速度" }, { symbol: "h", meaning: "深度" }],
+    },
+    "density": {
+      expression: "rho = m / V",
+      note: "密度是在看同樣體積裡裝了多少質量。",
+      symbols: [{ symbol: "rho", meaning: "密度" }, { symbol: "m", meaning: "質量" }, { symbol: "V", meaning: "體積" }],
+    },
+    "reflection": {
+      expression: "theta_i = theta_r",
+      note: "反射時，入射角和反射角相等，這是鏡面反射的基本規則。",
+      symbols: [{ symbol: "theta_i", meaning: "入射角" }, { symbol: "theta_r", meaning: "反射角" }],
+    },
+    "refraction": {
+      expression: "n1 sin(theta1) = n2 sin(theta2)",
+      note: "光進入不同介質時會改變方向，這和折射率有關。",
+      symbols: [{ symbol: "n1、n2", meaning: "兩種介質的折射率" }, { symbol: "theta1", meaning: "入射角" }, { symbol: "theta2", meaning: "折射角" }],
+    },
+    "lens-imaging": {
+      expression: "1 / f = 1 / do + 1 / di",
+      note: "透鏡成像和焦距、物距、像距彼此相關。",
+      symbols: [{ symbol: "f", meaning: "焦距" }, { symbol: "do", meaning: "物距" }, { symbol: "di", meaning: "像距" }],
+    },
+    "wave-properties": {
+      expression: "v = f lambda",
+      note: "同一種波在同一介質中，波速通常固定，頻率和波長會互相配合。",
+      symbols: [{ symbol: "v", meaning: "波速" }, { symbol: "f", meaning: "頻率" }, { symbol: "lambda", meaning: "波長" }],
+    },
+    "doppler": {
+      expression: "f_prime = f (v ± vo) / (v ∓ vs)",
+      note: "當聲源或觀察者移動時，聽到的頻率會改變。",
+      symbols: [{ symbol: "f_prime", meaning: "聽到的頻率" }, { symbol: "f", meaning: "原頻率" }, { symbol: "v", meaning: "波速" }, { symbol: "vo", meaning: "觀察者速度" }, { symbol: "vs", meaning: "聲源速度" }],
+    },
+    "series-parallel": {
+      expression: "R_series = R1 + R2",
+      note: "串聯時電阻直接相加；並聯時總電阻會比單一支路更小。",
+      symbols: [{ symbol: "R_series", meaning: "串聯總電阻" }, { symbol: "R1、R2", meaning: "各支路電阻" }],
+    },
+    "ohms-law": {
+      expression: "V = IR",
+      note: "歐姆定律幫我們連結電壓、電流和電阻。",
+      symbols: [{ symbol: "V", meaning: "電壓" }, { symbol: "I", meaning: "電流" }, { symbol: "R", meaning: "電阻" }],
+    },
+    "electromagnet": {
+      expression: "B ~ mu n I",
+      note: "電流越大、圈數越多，電磁鐵通常越強。",
+      symbols: [{ symbol: "B", meaning: "磁場強度" }, { symbol: "mu", meaning: "介質相關常數" }, { symbol: "n", meaning: "線圈密度" }, { symbol: "I", meaning: "電流" }],
+    },
+    "power-generation": {
+      expression: "P = E / t",
+      note: "發電其實是在把其他形式能量，在一段時間內轉成電能。",
+      symbols: [{ symbol: "P", meaning: "功率" }, { symbol: "E", meaning: "能量" }, { symbol: "t", meaning: "時間" }],
+    },
+    "energy-conversion": {
+      expression: "E_in = E_useful + E_loss",
+      note: "輸入能量通常會分成有用的部分和損失掉的部分。",
+      symbols: [{ symbol: "E_in", meaning: "輸入能量" }, { symbol: "E_useful", meaning: "有用能量" }, { symbol: "E_loss", meaning: "損失能量" }],
+    },
+    "energy-efficiency": {
+      expression: "eta = E_useful / E_in x 100%",
+      note: "效率越高，代表更多輸入能量真的變成有用輸出。",
+      symbols: [{ symbol: "eta", meaning: "效率" }, { symbol: "E_useful", meaning: "有用能量" }, { symbol: "E_in", meaning: "輸入能量" }],
+    },
+    "thermal-expansion": {
+      expression: "ΔL = alpha L0 ΔT",
+      note: "物體加熱後長度改變，和原長、材質、溫度變化有關。",
+      symbols: [{ symbol: "ΔL", meaning: "長度改變量" }, { symbol: "alpha", meaning: "線膨脹係數" }, { symbol: "L0", meaning: "原長" }, { symbol: "ΔT", meaning: "溫度變化" }],
+    },
+    "heat-radiation": {
+      expression: "P = epsilon sigma A T^4",
+      note: "熱輻射和表面性質、面積以及溫度有很大關係，溫度影響特別強。",
+      symbols: [{ symbol: "P", meaning: "輻射功率" }, { symbol: "epsilon", meaning: "放射率" }, { symbol: "sigma", meaning: "常數" }, { symbol: "A", meaning: "面積" }, { symbol: "T", meaning: "絕對溫度" }],
+    },
+    "tides": {
+      expression: "F_tidal ~ 1 / r^3",
+      note: "潮汐力和距離非常敏感，所以月球雖然不大，影響仍很明顯。",
+      symbols: [{ symbol: "F_tidal", meaning: "潮汐力" }, { symbol: "r", meaning: "和天體的距離" }],
+    },
+    "measurement-error": {
+      expression: "error% = ",
+      note: "measured - true",
+      symbols: [],
+    },
+    "vector-components": {
+      expression: "Ax = A cos(theta), Ay = A sin(theta)",
+      note: "一個向量可以拆成水平和垂直兩部分來分析。",
+      symbols: [{ symbol: "Ax", meaning: "水平分量" }, { symbol: "Ay", meaning: "垂直分量" }, { symbol: "A", meaning: "原向量大小" }, { symbol: "theta", meaning: "夾角" }],
+    },
+    "circular-motion": {
+      expression: "F_c = mv^2 / r",
+      note: "要讓物體繞圈，就需要指向圓心的向心力。",
+      symbols: [{ symbol: "F_c", meaning: "向心力" }, { symbol: "m", meaning: "質量" }, { symbol: "v", meaning: "速度" }, { symbol: "r", meaning: "半徑" }],
+    },
+    "simple-harmonic-motion": {
+      expression: "x = A cos(omega t)",
+      note: "簡諧運動的位移會週期性重複。",
+      symbols: [{ symbol: "x", meaning: "位移" }, { symbol: "A", meaning: "振幅" }, { symbol: "omega", meaning: "角頻率" }, { symbol: "t", meaning: "時間" }],
+    },
+    "electric-field": {
+      expression: "E = F / q",
+      note: "電場表示每單位電荷會受到多少力。",
+      symbols: [{ symbol: "E", meaning: "電場強度" }, { symbol: "F", meaning: "電力" }, { symbol: "q", meaning: "試驗電荷" }],
+    },
+    "momentum-conservation": {
+      expression: "m1u1 + m2u2 = m1v1 + m2v2",
+      note: "如果外力影響很小，碰撞前後總動量通常守恆。",
+      symbols: [{ symbol: "m1、m2", meaning: "兩物體質量" }, { symbol: "u1、u2", meaning: "碰撞前速度" }, { symbol: "v1、v2", meaning: "碰撞後速度" }],
+    },
+    "pendulum": {
+      expression: "T = 2pi sqrt(L / g)",
+      note: "單擺的週期和擺長有關，和擺球質量無關。",
+      symbols: [{ symbol: "T", meaning: "週期" }, { symbol: "L", meaning: "擺長" }, { symbol: "g", meaning: "重力加速度" }],
+    },
+    "wave-interference": {
+      expression: "ΔL = n lambda",
+      note: "兩列波到達某點的路程差如果剛好是整數倍波長，容易形成加強。",
+      symbols: [{ symbol: "ΔL", meaning: "路程差" }, { symbol: "n", meaning: "整數" }, { symbol: "lambda", meaning: "波長" }],
+    },
+    "electromagnetic-induction": {
+      expression: "epsilon = -N ΔPhi / Δt",
+      note: "磁通量改變得越快，感應電壓通常越明顯。",
+      symbols: [{ symbol: "epsilon", meaning: "感應電動勢" }, { symbol: "N", meaning: "線圈圈數" }, { symbol: "ΔPhi", meaning: "磁通量改變" }, { symbol: "Δt", meaning: "時間改變" }],
+    },
+    "photoelectric-effect": {
+      expression: "K_max = hf - phi",
+      note: "光子的能量要先超過逸出功，剩下的部分才會變成電子動能。",
+      symbols: [{ symbol: "K_max", meaning: "光電子最大動能" }, { symbol: "h", meaning: "普朗克常數" }, { symbol: "f", meaning: "頻率" }, { symbol: "phi", meaning: "逸出功" }],
+    },
+    "gravity-orbit": {
+      expression: "v = sqrt(GM / r)",
+      note: "圓形軌道速度和中心天體質量、軌道半徑有關。",
+      symbols: [{ symbol: "v", meaning: "軌道速度" }, { symbol: "G", meaning: "萬有引力常數" }, { symbol: "M", meaning: "中心天體質量" }, { symbol: "r", meaning: "軌道半徑" }],
+    },
+    "capacitor-energy": {
+      expression: "U = (1/2)CV^2",
+      note: "電容儲存的能量和電容值、電壓都有關，而且對電壓特別敏感。",
+      symbols: [{ symbol: "U", meaning: "儲存能量" }, { symbol: "C", meaning: "電容" }, { symbol: "V", meaning: "電壓" }],
+    },
+    "alternating-current": {
+      expression: "v(t) = V_max sin(omega t)",
+      note: "交流電的電壓會隨時間上下變化，不是固定不變。",
+      symbols: [{ symbol: "v(t)", meaning: "某一時刻電壓" }, { symbol: "V_max", meaning: "最大電壓" }, { symbol: "omega", meaning: "角頻率" }, { symbol: "t", meaning: "時間" }],
+    },
+    "heat-engine": {
+      expression: "eta = W / Q_h",
+      note: "熱機效率是在看吸收的熱量中，有多少能真的變成有用功。",
+      symbols: [{ symbol: "eta", meaning: "效率" }, { symbol: "W", meaning: "有用功" }, { symbol: "Q_h", meaning: "從高溫熱源吸收的熱量" }],
+    },
+    "radioactivity-half-life": {
+      expression: "N = N0 (1/2)^(t / T_half)",
+      note: "放射性原子會按半衰期規律慢慢減少。",
+      symbols: [{ symbol: "N", meaning: "剩餘原子數" }, { symbol: "N0", meaning: "初始原子數" }, { symbol: "t", meaning: "時間" }, { symbol: "T_half", meaning: "半衰期" }],
+    },
+    "coulomb-law": {
+      expression: "F = kq1q2 / r^2",
+      note: "兩個電荷的作用力和電荷量成正比，和距離平方成反比。",
+      symbols: [{ symbol: "F", meaning: "電力" }, { symbol: "k", meaning: "靜電常數" }, { symbol: "q1、q2", meaning: "電荷量" }, { symbol: "r", meaning: "距離" }],
+    },
+    "equipotential-field-lines": {
+      expression: "E = -ΔV / Δd",
+      note: "電位變化越快的地方，電場通常越強。",
+      symbols: [{ symbol: "E", meaning: "電場強度" }, { symbol: "ΔV", meaning: "電位差" }, { symbol: "Δd", meaning: "位置變化" }],
+    },
+    "double-slit": {
+      expression: "y = lambda L / d",
+      note: "雙狹縫條紋間距和波長、屏幕距離成正比，和狹縫距離成反比。",
+      symbols: [{ symbol: "y", meaning: "條紋間距" }, { symbol: "lambda", meaning: "波長" }, { symbol: "L", meaning: "狹縫到屏幕距離" }, { symbol: "d", meaning: "狹縫間距" }],
+    },
+    "kinetic-gas": {
+      expression: "PV = nRT",
+      note: "氣體的壓力、體積、溫度和莫耳數彼此相關。",
+      symbols: [{ symbol: "P", meaning: "壓力" }, { symbol: "V", meaning: "體積" }, { symbol: "n", meaning: "莫耳數" }, { symbol: "R", meaning: "氣體常數" }, { symbol: "T", meaning: "絕對溫度" }],
+    },
+    "atomic-model": {
+      expression: "ΔE = hf",
+      note: "電子躍遷時，能量差可以對應成一個光子的能量。",
+      symbols: [{ symbol: "ΔE", meaning: "能量差" }, { symbol: "h", meaning: "普朗克常數" }, { symbol: "f", meaning: "光頻率" }],
+    },
+    "gravity-potential": {
+      expression: "U = -GMm / r",
+      note: "引力位能通常是負值，距離越近，位能數值會更低。",
+      symbols: [{ symbol: "U", meaning: "引力位能" }, { symbol: "G", meaning: "萬有引力常數" }, { symbol: "M、m", meaning: "兩個質量" }, { symbol: "r", meaning: "距離" }],
+    },
+    "electromagnetic-spectrum": {
+      expression: "c = f lambda",
+      note: "所有電磁波在真空中的波速都一樣，所以頻率和波長會互相配合。",
+      symbols: [{ symbol: "c", meaning: "光速" }, { symbol: "f", meaning: "頻率" }, { symbol: "lambda", meaning: "波長" }],
+    },
+    "transformer": {
+      expression: "Vs / Vp = Ns / Np",
+      note: "變壓器的輸出電壓和輸入電壓，會跟線圈圈數比一起改變。",
+      symbols: [{ symbol: "Vs", meaning: "次級電壓" }, { symbol: "Vp", meaning: "初級電壓" }, { symbol: "Ns", meaning: "次級圈數" }, { symbol: "Np", meaning: "初級圈數" }],
+    },
+    "rc-circuit": {
+      expression: "Vc(t) = V(1 - e^(-t / RC))",
+      note: "RC 充電不是瞬間完成，而是慢慢接近最終電壓。",
+      symbols: [{ symbol: "Vc(t)", meaning: "某時刻電容電壓" }, { symbol: "V", meaning: "電源電壓" }, { symbol: "t", meaning: "時間" }, { symbol: "R", meaning: "電阻" }, { symbol: "C", meaning: "電容" }],
+    },
+    "relativity-intro": {
+      expression: "gamma = 1 / sqrt(1 - v^2 / c^2)",
+      note: "速度越接近光速，相對論效應會越明顯。",
+      symbols: [{ symbol: "gamma", meaning: "相對論因子" }, { symbol: "v", meaning: "物體速度" }, { symbol: "c", meaning: "光速" }],
+    },
+    "blackbody-radiation": {
+      expression: "lambda_max T = b",
+      note: "溫度越高，最強輻射波長越短。",
+      symbols: [{ symbol: "lambda_max", meaning: "峰值波長" }, { symbol: "T", meaning: "絕對溫度" }, { symbol: "b", meaning: "維恩常數" }],
+    },
+    "de-broglie-wave": {
+      expression: "lambda = h / p",
+      note: "粒子的動量越大，對應的物質波波長越短。",
+      symbols: [{ symbol: "lambda", meaning: "德布羅意波長" }, { symbol: "h", meaning: "普朗克常數" }, { symbol: "p", meaning: "動量" }],
+    },
+    "uncertainty-principle": {
+      expression: "Δx Δp >= h / 4pi",
+      note: "位置越精確，動量通常越不容易同時精確知道。",
+      symbols: [{ symbol: "Δx", meaning: "位置不確定度" }, { symbol: "Δp", meaning: "動量不確定度" }, { symbol: "h", meaning: "普朗克常數" }],
+    },
+    "spectroscopy": {
+      expression: "ΔE = hf = hc / lambda",
+      note: "光譜線來自能階差，所以不同元素會有不同顏色和位置的光譜線。",
+      symbols: [{ symbol: "ΔE", meaning: "能量差" }, { symbol: "h", meaning: "普朗克常數" }, { symbol: "f", meaning: "頻率" }, { symbol: "c", meaning: "光速" }, { symbol: "lambda", meaning: "波長" }],
+    },
+    "nuclear-reactions": {
+      expression: "E = Δmc^2",
+      note: "核反應能量來自質量差，哪怕少量質量也能對應很大能量。",
+      symbols: [{ symbol: "E", meaning: "放出能量" }, { symbol: "Δm", meaning: "質量差" }, { symbol: "c", meaning: "光速" }],
+    },
+    "lorentz-force": {
+      expression: "F = qvB sin(theta)",
+      note: "帶電粒子在磁場中移動時，若速度不和磁場平行，就會受到磁力。",
+      symbols: [{ symbol: "F", meaning: "洛倫茲力" }, { symbol: "q", meaning: "電荷量" }, { symbol: "v", meaning: "速度" }, { symbol: "B", meaning: "磁場強度" }, { symbol: "theta", meaning: "速度和磁場夾角" }],
+    },
+    "magnetic-particle": {
+      expression: "r = mv / qB",
+      note: "在磁場中繞圓時，速度越快或磁場越小，半徑通常越大。",
+      symbols: [{ symbol: "r", meaning: "軌道半徑" }, { symbol: "m", meaning: "質量" }, { symbol: "v", meaning: "速度" }, { symbol: "q", meaning: "電荷量" }, { symbol: "B", meaning: "磁場強度" }],
+    },
+    "crossed-fields": {
+      expression: "qE = qvB",
+      note: "當電場力和磁力剛好一樣大時，粒子可以接近直線前進。",
+      symbols: [{ symbol: "q", meaning: "電荷量" }, { symbol: "E", meaning: "電場強度" }, { symbol: "v", meaning: "速度" }, { symbol: "B", meaning: "磁場強度" }],
+    },
+    "motor-effect": {
+      expression: "F = BIL sin(theta)",
+      note: "馬達效應中的導線受力，和磁場、電流、長度都有關。",
+      symbols: [{ symbol: "F", meaning: "磁力" }, { symbol: "B", meaning: "磁場強度" }, { symbol: "I", meaning: "電流" }, { symbol: "L", meaning: "導線長度" }, { symbol: "theta", meaning: "夾角" }],
+    },
+    "generator-principle": {
+      expression: "epsilon = NBAomega sin(omega t)",
+      note: "發電機中的感應電壓和磁場、面積、圈數、轉動速度都有關。",
+      symbols: [{ symbol: "epsilon", meaning: "感應電壓" }, { symbol: "N", meaning: "圈數" }, { symbol: "B", meaning: "磁場" }, { symbol: "A", meaning: "線圈面積" }, { symbol: "omega", meaning: "角速度" }],
+    },
+    "damping-oscillation": {
+      expression: "x = A e^(-bt) cos(omega t)",
+      note: "阻尼存在時，振幅會隨時間乘上一個慢慢變小的因子。",
+      symbols: [{ symbol: "x", meaning: "位移" }, { symbol: "A", meaning: "初始振幅" }, { symbol: "b", meaning: "阻尼常數" }, { symbol: "t", meaning: "時間" }, { symbol: "omega", meaning: "角頻率" }],
+    },
+    "resonance": {
+      expression: "f_drive ≈ f0",
+      note: "外力頻率接近系統固有頻率時，最容易出現很大的振幅。",
+      symbols: [{ symbol: "f_drive", meaning: "外力頻率" }, { symbol: "f0", meaning: "固有頻率" }],
+    },
+    "standing-wave-harmonics": {
+      expression: "f_n = nv / 2L",
+      note: "固定兩端的弦只允許某些特定頻率形成穩定駐波。",
+      symbols: [{ symbol: "f_n", meaning: "第 n 諧波頻率" }, { symbol: "n", meaning: "諧波次數" }, { symbol: "v", meaning: "波速" }, { symbol: "L", meaning: "弦長" }],
+    },
+    "spring-energy": {
+      expression: "U = (1/2)kx^2",
+      note: "彈簧拉得越開，儲存的彈性位能通常增加得很快。",
+      symbols: [{ symbol: "U", meaning: "彈性位能" }, { symbol: "k", meaning: "彈簧常數" }, { symbol: "x", meaning: "位移" }],
+    },
+    "pendulum-energy": {
+      expression: "mgh = (1/2)mv^2",
+      note: "單擺從高處擺下來時，位能會轉成動能。",
+      symbols: [{ symbol: "m", meaning: "質量" }, { symbol: "g", meaning: "重力加速度" }, { symbol: "h", meaning: "高度差" }, { symbol: "v", meaning: "速度" }],
+    },
+    "angular-momentum": {
+      expression: "L = mvr",
+      note: "角動量和質量、半徑、切線速度都有關。",
+      symbols: [{ symbol: "L", meaning: "角動量" }, { symbol: "m", meaning: "質量" }, { symbol: "v", meaning: "切線速度" }, { symbol: "r", meaning: "半徑" }],
+    },
+    "moment-of-inertia": {
+      expression: "I = Sigma mr^2",
+      note: "轉動慣量在看質量離轉軸有多遠，越遠影響越大。",
+      symbols: [{ symbol: "I", meaning: "轉動慣量" }, { symbol: "m", meaning: "質量" }, { symbol: "r", meaning: "到轉軸距離" }],
+    },
+    "torque-rotation": {
+      expression: "tau = Ialpha",
+      note: "力矩會造成角加速度，轉動版的牛頓第二定律就是這個想法。",
+      symbols: [{ symbol: "tau", meaning: "力矩" }, { symbol: "I", meaning: "轉動慣量" }, { symbol: "alpha", meaning: "角加速度" }],
+    },
+    "projectile-range": {
+      expression: "R = v0^2 sin(2theta) / g",
+      note: "同一初速下，拋射角會決定射程大小。",
+      symbols: [{ symbol: "R", meaning: "射程" }, { symbol: "v0", meaning: "初速度" }, { symbol: "theta", meaning: "角度" }, { symbol: "g", meaning: "重力加速度" }],
+    },
+    "escape-velocity": {
+      expression: "v_e = sqrt(2GM / r)",
+      note: "要逃離行星引力，發射速度至少要超過這個門檻。",
+      symbols: [{ symbol: "v_e", meaning: "逃逸速度" }, { symbol: "G", meaning: "萬有引力常數" }, { symbol: "M", meaning: "行星質量" }, { symbol: "r", meaning: "距離行星中心半徑" }],
+    },
+    "kepler-third-law": {
+      expression: "T^2 ∝ r^3",
+      note: "繞得越遠的行星，公轉週期通常會長很多。",
+      symbols: [{ symbol: "T", meaning: "公轉週期" }, { symbol: "r", meaning: "軌道半徑" }],
+    },
+    "bernoulli-flow": {
+      expression: "P + (1/2)rho v^2 + rho gh = constant",
+      note: "流體速度、壓力和高度之間可以互相交換。",
+      symbols: [{ symbol: "P", meaning: "壓力" }, { symbol: "rho", meaning: "密度" }, { symbol: "v", meaning: "流速" }, { symbol: "g", meaning: "重力加速度" }, { symbol: "h", meaning: "高度" }],
+    },
+    "venturi-effect": {
+      expression: "A1v1 = A2v2",
+      note: "管道變窄時，為了讓流量接續，流速通常會變快。",
+      symbols: [{ symbol: "A1、A2", meaning: "兩處截面積" }, { symbol: "v1、v2", meaning: "兩處流速" }],
+    },
+    "polarization": {
+      expression: "I = I0 cos^2(theta)",
+      note: "偏振片轉動角度改變時，通過光強度也會跟著改變。",
+      symbols: [{ symbol: "I", meaning: "通過後強度" }, { symbol: "I0", meaning: "原始強度" }, { symbol: "theta", meaning: "兩偏振方向夾角" }],
+    },
+    "diffraction-grating": {
+      expression: "d sin(theta) = n lambda",
+      note: "光柵會把不同波長的光分到不同角度。",
+      symbols: [{ symbol: "d", meaning: "光柵間距" }, { symbol: "theta", meaning: "偏轉角" }, { symbol: "n", meaning: "階數" }, { symbol: "lambda", meaning: "波長" }],
+    },
+    "semiconductor-diode": {
+      expression: "I ≈ I_s (e^(V / V_T) - 1)",
+      note: "二極體跨過導通門檻後，電流常會快速上升。",
+      symbols: [{ symbol: "I", meaning: "電流" }, { symbol: "I_s", meaning: "飽和電流" }, { symbol: "V", meaning: "外加電壓" }, { symbol: "V_T", meaning: "熱電壓" }],
+    },
+    "transistor-switch": {
+      expression: "I_C ≈ beta I_B",
+      note: "小小的基極電流可以控制較大的集極電流。",
+      symbols: [{ symbol: "I_C", meaning: "集極電流" }, { symbol: "beta", meaning: "電流增益" }, { symbol: "I_B", meaning: "基極電流" }],
+    },
+    "quantum-tunneling": {
+      expression: "T ~ e^(-2kappa L)",
+      note: "障壁越高或越寬，穿隧機率通常越小。",
+      symbols: [{ symbol: "T", meaning: "穿透機率" }, { symbol: "kappa", meaning: "和障壁有關的量" }, { symbol: "L", meaning: "障壁寬度" }],
+    },
+    "infinite-potential-well": {
+      expression: "E_n = n^2 h^2 / (8mL^2)",
+      note: "粒子被關在盒子裡時，只能擁有某些特定能量。",
+      symbols: [{ symbol: "E_n", meaning: "第 n 個能階能量" }, { symbol: "n", meaning: "量子數" }, { symbol: "h", meaning: "普朗克常數" }, { symbol: "m", meaning: "質量" }, { symbol: "L", meaning: "盒子寬度" }],
+    },
+    "bohr-spectrum-advanced": {
+      expression: "1 / lambda = R(1 / n_f^2 - 1 / n_i^2)",
+      note: "波耳模型可以用能階差計算氫原子的光譜線。",
+      symbols: [{ symbol: "lambda", meaning: "光譜波長" }, { symbol: "R", meaning: "里德伯常數" }, { symbol: "n_i", meaning: "起始能階" }, { symbol: "n_f", meaning: "終止能階" }],
+    },
+    "nuclear-binding-energy": {
+      expression: "E = Delta m c^2",
+      note: "束縛能本質上也是質量差對應的能量。",
+      symbols: [{ symbol: "E", meaning: "束縛能" }, { symbol: "Delta m", meaning: "質量差" }, { symbol: "c", meaning: "光速" }],
+    },
+    "photoelectric-advanced": {
+      expression: "eV_s = hf - phi",
+      note: "截止電壓可以幫我們量出光電子的最大動能。",
+      symbols: [{ symbol: "e", meaning: "基本電荷" }, { symbol: "V_s", meaning: "截止電壓" }, { symbol: "h", meaning: "普朗克常數" }, { symbol: "f", meaning: "頻率" }, { symbol: "phi", meaning: "逸出功" }],
+    },
+    "signal-filter": {
+      expression: "A_out = A_in / sqrt(1 + (f / f_c)^2)",
+      note: "低通濾波器會讓高頻訊號的振幅變小。",
+      symbols: [{ symbol: "A_out", meaning: "輸出振幅" }, { symbol: "A_in", meaning: "輸入振幅" }, { symbol: "f", meaning: "輸入頻率" }, { symbol: "f_c", meaning: "截止頻率" }],
+    },
+  };
+
+  function renderFormula(conceptId) {
+    const formula = formulaBank[conceptId];
+    const lessonGrid = document.querySelector(".lesson-grid");
+
+    if (!formula || !lessonGrid || document.querySelector(".formula-section")) {
+      return null;
+    }
+
+    const section = document.createElement("section");
+    section.className = "formula-section";
+    section.innerHTML = `
+      <article class="formula-card">
+        <div class="formula-head">
+          <p class="eyebrow">數學公式</p>
+          <h2>這一頁的核心公式</h2>
+        </div>
+        <div class="formula-expression">${formula.expression}</div>
+        <p class="formula-note">${formula.note}</p>
+        <div class="formula-symbols">
+          ${formula.symbols
+            .map(
+              (item) => `
+                <div class="formula-symbol-item">
+                  <strong>${item.symbol}</strong>
+                  <span>${item.meaning}</span>
+                </div>
+              `
+            )
+            .join("")}
+        </div>
+      </article>
+    `;
+
+    lessonGrid.insertAdjacentElement("afterend", section);
+    return section;
+  }
+
   function renderQuiz(conceptId) {
     const quiz = quizBank[conceptId];
     const lessonGrid = document.querySelector(".lesson-grid");
@@ -725,9 +1265,11 @@
     }
 
     document.title = `${concept.title} | 物理小老師`;
+    renderFormula(conceptId);
     renderQuiz(conceptId);
     renderTopicNavigation(conceptId);
     return concept;
   };
 })();
+
 
